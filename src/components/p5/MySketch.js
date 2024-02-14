@@ -30,11 +30,14 @@ function MySketch() {
     const updateSketchHeight = () => {
       navbarHeight =
         document.querySelector(".navbar-container")?.offsetHeight || 0;
+
+      console.log("navbarHeight", navbarHeight);
       const windowHeight = window.innerHeight;
       const sketchHeight = windowHeight - navbarHeight;
 
       if (sketchRef.current) {
         sketchRef.current.style.height = `${sketchHeight}px`;
+        // sketchRef.current.style.width = `${sketchWidth}px`;
       } else {
         console.error("Sketch container ref is not available.");
       }
@@ -48,17 +51,18 @@ function MySketch() {
     font = p5.loadFont("/CLT-Sprat/desktop/SpratVF.ttf");
   };
 
-  let setup = (p5, canvasParentRef) => {
-    let availableWidth = p5.windowWidth; // This should ideally come from your dynamic calculations
-    let availableHeight = p5.windowHeight - navbarHeight; // Calculate this in your React component
+  let setup = (p5) => {
+    let computedStyle = getComputedStyle(sketchRef.current);
+    let sketchWidth = parseInt(computedStyle.width, 10);
+    let sketchHeight = parseInt(computedStyle.height, 10);
 
     let sketchCanvas = p5
-      .createCanvas(availableWidth, availableHeight)
-      .parent(canvasParentRef);
+      .createCanvas(sketchWidth, sketchHeight)
+      .parent(sketchRef.current);
 
     //Calculation to center the canvas
     let x = 0;
-    let y = availableHeight;
+    let y = 0;
     sketchCanvas.position(x, y);
 
     p5.frameRate(fps);
@@ -81,7 +85,6 @@ function MySketch() {
 
   function createTitle(p5) {
     [...letters].forEach((letter) => {
-      console.log(letter);
       letterTemplates[letter] = new Template(
         font.textToPoints(letter, 0, 0, fontSize, {
           sampleFactor: 10,
@@ -144,21 +147,17 @@ function MySketch() {
   };
 
   let draw = (p5) => {
-    p5.background(255);
-    // text(txt, 100, 50);
+    console.log("draw");
+    p5.background(0);
     applyAirResistance(p5);
     script.forEach((char) => {
       char.show();
     });
-    grounds.forEach((g) => {
-      g.show();
-    });
-    p5.fill(0);
+    // grounds.forEach((g) => {
+    grounds[2].show();
+    // });
+    p5.fill(255);
   };
-
-  // if (!isReady) {
-  //   return <div>Loading...</div>; // Or any other placeholder content
-  // }
 
   return (
     <div ref={sketchRef} className="sketch">
