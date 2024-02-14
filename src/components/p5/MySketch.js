@@ -10,7 +10,7 @@ function MySketch() {
   let Engine, Composite, World, Vertices, Body, Bodies, Runner;
   let font;
   let fontScale = 3;
-  let fontSize = 19;
+  let fontSize = 25;
   let letterSpacing = fontSize * 4;
   let grounds = [];
   let bounds;
@@ -20,8 +20,11 @@ function MySketch() {
   let letterTemplates = {};
   let letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ&";
   let txt = "DESIGNER AND CREATIVE DEVELOPER";
+  // let letters = "abcdefghijklmnopqrstuvwxyz&";
+  // let txt = "designer and creative developer";
   let script = [];
   var navbarHeight;
+  let bgColor;
 
   const sketchRef = useRef(null);
 
@@ -31,9 +34,7 @@ function MySketch() {
       navbarHeight =
         document.querySelector(".navbar-container")?.offsetHeight || 0;
 
-      console.log("navbarHeight", navbarHeight);
-      const windowHeight = window.innerHeight;
-      const sketchHeight = windowHeight - navbarHeight;
+      const sketchHeight = window.innerHeight - navbarHeight;
 
       if (sketchRef.current) {
         sketchRef.current.style.height = `${sketchHeight}px`;
@@ -48,7 +49,8 @@ function MySketch() {
 
   let preload = (p5) => {
     ({ Engine, Composite, Vertices, Runner, Bodies, Body, Runner } = Matter);
-    font = p5.loadFont("/CLT-Sprat/desktop/SpratVF.ttf");
+    // font = p5.loadFont("/CLT-Sprat/desktop/Sprat-CondensedThin.otf");
+    font = p5.loadFont("/News_Gothic/NewsGothicStd.otf");
   };
 
   let setup = (p5) => {
@@ -61,8 +63,8 @@ function MySketch() {
       .parent(sketchRef.current);
 
     //Calculation to center the canvas
-    let x = 0;
-    let y = 0;
+    let x = "var(--margin)";
+    let y = "var(--margin)" + navbarHeight;
     sketchCanvas.position(x, y);
 
     p5.frameRate(fps);
@@ -75,6 +77,13 @@ function MySketch() {
 
     createTitle(p5);
     createBoundary(p5);
+
+    let style = getComputedStyle(document.body);
+    bgColor = style.getPropertyValue("--background-color").trim();
+    // fontScale = parseFloat(style.getPropertyValue("--golden-ratio"));
+    // fontSize = parseFloat(style.getPropertyValue("--body-font-size"));
+    // console.log("fontScale", fontScale);
+    // fontSize = fontSize * fontScale;
   };
 
   function textHelper(p5) {
@@ -119,7 +128,7 @@ function MySketch() {
       new Boundary(p5, world, p5.width, p5.height / 2, 10, p5.height)
     );
     grounds.push(
-      new Boundary(p5, world, p5.width / 2, p5.height - 20, p5.width, 10)
+      new Boundary(p5, world, p5.width / 2, p5.height - 20, p5.width, 15)
     );
 
     Composite.add(world, grounds);
@@ -147,16 +156,15 @@ function MySketch() {
   };
 
   let draw = (p5) => {
-    console.log("draw");
-    p5.background(0);
+    p5.background(bgColor);
+    // text to see positioning
+    // p5.text(txt, p5.width / 2 - p5.textWidth(txt) / 2, 200);
     applyAirResistance(p5);
     script.forEach((char) => {
       char.show();
     });
-    // grounds.forEach((g) => {
     grounds[2].show();
-    // });
-    p5.fill(255);
+    p5.fill(0);
   };
 
   return (

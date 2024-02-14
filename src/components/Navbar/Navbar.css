@@ -1,15 +1,16 @@
 .navbar-container {
   font-size: var(--navbar-font-size);
   color: var(--font-color);
+  font-weight: var(--font-weight-medium);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: var(--margin);
 }
 
 .navbar-right {
   display: flex;
-  gap: 1rem;
+  gap: calc(var(--margin) / var(--golden-ratio));
 }
 
 .navbar-component {

@@ -1,22 +1,22 @@
 :root {
   --body-font: "PlayfairDisplay";
   --body-font-italics: "PlayfairDisplayItalics";
-  --font-weight-light: 200;
+  --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
-  --font-weight-bold: 600;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 800;
 
   --body-font-size: 0.8rem;
-  --navbar-font-size: 1.25rem;
-  --footer-font-size: 1.25rem;
-  --introduction-font-size: 8.6rem;
-  --arrow-size: 3.3rem;
+  --navbar-font-size: 1.3rem;
+  --footer-font-size: 1.3rem;
+  --golden-ratio: 1.618;
 
   --margin: 2rem;
 
-  /* --background-color: #fffff0;
-  --font-color: black; */
-  --background-color: #ffffff;
+  --background-color: #f9f6ee;
   --font-color: black;
 }
 

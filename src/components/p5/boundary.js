@@ -25,7 +25,7 @@ export class Boundary {
     p.rotate(angle);
     p.rectMode(p.CENTER); // Use p.CENTER
     p.fill(0);
-    p.rect(0, 0, this.w, this.h);
+    p.rect(0, -6, this.w, this.h - 5);
     p.pop();
   }
 }
