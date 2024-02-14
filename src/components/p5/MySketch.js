@@ -6,15 +6,13 @@ import { Template } from "./template.js";
 import { Letter } from "./letter.js";
 import "./MySketch.css";
 
-function MySketch() {
+function MySketch({ animationTrigger }) {
   let Engine, Composite, World, Vertices, Body, Bodies, Runner;
+  let engine, world, runner;
   let font;
   let fontScale = 3;
   let fontSize = 25;
-  let letterSpacing = fontSize * 4;
   let grounds = [];
-  let bounds;
-  let engine, world, runner;
   let titleStartingX;
   let fps = 30;
   let letterTemplates = {};
@@ -74,12 +72,20 @@ function MySketch() {
     engine = Engine.create();
     world = engine.world;
     runner = Runner.create();
+    console.log(`runner is ${runner}`);
 
     createTitle(p5);
     createBoundary(p5);
 
     let style = getComputedStyle(document.body);
     bgColor = style.getPropertyValue("--background-color").trim();
+
+    // let goldenRatio = parseFloat(style.getPropertyValue("--golden-ratio"));
+    // let bodyFontSize = parseFloat(style.getPropertyValue("--body-font-size"));
+    // let rootFontSize = getComputedStyle(document.documentElement).fontSize;
+    // fontScale = goldenRatio;
+    // fontSize = rootFontSize * bodyFontSize;
+
     // fontScale = parseFloat(style.getPropertyValue("--golden-ratio"));
     // fontSize = parseFloat(style.getPropertyValue("--body-font-size"));
     // console.log("fontScale", fontScale);
@@ -150,15 +156,19 @@ function MySketch() {
   }
 
   let keyPressed = (p5) => {
-    if (p5.keyCode === p5.ENTER) {
-      Runner.run(runner, engine);
-    }
+    // if (p5.keyCode === p5.ENTER) {
+    //   Runner.run(runner, engine);
+    // }
   };
 
   let draw = (p5) => {
-    p5.background(bgColor);
+    p5.background("#f9f6ee");
     // text to see positioning
     // p5.text(txt, p5.width / 2 - p5.textWidth(txt) / 2, 200);
+    if (animationTrigger) {
+      Runner.run(runner, engine);
+    }
+
     applyAirResistance(p5);
     script.forEach((char) => {
       char.show();

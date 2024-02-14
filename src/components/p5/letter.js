@@ -5,16 +5,7 @@ export class Letter {
     this.p = p;
     this.points = template.path;
     this.vertices = JSON.parse(JSON.stringify(template.vertices));
-    console.log(this.vertices);
     this.body = Matter.Bodies.fromVertices(x, y, this.vertices);
-
-    // this.vertices = Matter.Vertices.create(
-    //   this.points.map((point) => {
-    //     return { x: point.x * fontScale, y: point.y * fontScale };
-    //   })
-    // );
-
-    // this.body = Matter.Bodies.fromVertices(x, y, this.vertices);
 
     if (this.body) {
       Matter.Composite.add(world, this.body);
