@@ -10,7 +10,7 @@ function App() {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       const screenHeight = window.innerHeight;
-      const threshold = screenHeight / 10; // 1/4th of the screen height
+      const threshold = screenHeight / 10;
 
       // Trigger animation when user scrolls past 1/4th of the screen height
       setAnimationTrigger(scrollPosition > threshold);
@@ -26,7 +26,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <MySketch animationTrigger={animationTrigger} />
+      <MySketch />
     </div>
   );
 }

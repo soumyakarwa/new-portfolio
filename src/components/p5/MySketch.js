@@ -6,7 +6,7 @@ import { Template } from "./template.js";
 import { Letter } from "./letter.js";
 import "./MySketch.css";
 
-function MySketch({ animationTrigger }) {
+function MySketch() {
   let Engine, Composite, World, Vertices, Body, Bodies, Runner;
   let engine, world, runner;
   let font;
@@ -52,6 +52,7 @@ function MySketch({ animationTrigger }) {
   };
 
   let setup = (p5) => {
+    console.log("setup");
     let computedStyle = getComputedStyle(sketchRef.current);
     let sketchWidth = parseInt(computedStyle.width, 10);
     let sketchHeight = parseInt(computedStyle.height, 10);
@@ -72,7 +73,6 @@ function MySketch({ animationTrigger }) {
     engine = Engine.create();
     world = engine.world;
     runner = Runner.create();
-    console.log(`runner is ${runner}`);
 
     createTitle(p5);
     createBoundary(p5);
@@ -156,18 +156,17 @@ function MySketch({ animationTrigger }) {
   }
 
   let keyPressed = (p5) => {
-    // if (p5.keyCode === p5.ENTER) {
-    //   Runner.run(runner, engine);
-    // }
+    if (p5.keyCode === p5.ENTER) {
+      Runner.run(runner, engine);
+    }
   };
 
   let draw = (p5) => {
+    console.log("draw");
+    console.log(`Runner is ${runner}`);
+    console.log(`Engine is ${engine}`);
+
     p5.background("#f9f6ee");
-    // text to see positioning
-    // p5.text(txt, p5.width / 2 - p5.textWidth(txt) / 2, 200);
-    if (animationTrigger) {
-      Runner.run(runner, engine);
-    }
 
     applyAirResistance(p5);
     script.forEach((char) => {
