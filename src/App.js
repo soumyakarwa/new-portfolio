@@ -26,7 +26,13 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <MySketch animationTrigger={animationTrigger} />
+      <iframe
+        src="/p5/sketch.html"
+        width="800"
+        height="600"
+        style={{ border: "none" }}
+        title="p5 Sketch"
+      ></iframe>
     </div>
   );
 }

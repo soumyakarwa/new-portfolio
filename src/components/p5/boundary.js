@@ -1,31 +1,21 @@
-import Matter from "matter-js";
+// boundary.js
 
 export class Boundary {
-  constructor(p, world, x, y, w, h) {
-    // Add p and world as parameters
-    let options = {
-      friction: 0.3,
-      restitution: 0.6,
-      isStatic: true,
-    };
-    this.body = Matter.Bodies.rectangle(x, y, w, h, options); // Use Matter.Bodies
+  constructor(p, x, y, w, h) {
+    this.p = p; // p5 instance
+    this.x = x;
+    this.y = y;
     this.w = w;
     this.h = h;
-    Matter.Composite.add(world, this.body); // Use Matter.Composite
-    this.p = p; // Store the p5 instance
   }
 
   show() {
-    let pos = this.body.position;
-    let angle = this.body.angle;
-    let p = this.p; // Use the stored p5 instance
-
-    p.push(); // Use p5 instance methods
-    p.translate(pos.x, pos.y);
-    p.rotate(angle);
-    p.rectMode(p.CENTER); // Use p.CENTER
+    let p = this.p;
+    p.push();
+    p.translate(this.x, this.y);
+    p.rectMode(p.CENTER);
     p.fill(0);
-    p.rect(0, -6, this.w, this.h - 5);
+    p.rect(0, 0, this.w, this.h);
     p.pop();
   }
 }
