@@ -4,7 +4,7 @@ class Template {
     this.vertices = this.letterOutline();
     this.options = {
       friction: 0.4,
-      restitution: 0.5,
+      restitution: 0.3,
     };
   }
 

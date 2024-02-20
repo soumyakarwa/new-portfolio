@@ -7,21 +7,14 @@ function App() {
     const handleScroll = () => {
       // Get the iframe element
       const iframe = document.querySelector(".sketch");
-
-      // Check if the iframe is in view or at the desired scroll position
-      if (window.scrollY > (1 / 10) * window.innerHeight) {
-        // Post a message to the iframe to trigger the sketch
+      if (window.scrollY > (1 / 12) * window.innerHeight) {
         iframe.contentWindow.postMessage(
           "startSketch",
           "http://localhost:3000"
         );
       }
     };
-
-    // Add the event listener
     window.addEventListener("scroll", handleScroll);
-
-    // Clean up the event listener
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 

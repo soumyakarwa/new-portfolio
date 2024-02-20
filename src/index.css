@@ -16,8 +16,9 @@
 
   --margin: 2rem;
 
-  --background-color: #f9f6ee;
-  --font-color: black;
+  /* --background-color: #f9f6ee; */
+  --background-color: #f6efe5;
+  --font-color: #dd3422;
 }
 
 body {
@@ -70,4 +71,14 @@ code {
   font-family: "PlayfairDisplayItalics";
   src: url("../public/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf")
     format("truetype");
+}
+
+@font-face {
+  font-family: "News_Gothics";
+  src: url("../public/News_Gothic/NewsGothicStd.otf");
+}
+
+@font-face {
+  font-family: "Overused-Grotesk";
+  src: url("../public/Overused-Grotesk/variable/OverusedGrotesk-VF.ttf");
 }

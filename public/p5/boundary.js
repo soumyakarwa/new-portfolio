@@ -2,7 +2,7 @@ class Boundary {
   constructor(x, y, w, h) {
     let options = {
       friction: 0.3,
-      restitution: 0.6,
+      restitution: 0,
       isStatic: true,
     };
     this.body = Bodies.rectangle(x, y, w, h, options);

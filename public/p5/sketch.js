@@ -1,26 +1,32 @@
 let Engine, Composite, World, Vertices, Body, Bodies, Runner;
 let font;
 var fontScale = 3;
-var fontSize = 23;
+var fontSize = 27;
 var letterSpacing = fontSize * 4;
 let grounds = [];
 let bounds;
 let engine, world, runner;
 let titleStartingX;
+var titleTxtWidth = 0;
 
 var fps = 30;
 
 var letterTemplates = {};
 var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ&";
 let txt = "DESIGNER AND CREATIVE DEVELOPER";
+// var letters = "abcdefghijklmnoqprstuvwxyz&";
+// let txt = "designer & creative developer";
+var instructionText = "scroll";
 var script = [];
 var startSketch = false;
+var showText = true;
 
 window.addEventListener("message", (event) => {
   // Make sure to check the origin of the message for security purposes
   if (event.origin === "http://localhost:3000") {
     if (event.data === "startSketch") {
       Runner.run(runner, engine);
+      showText = false;
     }
   }
 });
@@ -32,10 +38,10 @@ function preload() {
     (Runner = Matter.Runner),
     (Bodies = Matter.Bodies),
     (Body = Matter.Body);
-  // font = loadFont(
-  //   "./assets/fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf"
-  // );
   font = loadFont("./assets/fonts/News_Gothic/NewsGothicStd.otf");
+  // font = loadFont(
+  //   "./assets/fonts/Overused-Grotesk/variable/OverusedGrotesk-VF.ttf"
+  // );
 }
 
 function setup() {
@@ -45,8 +51,6 @@ function setup() {
   engine = Engine.create();
   world = engine.world;
   runner = Runner.create();
-
-  // create letter templates
   createTitle();
   createBoundary();
 }
@@ -54,7 +58,17 @@ function setup() {
 function textHelper() {
   textFont(font);
   textSize(fontSize * fontScale);
-  titleStartingX = width / 2 - textWidth(txt) / 2;
+  var splitTxt = txt.split("");
+
+  splitTxt.forEach((item) => {
+    console.log(item);
+    if (item === " ") {
+      titleTxtWidth += 25;
+    } else {
+      titleTxtWidth += textWidth(item);
+    }
+  });
+  titleStartingX = width - titleTxtWidth;
 }
 
 function createTitle() {
@@ -81,7 +95,7 @@ function createTitle() {
 function createBoundary() {
   grounds.push(new Boundary(0, height / 2, 10, height));
   grounds.push(new Boundary(width, height / 2, 10, height));
-  grounds.push(new Boundary(width / 2, height - 20, width, 5));
+  grounds.push(new Boundary(width / 2, height - 20, width, 10));
 
   Composite.add(world, grounds);
 }
@@ -102,11 +116,23 @@ function applyAirResistance() {
 }
 
 function draw() {
-  background("#f9f6ee");
+  background("#f6efe5");
   applyAirResistance();
   script.forEach((char) => {
     char.show();
   });
   grounds[2].show();
-  fill(0);
+
+  yoffset = sin(frameCount * 0.15) * 5;
+
+  if (showText) {
+    textSize(12);
+    text(
+      instructionText,
+      width / 2 - textWidth(instructionText) / 2,
+      height - 150 + yoffset
+    );
+  }
+  ellipse((width - titleTxtWidth) / 2, 100, 5, 5);
+  fill("#dd3422");
 }
