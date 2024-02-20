@@ -14,6 +14,16 @@ var letterTemplates = {};
 var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ&";
 let txt = "DESIGNER AND CREATIVE DEVELOPER";
 var script = [];
+var startSketch = false;
+
+window.addEventListener("message", (event) => {
+  // Make sure to check the origin of the message for security purposes
+  if (event.origin === "http://localhost:3000") {
+    if (event.data === "startSketch") {
+      Runner.run(runner, engine);
+    }
+  }
+});
 
 function preload() {
   (Engine = Matter.Engine),
@@ -71,19 +81,13 @@ function createTitle() {
 function createBoundary() {
   grounds.push(new Boundary(0, height / 2, 10, height));
   grounds.push(new Boundary(width, height / 2, 10, height));
-  grounds.push(new Boundary(width / 2, height - 20, width, 10));
+  grounds.push(new Boundary(width / 2, height - 20, width, 5));
 
   Composite.add(world, grounds);
 }
 
-function keyPressed() {
-  if (keyCode === 13) {
-    Runner.run(runner, engine);
-  }
-}
-
 function applyAirResistance() {
-  let airDensity = 0.0000005; // Adjust this value to control the effect of air resistance
+  let airDensity = 0.00000005; // Adjust this value to control the effect of air resistance
 
   Composite.allBodies(world).forEach((body) => {
     let velocity = body.velocity;
@@ -98,14 +102,11 @@ function applyAirResistance() {
 }
 
 function draw() {
-  background(255);
-  // text(txt, 100, 50);
+  background("#f9f6ee");
   applyAirResistance();
   script.forEach((char) => {
     char.show();
   });
-  grounds.forEach((g) => {
-    g.show();
-  });
+  grounds[2].show();
   fill(0);
 }

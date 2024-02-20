@@ -1,26 +1,28 @@
 import React, { useState, useEffect } from "react";
-import MySketch from "./components/p5/MySketch";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import "./App.css";
 
 function App() {
-  const [animationTrigger, setAnimationTrigger] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const screenHeight = window.innerHeight;
-      const threshold = screenHeight / 10; // 1/4th of the screen height
+      // Get the iframe element
+      const iframe = document.querySelector(".sketch");
 
-      // Trigger animation when user scrolls past 1/4th of the screen height
-      setAnimationTrigger(scrollPosition > threshold);
+      // Check if the iframe is in view or at the desired scroll position
+      if (window.scrollY > (1 / 10) * window.innerHeight) {
+        // Post a message to the iframe to trigger the sketch
+        iframe.contentWindow.postMessage(
+          "startSketch",
+          "http://localhost:3000"
+        );
+      }
     };
 
+    // Add the event listener
     window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    // Clean up the event listener
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -28,9 +30,7 @@ function App() {
       <Navbar />
       <iframe
         src="/p5/sketch.html"
-        width="800"
-        height="600"
-        style={{ border: "none" }}
+        className="sketch"
         title="p5 Sketch"
       ></iframe>
     </div>
