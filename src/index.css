@@ -1,5 +1,5 @@
 :root {
-  --body-font: "PlayfairDisplay";
+  --body-font: "Geist";
   --body-font-italics: "PlayfairDisplayItalics";
   --font-weight-light: 300;
   --font-weight-regular: 400;
@@ -9,16 +9,16 @@
   --font-weight-extrabold: 800;
   --font-weight-black: 800;
 
-  --body-font-size: 0.8rem;
-  --navbar-font-size: 1.3rem;
-  --footer-font-size: 1.3rem;
+  --body-font-size: 0.7rem;
+  --navbar-font-size: calc(var(--body-font-size) * var(--golden-ratio));
+  --footer-font-size: calc(var(--body-font-size) * var(--golden-ratio));
   --golden-ratio: 1.618;
 
   --margin: 2rem;
 
   /* --background-color: #f9f6ee; */
-  --background-color: #f6efe5;
-  --font-color: #dd3422;
+  --background-color: #f9f3ee;
+  --font-color: #262525;
 }
 
 body {
@@ -74,11 +74,6 @@ code {
 }
 
 @font-face {
-  font-family: "News_Gothics";
-  src: url("../public/News_Gothic/NewsGothicStd.otf");
-}
-
-@font-face {
-  font-family: "Overused-Grotesk";
-  src: url("../public/Overused-Grotesk/variable/OverusedGrotesk-VF.ttf");
+  font-family: "Geist";
+  src: url("../public/Geist/GeistVariableVF.ttf") format("truetype");
 }

@@ -1,7 +1,7 @@
 let Engine, Composite, World, Vertices, Body, Bodies, Runner;
 let font;
 var fontScale = 3;
-var fontSize = 27;
+var fontSize = 24;
 var letterSpacing = fontSize * 4;
 let grounds = [];
 let bounds;
@@ -12,17 +12,16 @@ var titleTxtWidth = 0;
 var fps = 30;
 
 var letterTemplates = {};
-var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ&";
-let txt = "DESIGNER AND CREATIVE DEVELOPER";
-// var letters = "abcdefghijklmnoqprstuvwxyz&";
-// let txt = "designer & creative developer";
+// var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ&";
+// let txt = "DESIGNER AND CREATIVE DEVELOPER";
+var letters = "abcdefghijklmnoqprstuvwxyz&";
+let txt = "designer and creative developer";
 var instructionText = "scroll";
 var script = [];
 var startSketch = false;
 var showText = true;
 
 window.addEventListener("message", (event) => {
-  // Make sure to check the origin of the message for security purposes
   if (event.origin === "http://localhost:3000") {
     if (event.data === "startSketch") {
       Runner.run(runner, engine);
@@ -38,10 +37,7 @@ function preload() {
     (Runner = Matter.Runner),
     (Bodies = Matter.Bodies),
     (Body = Matter.Body);
-  font = loadFont("./assets/fonts/News_Gothic/NewsGothicStd.otf");
-  // font = loadFont(
-  //   "./assets/fonts/Overused-Grotesk/variable/OverusedGrotesk-VF.ttf"
-  // );
+  font = loadFont("./assets/fonts/Geist/Geist-Medium.otf");
 }
 
 function setup() {
@@ -101,12 +97,12 @@ function createBoundary() {
 }
 
 function applyAirResistance() {
-  let airDensity = 0.00000005; // Adjust this value to control the effect of air resistance
+  let airDensity = 0.0000005; // Adjust this value to control the effect of air resistance
 
   Composite.allBodies(world).forEach((body) => {
     let velocity = body.velocity;
     let speed = Matter.Vector.magnitude(velocity);
-    let dragCoefficient = airDensity * speed * speed; // Calculate the drag force magnitude
+    let dragCoefficient = random(0, airDensity) * speed * speed; // Calculate the drag force magnitude
 
     // Calculate the drag force vector
     let dragForce = Matter.Vector.mult(velocity, -dragCoefficient);
@@ -116,7 +112,7 @@ function applyAirResistance() {
 }
 
 function draw() {
-  background("#f6efe5");
+  background("#F9F3EE");
   applyAirResistance();
   script.forEach((char) => {
     char.show();
@@ -124,6 +120,9 @@ function draw() {
   grounds[2].show();
 
   yoffset = sin(frameCount * 0.15) * 5;
+
+  // textSize(fontSize * fontScale);
+  // text(txt, width / 2 - textWidth(txt) / 2, 200);
 
   if (showText) {
     textSize(12);
@@ -133,6 +132,6 @@ function draw() {
       height - 150 + yoffset
     );
   }
-  ellipse((width - titleTxtWidth) / 2, 100, 5, 5);
-  fill("#dd3422");
+  // ellipse((width - titleTxtWidth) / 2, 100, 5, 5);
+  fill("#262525");
 }

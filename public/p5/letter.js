@@ -18,6 +18,7 @@ class Letter {
     rotate(angle);
     beginShape();
     translate(-25, 25);
+    noStroke();
     for (let i = 0; i < this.points.length; i++) {
       let p = this.points[i];
       vertex(p.x * fontScale, p.y * fontScale);
