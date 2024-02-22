@@ -1,5 +1,6 @@
 import React from "react";
 import "./Work.css";
+import fibonacciGif from "../../assets/fibonacci-copy.gif";
 
 const caseStudies = [
   {
@@ -7,7 +8,7 @@ const caseStudies = [
     title: "Case Study 1",
     subtitle: "An overview of case study 1",
     tags: ["Design", "UI/UX"],
-    imageUrl: "https://via.placeholder.com/150", // Placeholder image URL
+    imageUrl: fibonacciGif,
   },
   {
     id: 2,
@@ -31,13 +32,19 @@ const Work = () => {
             alt={`${study.title} cover`}
             className="case-study-image"
           />
-          <p>{study.title}</p>
-          <p>{study.subtitle}</p>
-          <ul className="tags">
-            {study.tags.map((tag, idx) => (
-              <li key={idx}>{tag}</li>
-            ))}
-          </ul>
+          <div className="content">
+            <div className="description">
+              {" "}
+              <div className="title">{study.title}</div>
+              <div className="subtitle">{study.subtitle}</div>
+            </div>
+
+            <ul className="tags">
+              {study.tags.map((tag, idx) => (
+                <li key={idx}>{tag}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       ))}
       {/* </div> */}
