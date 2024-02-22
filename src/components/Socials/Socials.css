@@ -1,29 +1,19 @@
-.navbar-container {
+.social-container {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   margin: var(--margin);
   font-size: var(--navbar-font-size);
   font-weight: var(--font-weight-regular);
   color: var(--font-color);
   display: flex;
   flex-direction: column;
-  gap: var(--margin);
+  text-align: right;
   width: 10%;
   /* border: 1px solid black; */
 }
 
-.navbar-left {
-  font-weight: var(--font-weight-semibold);
-}
-
-.navbar-right {
-  display: flex;
-  flex-direction: column;
-  /* gap: calc(var(--margin) / var(--golden-ratio)); */
-}
-
-.navbar-component {
+.social-component {
   cursor: pointer;
 }
 

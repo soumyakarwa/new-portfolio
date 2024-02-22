@@ -23,24 +23,24 @@ const caseStudies = [
 const Work = () => {
   return (
     <div className="work-container">
-      <div className="row">
-        {caseStudies.map((study) => (
-          <div key={study.id} className="case-study">
-            <img
-              src={study.imageUrl}
-              alt={`${study.title} cover`}
-              className="case-study-image"
-            />
-            <p>{study.title}</p>
-            <p>{study.subtitle}</p>
-            <ul className="tags">
-              {study.tags.map((tag, idx) => (
-                <li key={idx}>{tag}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
+      {/* <div className="row"> */}
+      {caseStudies.map((study) => (
+        <div key={study.id} className="case-study">
+          <img
+            src={study.imageUrl}
+            alt={`${study.title} cover`}
+            className="case-study-image"
+          />
+          <p>{study.title}</p>
+          <p>{study.subtitle}</p>
+          <ul className="tags">
+            {study.tags.map((tag, idx) => (
+              <li key={idx}>{tag}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+      {/* </div> */}
     </div>
   );
 };

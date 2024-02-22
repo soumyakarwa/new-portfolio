@@ -11,7 +11,7 @@ const Navbar = ({ onSectionChange }) => {
           className="navbar-component"
           onClick={() => onSectionChange("work")}
         >
-          Soumya Karwa
+          SOUMYA KARWA
         </div>
       </div>
       <div className="navbar-right">

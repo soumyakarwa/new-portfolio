@@ -5,6 +5,7 @@
   width: 100%;
   height: 100%;
   background-color: var(--background-color);
+  font-family: var(--body-font-mono);
   z-index: 10;
   display: flex;
   justify-content: center;

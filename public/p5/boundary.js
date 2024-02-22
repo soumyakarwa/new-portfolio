@@ -20,8 +20,9 @@ class Boundary {
     translate(pos.x, pos.y);
     rotate(angle);
     rectMode(CENTER);
-    fill(255);
-    rect(0, 0, this.w, this.h / 2);
+    fill(0);
+    noStroke();
+    rect(0, 0, this.w, 2 * this.h);
     pop();
   }
 }

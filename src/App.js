@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import LoadingAnimation from "./components/LoadingAnimation/LoadingAnimation.jsx";
-import Background from "./components/Background/Background.jsx";
 import Work from "./components/Work/Work.jsx";
+import Socials from "./components/Socials/Socials.jsx";
 import "./App.css";
 
 function App() {
@@ -24,7 +24,6 @@ function App() {
   }, [messageSent]);
   return (
     <div className="App">
-      {/* <Background /> */}
       <LoadingAnimation />
       <div className="intro">
         <Navbar />
@@ -33,7 +32,7 @@ function App() {
           className="sketch"
           title="p5 Sketch"
         ></iframe>
-        <Navbar />
+        <Socials />
       </div>
       <Work />
     </div>

@@ -1,16 +1,17 @@
 let Engine, Composite, World, Vertices, Body, Bodies, Runner, Events;
 let font;
 var fontScale = 3;
-var fontSize = 23;
+var fontSize = 35;
 var letterSpacing = fontSize * 4;
 let grounds = [];
 let bounds;
 let engine, world, runner;
-let titleStartingX;
-let titleStartingY = 80;
+let titleStartingX = 0;
+let wordX = [];
+let titleStartingY;
 var titleTxtWidth = 0;
+var splitTxt;
 var collidedLetters = new Set();
-var generationCount = 0;
 
 var fps = 30;
 
@@ -55,40 +56,36 @@ function setup() {
   runner = Runner.create();
   createTitle();
   createBoundary();
-  world.gravity.y = 1.75;
 }
 
 function textHelper() {
   textFont(font);
   textSize(fontSize * fontScale);
-  var splitTxt = txt.split("");
-
-  splitTxt.forEach((item) => {
-    if (item === " ") {
-      titleTxtWidth += 25;
-    } else {
-      titleTxtWidth += textWidth(item);
-    }
+  splitTxt = txt.split(" ");
+  console.log(splitTxt);
+  splitTxt.forEach((word, i) => {
+    console.log(word[0]);
+    wordX[i] = width / 2 - textWidth(word) / 2 + textWidth(word[0]) / 3;
   });
-  titleStartingX = 50;
+  titleStartingX = wordX[0];
+  titleStartingY = 1.75 * fontSize;
 }
 
 function createTitle() {
-  if (generationCount === 0) {
-    [...letters].forEach((letter) => {
-      letterTemplates[letter] = new Template(
-        font.textToPoints(letter, 0, 0, fontSize, {
-          sampleFactor: 20,
-          simplifyThreshold: 0,
-        })
-      );
-    });
-  }
+  [...letters].forEach((letter) => {
+    letterTemplates[letter] = new Template(
+      font.textToPoints(letter, 0, 0, fontSize, {
+        sampleFactor: 20,
+        simplifyThreshold: 0,
+      })
+    );
+  });
+  var space = 0;
   [...txt].forEach((char) => {
-    console.log(generationCount, char, titleStartingX);
     if (char === " ") {
-      titleStartingX = 50;
-      titleStartingY += fontScale * fontSize + 10;
+      space++;
+      titleStartingX = wordX[space];
+      titleStartingY += fontScale * fontSize;
       return;
     }
     script.push(
@@ -103,7 +100,6 @@ function createTitle() {
     totalChars++;
     titleStartingX += textWidth(char);
   });
-  generationCount++;
 }
 
 function createBoundary() {
@@ -149,13 +145,7 @@ function checkCollision() {
         pair.bodyA.label === "barrier" ? pair.bodyA : pair.bodyB;
 
       collidedLetters.add(letterID);
-
-      // Check if all letters have collided
-      if (collidedLetters.size === totalChars - 1 && generationCount === 1) {
-        // Stop the runner
-        // titleStartingX = (width - titleTxtWidth) / 2 + textWidth(txt[0]) / 2;
-        // createTitle();
-        // grounds.push(new Boundary(width / 2, 95, width, 10, "temp"));
+      if (collidedLetters.size === totalChars - 1) {
         barrierBody.restitution = 0;
         barrierBody.friction = 1;
       }
@@ -166,14 +156,19 @@ function checkCollision() {
 function adjustBodyProperties(body) {
   body.restitution = 0.1;
   body.friction = 0.9;
+  Body.setVelocity(body, { x: 0, y: 0 });
+  Body.setAngularVelocity(body, 0);
 }
 
 function draw() {
-  background(0);
+  background(255);
   applyAirResistance();
   script.forEach((char) => {
     char.show();
   });
+  // grounds.forEach((g) => {
+  //   g.show();
+  // });
   grounds[2].show();
   checkCollision();
   yoffset = sin(frameCount * 0.15) * 5;
@@ -189,6 +184,10 @@ function draw() {
       height - 150 + yoffset
     );
   }
-  ellipse((width - titleTxtWidth) / 2, 100, 5, 5);
-  fill(255);
+  textSize(fontScale * fontSize);
+  // ellipse(width / 2 - textWidth(splitTxt[0]) / 2, 100, 5, 5);
+  // ellipse(width / 2 - textWidth(splitTxt[1]) / 2, 200, 5, 5);
+  // ellipse(width / 2 - textWidth(splitTxt[2]) / 2, 300, 5, 5);
+  // ellipse(width / 2 - textWidth(splitTxt[3]) / 2, 400, 5, 5);
+  fill(0);
 }
