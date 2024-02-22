@@ -1,9 +1,10 @@
 class Boundary {
-  constructor(x, y, w, h) {
+  constructor(x, y, w, h, label) {
     let options = {
       friction: 0.3,
       restitution: 0,
       isStatic: true,
+      label: label,
     };
     this.body = Bodies.rectangle(x, y, w, h, options);
     this.w = w;
@@ -19,7 +20,7 @@ class Boundary {
     translate(pos.x, pos.y);
     rotate(angle);
     rectMode(CENTER);
-    fill(0);
+    fill(255);
     rect(0, 0, this.w, this.h / 2);
     pop();
   }

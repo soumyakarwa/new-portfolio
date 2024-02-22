@@ -1,5 +1,5 @@
 :root {
-  --body-font: "Geist";
+  --body-font: "Geist-Mono";
   --body-font-italics: "PlayfairDisplayItalics";
   --font-weight-light: 300;
   --font-weight-regular: 400;
@@ -17,8 +17,8 @@
   --margin: 2rem;
 
   /* --background-color: #f9f6ee; */
-  --background-color: #f9f3ee;
-  --font-color: #262525;
+  --background-color: black;
+  --font-color: white;
 }
 
 body {
@@ -32,10 +32,10 @@ body {
 }
 
 .sketch {
-  width: 100%;
+  width: 80%;
   height: 100vh;
-  border: none;
-  margin-bottom: var(--margin);
+  /* border: 1px solid white; */
+  /* margin-top: var(--margin); */
 }
 
 code {
@@ -77,4 +77,9 @@ code {
 @font-face {
   font-family: "Geist";
   src: url("../public/Geist/GeistVariableVF.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Geist-Mono";
+  src: url("../public/Geist.Mono/GeistMonoVariableVF.ttf") format("truetype");
 }

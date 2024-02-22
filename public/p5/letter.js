@@ -1,8 +1,11 @@
 class Letter {
-  constructor(world, x, y, template) {
+  constructor(world, x, y, template, i) {
     this.points = template.path;
     this.vertices = JSON.parse(JSON.stringify(template.vertices));
-    this.body = Bodies.fromVertices(x, y, this.vertices);
+    this.body = Bodies.fromVertices(x, y, this.vertices, {
+      label: "letter",
+      id: i,
+    });
 
     if (this.body) {
       Composite.add(world, this.body);

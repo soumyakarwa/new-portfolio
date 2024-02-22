@@ -1,16 +1,18 @@
 .navbar-container {
   font-size: var(--navbar-font-size);
-  color: var(--font-color);
   font-weight: var(--font-weight-regular);
+  color: var(--font-color);
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: var(--margin);
+  flex-direction: column;
+  gap: var(--margin);
+  width: 10%;
+  border: 1px solid white;
 }
 
 .navbar-right {
   display: flex;
-  gap: calc(var(--margin) / var(--golden-ratio));
+  flex-direction: column;
+  /* gap: calc(var(--margin) / var(--golden-ratio)); */
 }
 
 .navbar-component {

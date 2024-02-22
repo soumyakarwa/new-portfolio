@@ -5,7 +5,7 @@ import "./Navbar.css";
 const Navbar = ({ onSectionChange }) => {
   return (
     // <div className="nav">
-    <nav className="navbar-container">
+    <div className="navbar-container">
       <div className="navbar-left">
         <div
           className="navbar-component"
@@ -34,7 +34,7 @@ const Navbar = ({ onSectionChange }) => {
           About
         </div>
       </div>
-    </nav>
+    </div>
     // </div>
   );
 };

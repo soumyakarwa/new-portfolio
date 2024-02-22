@@ -1,21 +1,25 @@
-let Engine, Composite, World, Vertices, Body, Bodies, Runner;
+let Engine, Composite, World, Vertices, Body, Bodies, Runner, Events;
 let font;
 var fontScale = 3;
-var fontSize = 24;
+var fontSize = 23;
 var letterSpacing = fontSize * 4;
 let grounds = [];
 let bounds;
 let engine, world, runner;
 let titleStartingX;
+let titleStartingY = 80;
 var titleTxtWidth = 0;
+var collidedLetters = new Set();
+var generationCount = 0;
 
 var fps = 30;
 
 var letterTemplates = {};
-// var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ&";
-// let txt = "DESIGNER AND CREATIVE DEVELOPER";
-var letters = "abcdefghijklmnoqprstuvwxyz&";
-let txt = "designer and creative developer";
+var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ&";
+let txt = "DESIGNER AND CREATIVE DEVELOPER";
+// var letters = "abcdefghijklmnoqprstuvwxyz&";
+// let txt = "designer & creative developer";
+var totalChars = 1;
 var instructionText = "scroll";
 var script = [];
 var startSketch = false;
@@ -36,8 +40,9 @@ function preload() {
     (Vertices = Matter.Vertices),
     (Runner = Matter.Runner),
     (Bodies = Matter.Bodies),
-    (Body = Matter.Body);
-  font = loadFont("./assets/fonts/Geist/Geist-Medium.otf");
+    (Body = Matter.Body),
+    (Events = Matter.Events);
+  font = loadFont("./assets/fonts/Geist/Geist-Regular.otf");
 }
 
 function setup() {
@@ -50,7 +55,7 @@ function setup() {
   runner = Runner.create();
   createTitle();
   createBoundary();
-  world.gravity.y = 3;
+  world.gravity.y = 1.75;
 }
 
 function textHelper() {
@@ -59,47 +64,58 @@ function textHelper() {
   var splitTxt = txt.split("");
 
   splitTxt.forEach((item) => {
-    console.log(item);
     if (item === " ") {
       titleTxtWidth += 25;
     } else {
       titleTxtWidth += textWidth(item);
     }
   });
-  titleStartingX = (width - titleTxtWidth) / 2;
+  titleStartingX = 50;
 }
 
 function createTitle() {
-  [...letters].forEach((letter) => {
-    letterTemplates[letter] = new Template(
-      font.textToPoints(letter, 0, 0, fontSize, {
-        sampleFactor: 20,
-        simplifyThreshold: 0,
-      })
-    );
-  });
+  if (generationCount === 0) {
+    [...letters].forEach((letter) => {
+      letterTemplates[letter] = new Template(
+        font.textToPoints(letter, 0, 0, fontSize, {
+          sampleFactor: 20,
+          simplifyThreshold: 0,
+        })
+      );
+    });
+  }
   [...txt].forEach((char) => {
+    console.log(generationCount, char, titleStartingX);
     if (char === " ") {
-      titleStartingX += 25;
+      titleStartingX = 50;
+      titleStartingY += fontScale * fontSize + 10;
       return;
     }
     script.push(
-      new Letter(world, titleStartingX, 60, letterTemplates[`${char}`])
+      new Letter(
+        world,
+        titleStartingX,
+        titleStartingY,
+        letterTemplates[`${char}`],
+        totalChars
+      )
     );
+    totalChars++;
     titleStartingX += textWidth(char);
   });
+  generationCount++;
 }
 
 function createBoundary() {
-  grounds.push(new Boundary(0, height / 2, 10, height));
-  grounds.push(new Boundary(width, height / 2, 10, height));
-  grounds.push(new Boundary(width / 2, height - 20, width, 10));
+  grounds.push(new Boundary(0, height / 2, 10, height, "barrier"));
+  grounds.push(new Boundary(width, height / 2, 10, height, "barrier"));
+  grounds.push(new Boundary(width / 2, height, width, 10, "barrier"));
 
   Composite.add(world, grounds);
 }
 
 function applyAirResistance() {
-  let airDensity = 0.00000000005; // Adjust this value to control the effect of air resistance
+  let airDensity = 0.000000005; // Adjust this value to control the effect of air resistance
 
   Composite.allBodies(world).forEach((body) => {
     let velocity = body.velocity;
@@ -113,14 +129,53 @@ function applyAirResistance() {
   });
 }
 
+function checkCollision() {
+  Events.on(engine, "collisionStart", function (event) {
+    var pairs = event.pairs;
+
+    pairs.forEach(function (pair) {
+      var bodyA = pair.bodyA;
+      var bodyB = pair.bodyB;
+
+      if (bodyA.label === "barrier" && bodyB.label === "letter") {
+        adjustBodyProperties(bodyB);
+      } else if (bodyB.label === "barrier" && bodyA.label === "letter") {
+        adjustBodyProperties(bodyA);
+      }
+
+      var letterID =
+        pair.bodyA.label === "letter" ? pair.bodyA.id : pair.bodyB.id;
+      var barrierBody =
+        pair.bodyA.label === "barrier" ? pair.bodyA : pair.bodyB;
+
+      collidedLetters.add(letterID);
+
+      // Check if all letters have collided
+      if (collidedLetters.size === totalChars - 1 && generationCount === 1) {
+        // Stop the runner
+        // titleStartingX = (width - titleTxtWidth) / 2 + textWidth(txt[0]) / 2;
+        // createTitle();
+        // grounds.push(new Boundary(width / 2, 95, width, 10, "temp"));
+        barrierBody.restitution = 0;
+        barrierBody.friction = 1;
+      }
+    });
+  });
+}
+
+function adjustBodyProperties(body) {
+  body.restitution = 0.1;
+  body.friction = 0.9;
+}
+
 function draw() {
-  background("#F9F3EE");
+  background(0);
   applyAirResistance();
   script.forEach((char) => {
     char.show();
   });
   grounds[2].show();
-
+  checkCollision();
   yoffset = sin(frameCount * 0.15) * 5;
 
   // textSize(fontSize * fontScale);
@@ -134,6 +189,6 @@ function draw() {
       height - 150 + yoffset
     );
   }
-  // ellipse((width - titleTxtWidth) / 2, 100, 5, 5);
-  fill("#262525");
+  ellipse((width - titleTxtWidth) / 2, 100, 5, 5);
+  fill(255);
 }

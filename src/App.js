@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import LoadingAnimation from "./components/LoadingAnimation/LoadingAnimation.jsx";
+import Background from "./components/Background/Background.jsx";
 import Work from "./components/Work/Work.jsx";
 import "./App.css";
 
@@ -23,13 +24,17 @@ function App() {
   }, [messageSent]);
   return (
     <div className="App">
+      {/* <Background /> */}
       <LoadingAnimation />
-      <Navbar />
-      <iframe
-        src="/p5/sketch.html"
-        className="sketch"
-        title="p5 Sketch"
-      ></iframe>
+      <div className="intro">
+        <Navbar />
+        <iframe
+          src="/p5/sketch.html"
+          className="sketch"
+          title="p5 Sketch"
+        ></iframe>
+        <Navbar />
+      </div>
       <Work />
     </div>
   );
