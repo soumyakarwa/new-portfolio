@@ -20,7 +20,7 @@ class Boundary {
     rotate(angle);
     rectMode(CENTER);
     fill(0);
-    rect(-this.h / 2, 0, this.w, this.h);
+    rect(0, 0, this.w, this.h / 2);
     pop();
   }
 }

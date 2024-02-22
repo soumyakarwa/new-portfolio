@@ -45,10 +45,12 @@ function setup() {
   frameRate(fps);
   textHelper();
   engine = Engine.create();
+  engine.positionIterations = 10;
   world = engine.world;
   runner = Runner.create();
   createTitle();
   createBoundary();
+  world.gravity.y = 3;
 }
 
 function textHelper() {
@@ -64,7 +66,7 @@ function textHelper() {
       titleTxtWidth += textWidth(item);
     }
   });
-  titleStartingX = width - titleTxtWidth;
+  titleStartingX = (width - titleTxtWidth) / 2;
 }
 
 function createTitle() {
@@ -97,7 +99,7 @@ function createBoundary() {
 }
 
 function applyAirResistance() {
-  let airDensity = 0.0000005; // Adjust this value to control the effect of air resistance
+  let airDensity = 0.00000000005; // Adjust this value to control the effect of air resistance
 
   Composite.allBodies(world).forEach((body) => {
     let velocity = body.velocity;

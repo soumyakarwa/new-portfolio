@@ -1,0 +1,36 @@
+.work-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: var(--margin);
+}
+
+.case-study {
+  flex-basis: calc(50% - 10px); /* Adjust the width of each case study */
+  text-align: center;
+}
+
+.case-study-image {
+  width: 100%;
+  height: 50%;
+  margin-bottom: calc(var(--margin) / 2);
+}
+
+.tags {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.tags li {
+  display: inline-block;
+  background-color: #e0e0e0;
+  margin-right: 5px;
+  padding: 5px;
+  border-radius: 5px;
+}

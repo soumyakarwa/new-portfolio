@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import LoadingAnimation from "./components/LoadingAnimation/LoadingAnimation.jsx";
+import Work from "./components/Work/Work.jsx";
 import "./App.css";
 
 function App() {
@@ -8,13 +9,13 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (!messageSent && window.scrollY > (1 / 12) * window.innerHeight) {
+      if (!messageSent && window.scrollY > (1 / 100) * window.innerHeight) {
         const iframe = document.querySelector(".sketch");
         iframe.contentWindow.postMessage(
           "startSketch",
           "http://localhost:3000"
         );
-        setMessageSent(true); // Update the flag
+        setMessageSent(true);
       }
     };
     window.addEventListener("scroll", handleScroll);
@@ -22,13 +23,14 @@ function App() {
   }, [messageSent]);
   return (
     <div className="App">
-      {/* <LoadingAnimation /> */}
+      <LoadingAnimation />
       <Navbar />
       <iframe
         src="/p5/sketch.html"
         className="sketch"
         title="p5 Sketch"
       ></iframe>
+      <Work />
     </div>
   );
 }
