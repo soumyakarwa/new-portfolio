@@ -43,6 +43,7 @@
   width: 100%;
   height: 10%;
   margin-bottom: calc(var(--margin) / var(--golden-ratio));
+  border: 1px solid black;
 }
 
 .tags {

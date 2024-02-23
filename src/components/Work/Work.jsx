@@ -1,21 +1,38 @@
 import React from "react";
 import "./Work.css";
 import fibonacciGif from "../../assets/fibonacci-copy.gif";
+import lightAndTimeGif from "../../assets/lightAndTime.gif";
+import typographicFormGif from "../../assets/typographicForm.gif";
+import nuclearDawnCover from "../../assets/nuclearDawn/mockup-spread2.png";
 
 const caseStudies = [
   {
     id: 1,
-    title: "Case Study 1",
+    title: "Fibonacci",
     subtitle: "An overview of case study 1",
-    tags: ["Design", "UI/UX"],
+    tags: ["Poster Design", "Digital Media", "Creative Coding"],
     imageUrl: fibonacciGif,
   },
   {
     id: 2,
-    title: "Case Study 2",
+    title: "Typographic Form",
     subtitle: "An overview of case study 2",
-    tags: ["Development", "React"],
-    imageUrl: "https://via.placeholder.com/150", // Placeholder image URL
+    tags: ["Creative Coding"],
+    imageUrl: typographicFormGif,
+  },
+  {
+    id: 3,
+    title: "Nuclear Dawn",
+    subtitle: "An overview of case study 2",
+    tags: ["Editorial Design"],
+    imageUrl: nuclearDawnCover,
+  },
+  {
+    id: 4,
+    title: "Light & Time",
+    subtitle: "An overview of case study 2",
+    tags: ["Creative Coding", "Digital Media"],
+    imageUrl: lightAndTimeGif,
   },
   // Add more case studies as needed
 ];

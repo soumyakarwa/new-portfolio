@@ -13,9 +13,7 @@
   --body-font-size: 0.7rem;
   --navbar-font-size: calc(var(--body-font-size) * var(--golden-ratio));
   --footer-font-size: calc(var(--body-font-size) * var(--golden-ratio));
-  --title-font-size: calc(
-    var(--navbar-font-size) * var(--golden-ratio) * var(--golden-ratio)
-  );
+  --title-font-size: calc(var(--navbar-font-size) * var(--golden-ratio));
   --golden-ratio: 1.618;
 
   --margin: 2rem;
