@@ -40,7 +40,7 @@ body {
   height: 100vh;
   border: none;
   /* border: 1px solid white; */
-  /* margin-top: var(--margin); */
+  margin-top: var(--margin);
 }
 
 code {

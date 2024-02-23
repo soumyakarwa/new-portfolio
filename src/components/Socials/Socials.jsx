@@ -10,25 +10,25 @@ const Socials = ({ onSectionChange }) => {
         className="social-component"
         // onClick={() => onSectionChange("inst")}
       >
-        Instagram
+        INSTAGRAM
       </div>
       <div
         className="social-component"
         // onClick={() => onSectionChange("play")}
       >
-        GitHub
+        GITHUB
       </div>
       <div
         className="social-component"
         // onClick={() => onSectionChange("about")}
       >
-        Email
+        EMAIL
       </div>
       <div
         className="social-component"
         // onClick={() => onSectionChange("about")}
       >
-        LinkedIn
+        LINKEDIN
       </div>
     </div>
     // </div>

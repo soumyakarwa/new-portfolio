@@ -19,13 +19,13 @@ const Navbar = ({ onSectionChange }) => {
           className="navbar-component"
           onClick={() => onSectionChange("work")}
         >
-          Work
+          WORK
         </div>
         <div
           className="navbar-component"
           onClick={() => onSectionChange("about")}
         >
-          About
+          ABOUT
         </div>
       </div>
     </div>

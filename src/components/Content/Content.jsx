@@ -31,19 +31,19 @@ const Content = ({ study }) => {
         /> */}
         <div className="content-details">
           <div className="content-description">
+            <ul className="content-tags">
+              {study.tags.map((tag, idx) => (
+                <li
+                  key={idx}
+                  style={{ backgroundColor: getBackgroundColor(tag) }}
+                >
+                  {tag}
+                </li>
+              ))}
+            </ul>
             <div className="content-title">{study.title}</div>
             <div className="content-subtitle">{study.subtitle}</div>
           </div>
-          <ul className="content-tags">
-            {study.tags.map((tag, idx) => (
-              <li
-                key={idx}
-                style={{ backgroundColor: getBackgroundColor(tag) }}
-              >
-                {tag}
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
     </div>

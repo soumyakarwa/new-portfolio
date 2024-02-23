@@ -3,7 +3,7 @@
   top: 0;
   right: 0;
   margin: var(--margin);
-  font-size: var(--navbar-font-size);
+  font-size: var(--body-font-size);
   font-weight: var(--font-weight-regular);
   color: var(--font-color);
   display: flex;

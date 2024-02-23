@@ -31,7 +31,8 @@
 }
 
 .content-title {
-  font-size: var(--title-font-size);
+  font-size: var(--navbar-font-size);
+  font-weight: var(--font-weight-semibold);
 }
 
 .content-subtitle {
@@ -49,7 +50,7 @@
   height: fit-content;
   gap: calc(var(--margin) / var(--golden-ratio));
   text-align: center;
-  margin: 0;
+  margin-bottom: calc(var(--margin) / var(--golden-ratio));
   color: var(--background-color);
 }
 
@@ -63,4 +64,5 @@
   display: flex;
   flex-direction: column;
   max-width: 50%;
+  /* gap: calc(var(--margin) / var(--golden-ratio)); */
 }

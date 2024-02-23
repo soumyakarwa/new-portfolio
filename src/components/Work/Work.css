@@ -15,7 +15,8 @@
 }
 
 .title {
-  font-size: var(--title-font-size);
+  font-size: var(--navbar-font-size);
+  font-weight: var(--font-weight-semibold);
 }
 
 .subtitle {
