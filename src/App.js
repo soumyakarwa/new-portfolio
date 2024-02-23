@@ -5,6 +5,7 @@ import Work from "./components/Work/Work.jsx";
 import Socials from "./components/Socials/Socials.jsx";
 import Content from "./components/Content/Content.jsx";
 import About from "./components/About/About.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 import "./App.css";
 
 function App() {
@@ -105,6 +106,7 @@ function App() {
         <Socials />
       </div>
       {contentToRender()}
+      <Footer />
     </div>
   );
 }

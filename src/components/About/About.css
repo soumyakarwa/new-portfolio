@@ -19,7 +19,7 @@
 
 .about-description {
   margin-bottom: var(--margin);
-  max-width: 30rem;
+  max-width: 50%;
   text-align: left;
   align-items: flex-start;
 }

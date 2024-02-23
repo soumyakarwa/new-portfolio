@@ -1,0 +1,7 @@
+.footer-container {
+  padding: var(--margin);
+  /* padding-bottom: calc(var(--margin) * var(--golden-ratio)); */
+  text-align: center;
+  background-color: var(--font-color);
+  color: var(--background-color);
+}

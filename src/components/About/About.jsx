@@ -26,16 +26,16 @@ const About = () => {
         <div className="image-grid">
           <figure className="landscape">
             <img src={landscapeImg1} alt="Landscape 1" />
-            <figcaption>There's no place like home. Mumbai, India</figcaption>
+            <figcaption>There's no place like home: Mumbai, India.</figcaption>
           </figure>
           <figure className="portrait">
             <img src={portraitImg1} alt="Portrait 1" />
-            <figcaption>My Alma Mater. Brown University</figcaption>
+            <figcaption>My Alma Mater: Brown University.</figcaption>
           </figure>
           <figure className="portrait">
             <img src={portraitImg2} alt="Portrait 2" />
             <figcaption>
-              I've been singing for as long as I can remember
+              I've been singing for as long as I can remember!
             </figcaption>
           </figure>
           <figure className="portrait">

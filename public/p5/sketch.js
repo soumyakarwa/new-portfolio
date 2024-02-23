@@ -1,7 +1,7 @@
 let Engine, Composite, World, Vertices, Body, Bodies, Runner, Events;
 let font;
 var fontScale = 3;
-var fontSize = 30;
+var fontSize = 27;
 var letterSpacing = fontSize * 4;
 let grounds = [];
 let bounds;
@@ -17,7 +17,7 @@ var fps = 30;
 
 var letterTemplates = {};
 var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ&,";
-let txt = "DESIGNER, CREATIVE DEVELOPER AND VISUAL STORYTELLER";
+let txt = ["DESIGNER", "CREATIVE TECHNOLOGIST", "VISUAL STORYTELLER"];
 // var letters = "abcdefghijklmnoqprstuvwxyz&";
 // let txt = "designer & creative developer";
 var totalChars = 1;
@@ -56,20 +56,20 @@ function setup() {
   runner = Runner.create();
   createTitle();
   createBoundary();
-  world.gravity.y = 1.75;
+  world.gravity.y = 2;
 }
 
 function textHelper() {
   textFont(font);
   textSize(fontSize * fontScale);
-  splitTxt = txt.split(" ");
+  // splitTxt = txt.split(" ");
   console.log(splitTxt);
-  splitTxt.forEach((word, i) => {
-    console.log(word[0]);
+  txt.forEach((word, i) => {
     wordX[i] = width / 2 - textWidth(word) / 2 + textWidth(word[0]) / 3;
+    console.log(word, wordX[i]);
   });
   titleStartingX = wordX[0];
-  titleStartingY = 1.75 * fontSize;
+  titleStartingY = 2 * fontSize;
 }
 
 function createTitle() {
@@ -82,24 +82,27 @@ function createTitle() {
     );
   });
   var space = 0;
-  [...txt].forEach((char) => {
-    if (char === " ") {
-      space++;
-      titleStartingX = wordX[space];
-      titleStartingY += fontScale * fontSize;
-      return;
-    }
-    script.push(
-      new Letter(
-        world,
-        titleStartingX,
-        titleStartingY,
-        letterTemplates[`${char}`],
-        totalChars
-      )
-    );
-    totalChars++;
-    titleStartingX += textWidth(char);
+  txt.forEach((word) => {
+    [...word].forEach((char) => {
+      if (char === " ") {
+        titleStartingX += 25;
+        return;
+      }
+      script.push(
+        new Letter(
+          world,
+          titleStartingX,
+          titleStartingY,
+          letterTemplates[`${char}`],
+          totalChars
+        )
+      );
+      totalChars++;
+      titleStartingX += textWidth(char);
+    });
+    space++;
+    titleStartingX = wordX[space];
+    titleStartingY += fontScale * fontSize;
   });
 }
 

@@ -10,7 +10,7 @@
   --font-weight-extrabold: 800;
   --font-weight-black: 800;
 
-  --body-font-size: 0.8em;
+  --body-font-size: 0.8rem;
   --navbar-font-size: calc(var(--body-font-size) * var(--golden-ratio));
   --footer-font-size: calc(var(--body-font-size) * var(--golden-ratio));
   --title-font-size: calc(var(--navbar-font-size) * var(--golden-ratio));
@@ -19,6 +19,10 @@
 
   --background-color: white;
   --font-color: black;
+
+  --tag-color-2: #478723;
+  --tag-color-3: #234787;
+  --tag-color-1: #872347;
 }
 
 body {

@@ -1,11 +1,12 @@
 .App {
-  margin: var(--margin);
+  /* margin: var(--margin); */
   height: 100%;
 }
 
 .intro {
   display: flex;
   flex-direction: row;
+  margin: var(--margin);
   gap: var(--margin);
   /* margin-bottom: calc(var(--margin) * var(--golden-ratio)); */
 }

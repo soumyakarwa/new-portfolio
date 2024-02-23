@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  margin: var(--margin);
   margin-bottom: calc(
     var(--margin) * var(--golden-ratio)
   ); /* Consistent spacing */
@@ -28,7 +28,6 @@
 .content-image {
   width: 100%;
   margin-bottom: calc(var(--margin) / var(--golden-ratio));
-  border: 1px solid black;
 }
 
 .content-title {
@@ -46,15 +45,22 @@
   font-size: var(--tag-font-size);
   list-style-type: none;
   padding: 0;
+  display: flex;
+  height: fit-content;
+  gap: calc(var(--margin) / var(--golden-ratio));
   text-align: center;
   margin: 0;
+  color: var(--background-color);
 }
 
 .content-tags li {
   display: inline-block;
   font-size: var(--tag-font-size);
-  background-color: #e0e0e0;
-  margin-right: 5px;
   padding: 5px;
-  border-radius: 5px;
+}
+
+.content-description {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
 }
