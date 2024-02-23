@@ -10,14 +10,14 @@ const caseStudies = [
     id: 1,
     title: "Fibonacci",
     subtitle: "An overview of case study 1",
-    tags: ["Poster Design", "Digital Media", "Creative Coding"],
+    tags: ["Digital Media", "Poster Design"],
     imageUrl: fibonacciGif,
   },
   {
     id: 2,
     title: "Typographic Form",
     subtitle: "An overview of case study 2",
-    tags: ["Creative Coding"],
+    tags: ["Digital Media"],
     imageUrl: typographicFormGif,
   },
   {
@@ -31,31 +31,31 @@ const caseStudies = [
     id: 4,
     title: "Light & Time",
     subtitle: "An overview of case study 2",
-    tags: ["Creative Coding", "Digital Media"],
+    tags: ["Digital Media"],
     imageUrl: lightAndTimeGif,
   },
   // Add more case studies as needed
 ];
 
-// The Work component
-const Work = () => {
+const Work = ({ onStudyClick }) => {
   return (
     <div className="work-container">
-      {/* <div className="row"> */}
       {caseStudies.map((study) => (
-        <div key={study.id} className="case-study">
+        <div
+          key={study.id}
+          className="case-study"
+          onClick={() => onStudyClick(study)}
+        >
           <img
             src={study.imageUrl}
             alt={`${study.title} cover`}
             className="case-study-image"
           />
-          <div className="content">
+          <div className="work">
             <div className="description">
-              {" "}
               <div className="title">{study.title}</div>
               <div className="subtitle">{study.subtitle}</div>
             </div>
-
             <ul className="tags">
               {study.tags.map((tag, idx) => (
                 <li key={idx}>{tag}</li>
@@ -64,7 +64,6 @@ const Work = () => {
           </div>
         </div>
       ))}
-      {/* </div> */}
     </div>
   );
 };

@@ -1,7 +1,7 @@
 let Engine, Composite, World, Vertices, Body, Bodies, Runner, Events;
 let font;
 var fontScale = 3;
-var fontSize = 35;
+var fontSize = 30;
 var letterSpacing = fontSize * 4;
 let grounds = [];
 let bounds;
@@ -16,8 +16,8 @@ var collidedLetters = new Set();
 var fps = 30;
 
 var letterTemplates = {};
-var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ&";
-let txt = "DESIGNER AND CREATIVE DEVELOPER";
+var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ&,";
+let txt = "DESIGNER, CREATIVE DEVELOPER AND VISUAL STORYTELLER";
 // var letters = "abcdefghijklmnoqprstuvwxyz&";
 // let txt = "designer & creative developer";
 var totalChars = 1;
@@ -56,6 +56,7 @@ function setup() {
   runner = Runner.create();
   createTitle();
   createBoundary();
+  world.gravity.y = 1.75;
 }
 
 function textHelper() {

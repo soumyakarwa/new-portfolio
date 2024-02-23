@@ -1,7 +1,7 @@
 :root {
   --body-font: "Geist";
   --body-font-mono: "Geist-Mono";
-  /* --body-font-italics: "PlayfairDisplayItalics" */
+  --golden-ratio: 1.618;
   --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
@@ -10,15 +10,13 @@
   --font-weight-extrabold: 800;
   --font-weight-black: 800;
 
-  --body-font-size: 0.7rem;
+  --body-font-size: 0.8em;
   --navbar-font-size: calc(var(--body-font-size) * var(--golden-ratio));
   --footer-font-size: calc(var(--body-font-size) * var(--golden-ratio));
   --title-font-size: calc(var(--navbar-font-size) * var(--golden-ratio));
-  --golden-ratio: 1.618;
-
+  --tag-font-size: var(--body-font-size);
   --margin: 2rem;
 
-  /* --background-color: #f9f6ee; */
   --background-color: white;
   --font-color: black;
 }

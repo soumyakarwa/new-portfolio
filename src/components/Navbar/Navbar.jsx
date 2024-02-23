@@ -9,7 +9,7 @@ const Navbar = ({ onSectionChange }) => {
       <div className="navbar-left">
         <div
           className="navbar-component"
-          onClick={() => onSectionChange("work")}
+          onClick={() => onSectionChange("home")}
         >
           SOUMYA KARWA
         </div>
@@ -21,12 +21,6 @@ const Navbar = ({ onSectionChange }) => {
         >
           Work
         </div>
-        {/* <div
-          className="navbar-component"
-          onClick={() => onSectionChange("play")}
-        >
-          play
-        </div> */}
         <div
           className="navbar-component"
           onClick={() => onSectionChange("about")}
