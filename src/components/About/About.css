@@ -8,6 +8,7 @@
   flex-direction: column;
   font-family: var(--body-font-mono);
   font-size: var(--body-font-size);
+  margin: var(--margin);
 }
 
 .about-content {

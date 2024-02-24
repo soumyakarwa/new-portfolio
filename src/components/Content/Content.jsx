@@ -43,6 +43,16 @@ const Content = ({ study }) => {
             </ul>
             <div className="content-title">{study.title}</div>
             <div className="content-subtitle">{study.subtitle}</div>
+            <div>{study.role}</div>
+            <div>{study.overview}</div>
+            <div>{study.introductionTitle}</div>
+            <div>{study.introduction}</div>
+            <div>{study.paragraph1Title}</div>
+            <div>{study.paragraph1}</div>
+            <div>{study.paragraph2Title}</div>
+            <div>{study.paragraph2}</div>
+            <div>{study.designHeading}</div>
+            <div>{study.reflectionHeading}</div>
           </div>
         </div>
       </div>

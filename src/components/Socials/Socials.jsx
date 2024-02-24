@@ -30,6 +30,12 @@ const Socials = ({ onSectionChange }) => {
       >
         LINKEDIN
       </div>
+      <div
+        className="social-component"
+        // onClick={() => onSectionChange("about")}
+      >
+        RESUME
+      </div>
     </div>
     // </div>
   );

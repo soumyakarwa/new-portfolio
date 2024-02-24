@@ -8,6 +8,7 @@
     var(--margin) * var(--golden-ratio)
   ); /* Consistent spacing */
   font-size: var(--body-font-size);
+  font-family: var(--body-font-mono);
 }
 
 .content {
@@ -33,10 +34,11 @@
 .content-title {
   font-size: var(--navbar-font-size);
   font-weight: var(--font-weight-semibold);
+  font-family: var(--body-font);
 }
 
 .content-subtitle {
-  font-family: var(--body-font-mono);
+  /* font-family: var(--body-font-mono); */
   margin-bottom: calc(var(--margin) / var(--golden-ratio));
 }
 
