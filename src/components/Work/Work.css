@@ -25,6 +25,11 @@
   font-family: var(--body-font-mono);
 }
 
+.subheading {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--navbar-font-size);
+}
+
 .description {
   display: flex;
   flex-direction: column;

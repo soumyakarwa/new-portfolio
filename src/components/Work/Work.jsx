@@ -9,6 +9,7 @@ import fibonacciPara2_1 from "../../assets/fibonacci/fibonacci-1.jpg";
 import fibonacciPara2_2 from "../../assets/fibonacci/fibonacci-2.jpg";
 import lightAndTimeGif from "../../assets/lightAndTime.gif";
 import typographicFormGif from "../../assets/typographicForm/typographicForm.gif";
+import typeFormSketch from "../../assets/typographicForm/type-form-sketch.jpg";
 import nuclearDawnCover from "../../assets/nuclearDawn/mockup-spread2.png";
 
 const caseStudies = [
@@ -43,14 +44,42 @@ const caseStudies = [
     title: "TYPOGRAPHIC FORM",
     subtitle: `I designed a dynamic typographic animation to explore the anatomy of the word "curiosity," using p5.js to create three interactive experiences: tracking mouse movement, breaking down the word into its constituent letters, and exploring each letter individually.`,
     tags: ["Digital Media"],
+    role: "Designer, Developer",
+    overview: `I designed a dynamic typographic animation to explore the anatomy of the word "curiosity," using p5.js to create three interactive experiences: tracking mouse movement, breaking down the word into its constituent letters, and exploring each letter individually.`,
+    introductionTitle: `CONCEPT`,
+    introduction: ``,
+    paragraph1Title: `LOGIC`,
+    paragraph1: `The first one is pretty simple, with the word "curiosity" following the mouse position on the canvas. I restricted the number of texts on the screen because I wanted to create dynamic movement instead of the text being permanently drawn at a particular point. The second one was more complicated because I needed to keep track of each letter in the word. I wanted to demonstrate "curiosity" as a sum of its parts. Hence, another word will appear randomly on the screen whenever you hover over a particular letter. This word contains only the letters of "curiosity." I randomized the colors of the additional words while fading out the letters in "curiosity" that weren't used to demonstrate the correlation. The third one was similar to the first, except for one letter at a time. I wanted to break down the word to explore its structure in the barest form.`,
+    paragraph2Title: `INITIAL SKETCHES`,
+    paragraph2: ``,
+    designHeading: `FINAL DESIGNS`,
+    reflectionHeading: `REFLECTION`,
+    reflectionContent: ``,
     imageUrl: typographicFormGif,
+    // introUrl: [fibonacciIntro],
+    para2Url: [typeFormSketch],
+    designsUrl: [typographicFormGif],
   },
   {
     id: 3,
     title: "NUCLEAR DAWN",
     subtitle: `I designed and curated content for a 120-page, 5x8" trade book on the nuclear age, covering key historical events from the Pacific War to current disarmament efforts.`,
     tags: ["Editorial Design"],
+    role: "Designer, Editor",
+    overview: `I designed and curated content for a 120-page, 5x8" trade book on the nuclear age, covering key historical events from the Pacific War to current disarmament efforts.`,
+    introductionTitle: `WHY ATOMIC WEAPONS?`,
+    introduction: `The Fibonacci sequence is a series of numbers in which each number (Fibonacci number) is the sum of the two preceding ones, usually starting with 0 and 1. The sequence is 0, 1, 1, 2, 3, 5, 8, 13, 21, and so on. Interestingly, this sequence appears in many different areas of mathematics and science. It's also known for its occurrence in biological settings; for example, in branching in trees, the arrangement of leaves on a stem, the flowering of artichokes, and the arrangement of a pine cone's bracts. Apple also used the Golden Spiral to design its logo.`,
+    paragraph1Title: `LOGIC`,
+    paragraph1: `As someone who loves math, I find the Fibonacci sequence fascinating. It's amazing how it shows up in so many places, connecting things we wouldn't think are related. It's like finding a secret code in nature that links everything together.`,
+    paragraph2Title: `INITIAL SKETCHES`,
+    paragraph2: `I wanted to focus on the recursive nature of the sequence and decided to focus on the squares.`,
+    designHeading: `FINAL DESIGNS`,
+    reflectionHeading: `REFLECTION`,
+    reflectionContent: ``,
     imageUrl: nuclearDawnCover,
+    // introUrl: [fibonacciIntro],
+    para2Url: [typeFormSketch],
+    designsUrl: [typographicFormGif],
   },
   {
     id: 4,
@@ -84,6 +113,7 @@ const Work = ({ onStudyClick }) => {
 
   return (
     <div className="work-container">
+      <div className="subheading">SELECTED PROJECTS</div>
       {caseStudies.map((study) => (
         <div
           key={study.id}
