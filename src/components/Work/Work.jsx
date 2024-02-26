@@ -10,6 +10,12 @@ import fibonacciPara2_2 from "../../assets/fibonacci/fibonacci-2.jpg";
 import lightAndTimeGif from "../../assets/lightAndTime.gif";
 import typographicFormGif from "../../assets/typographicForm/typographicForm.gif";
 import typeFormSketch from "../../assets/typographicForm/type-form-sketch.jpg";
+import nuclearDawnFinal1 from "../../assets/nuclearDawn/mockup-spread2.png";
+import nuclearDawnFinal2 from "../../assets/nuclearDawn/mockup-spread3.png";
+import nuclearDawnFinal3 from "../../assets/nuclearDawn/mockup-spread4.png";
+import nuclearDawnFinal4 from "../../assets/nuclearDawn/mockup-spread5.png";
+import nuclearDawnFinal5 from "../../assets/nuclearDawn/mockup-spread6.png";
+import nuclearDawnFinal6 from "../../assets/nuclearDawn/mockup-spread7.png";
 import nuclearDawnCover from "../../assets/nuclearDawn/mockup-spread2.png";
 
 const caseStudies = [
@@ -47,7 +53,7 @@ const caseStudies = [
     role: "Designer, Developer",
     overview: `I designed a dynamic typographic animation to explore the anatomy of the word "curiosity," using p5.js to create three interactive experiences: tracking mouse movement, breaking down the word into its constituent letters, and exploring each letter individually.`,
     introductionTitle: `CONCEPT`,
-    introduction: ``,
+    introduction: `I love playing around with mouse interactions and was feeling experimental! I wanted to explore the anatomy of the "curiosity."`,
     paragraph1Title: `LOGIC`,
     paragraph1: `The first one is pretty simple, with the word "curiosity" following the mouse position on the canvas. I restricted the number of texts on the screen because I wanted to create dynamic movement instead of the text being permanently drawn at a particular point. The second one was more complicated because I needed to keep track of each letter in the word. I wanted to demonstrate "curiosity" as a sum of its parts. Hence, another word will appear randomly on the screen whenever you hover over a particular letter. This word contains only the letters of "curiosity." I randomized the colors of the additional words while fading out the letters in "curiosity" that weren't used to demonstrate the correlation. The third one was similar to the first, except for one letter at a time. I wanted to break down the word to explore its structure in the barest form.`,
     paragraph2Title: `INITIAL SKETCHES`,
@@ -56,7 +62,6 @@ const caseStudies = [
     reflectionHeading: `REFLECTION`,
     reflectionContent: ``,
     imageUrl: typographicFormGif,
-    // introUrl: [fibonacciIntro],
     para2Url: [typeFormSketch],
     designsUrl: [typographicFormGif],
   },
@@ -73,13 +78,19 @@ const caseStudies = [
     paragraph1: `As someone who loves math, I find the Fibonacci sequence fascinating. It's amazing how it shows up in so many places, connecting things we wouldn't think are related. It's like finding a secret code in nature that links everything together.`,
     paragraph2Title: `INITIAL SKETCHES`,
     paragraph2: `I wanted to focus on the recursive nature of the sequence and decided to focus on the squares.`,
-    designHeading: `FINAL DESIGNS`,
+    designHeading: `SELECTED SPREADS`,
     reflectionHeading: `REFLECTION`,
     reflectionContent: ``,
     imageUrl: nuclearDawnCover,
-    // introUrl: [fibonacciIntro],
     para2Url: [typeFormSketch],
-    designsUrl: [typographicFormGif],
+    designsUrl: [
+      nuclearDawnFinal1,
+      nuclearDawnFinal2,
+      nuclearDawnFinal3,
+      nuclearDawnFinal4,
+      nuclearDawnFinal5,
+      nuclearDawnFinal6,
+    ],
   },
   {
     id: 4,
