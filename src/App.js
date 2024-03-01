@@ -20,10 +20,13 @@ function App() {
       if (!messageSent && window.scrollY > (1 / 100) * window.innerHeight) {
         const iframe = document.querySelector(".sketch");
         if (iframe) {
-          iframe.contentWindow.postMessage(
-            "startSketch",
-            "http://localhost:3000"
-          );
+          // Determine the target origin based on the hostname
+          const targetOrigin =
+            window.location.hostname === "localhost"
+              ? "http://localhost:3000"
+              : "https://soumyakarwa.github.io/new-portfolio/";
+
+          iframe.contentWindow.postMessage("startSketch", targetOrigin);
           setMessageSent(true);
         }
       }
@@ -72,7 +75,7 @@ function App() {
               <MobileIntro />
             ) : (
               <iframe
-                src="/p5/sketch.html"
+                src="https://soumyakarwa.github.io/portfolio-animation/"
                 className="sketch"
                 title="p5 Sketch"
               ></iframe>
@@ -92,7 +95,7 @@ function App() {
               <MobileIntro />
             ) : (
               <iframe
-                src="/p5/sketch.html"
+                src="https://soumyakarwa.github.io/portfolio-animation/"
                 className="sketch"
                 title="p5 Sketch"
                 key={currentSection + (selectedStudy ? "-study" : "")}
