@@ -67,11 +67,19 @@
 }
 
 @media (max-width: 768px) {
+  .about-container {
+    width: 80%;
+  }
+
   .image-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .landscape {
-    grid-column: span 2;
+    grid-column: span 1;
+  }
+
+  .about-description {
+    max-width: 100%;
   }
 }

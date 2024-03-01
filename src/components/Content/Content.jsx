@@ -8,7 +8,7 @@ const Content = ({ study }) => {
     const defaultColor = rootStyle.getPropertyValue("--tag-color-1").trim();
 
     switch (tag) {
-      case "Creative Coding":
+      case "Data Visualization":
         return (
           rootStyle.getPropertyValue("--tag-color-2").trim() || defaultColor
         );
@@ -24,11 +24,6 @@ const Content = ({ study }) => {
   return (
     <div className="content-container">
       <div className="content">
-        {/* <img
-          src={study.imageUrl}
-          alt={`${study.title} cover`}
-          className="content-image"
-        /> */}
         <div className="content-details">
           <div className="content-description">
             <ul className="content-tags">
@@ -42,7 +37,6 @@ const Content = ({ study }) => {
               ))}
             </ul>
             <div className="content-title">{study.title}</div>
-            {/* <div className="content-subtitle">{study.subtitle}</div> */}
             <div className="section">
               <div className="section-text">
                 <div className="section-heading">ROLE</div>
@@ -126,7 +120,7 @@ const Content = ({ study }) => {
                   ))}
               </div>
             </div>
-            <div className="section">
+            {/* <div className="section">
               <div className="section-text">
                 <div className="section-heading">{study.reflectionHeading}</div>
               </div>
@@ -141,8 +135,8 @@ const Content = ({ study }) => {
                       className="content-image"
                     />
                   ))}
-              </div>
-            </div>
+              </div> */}
+            {/* </div> */}
           </div>
         </div>
       </div>

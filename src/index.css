@@ -23,6 +23,8 @@
   --tag-color-2: #478723;
   --tag-color-3: #234787;
   --tag-color-1: #872347;
+
+  /* --mobile-font-size: 0.5rem; */
 }
 
 body {
@@ -68,18 +70,6 @@ code {
 }
 
 @font-face {
-  font-family: "PlayfairDisplay";
-  src: url("../public/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf")
-    format("truetype");
-}
-
-@font-face {
-  font-family: "PlayfairDisplayItalics";
-  src: url("../public/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf")
-    format("truetype");
-}
-
-@font-face {
   font-family: "Geist";
   src: url("../public/Geist/GeistVariableVF.ttf") format("truetype");
 }
@@ -87,4 +77,16 @@ code {
 @font-face {
   font-family: "Geist-Mono";
   src: url("../public/Geist.Mono/GeistMonoVariableVF.ttf") format("truetype");
+}
+
+@media (max-width: 768px) {
+  :root {
+    --body-font-size: 0.5rem;
+    --margin: 0.8rem;
+  }
+
+  .sketch {
+    width: 100vw;
+    height: auto;
+  }
 }

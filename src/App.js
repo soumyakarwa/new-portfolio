@@ -6,12 +6,14 @@ import Socials from "./components/Socials/Socials.jsx";
 import Content from "./components/Content/Content.jsx";
 import About from "./components/About/About.jsx";
 import Footer from "./components/Footer/Footer.jsx";
+import MobileIntro from "./components/MobileIntro/MobileIntro.jsx";
 import "./App.css";
 
 function App() {
   const [messageSent, setMessageSent] = useState(false);
   const [selectedStudy, setSelectedStudy] = useState(null);
   const [currentSection, setCurrentSection] = useState("home");
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,6 +44,15 @@ function App() {
     window.scrollTo(0, 0); // Scroll to the top of the page
   }, [currentSection, selectedStudy]);
 
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   const handleStudyClick = (study) => {
     setSelectedStudy(study);
   };
@@ -52,27 +63,20 @@ function App() {
     setMessageSent(false);
   };
 
-  // const handleNavbarWorkClick = () => {
-  //   // If not already on the homepage or if a specific study is selected, reset to homepage view
-  //   if (currentSection !== "home" || selectedStudy !== null) {
-  //     setCurrentSection("home");
-  //     setSelectedStudy(null);
-  //   } else {
-  //     // If already on the homepage, just scroll to the Work component
-  //     workRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  // };
-
   const contentToRender = () => {
     switch (currentSection) {
       case "work":
         return !selectedStudy ? (
           <>
-            <iframe
-              src="/p5/sketch.html"
-              className="sketch"
-              title="p5 Sketch"
-            ></iframe>
+            {isMobile ? (
+              <MobileIntro />
+            ) : (
+              <iframe
+                src="/p5/sketch.html"
+                className="sketch"
+                title="p5 Sketch"
+              ></iframe>
+            )}
             <Work onStudyClick={handleStudyClick} />
           </>
         ) : (
@@ -84,12 +88,16 @@ function App() {
       default:
         return !selectedStudy ? (
           <>
-            <iframe
-              src="/p5/sketch.html"
-              className="sketch"
-              title="p5 Sketch"
-              key={currentSection + (selectedStudy ? "-study" : "")}
-            ></iframe>
+            {isMobile ? (
+              <MobileIntro />
+            ) : (
+              <iframe
+                src="/p5/sketch.html"
+                className="sketch"
+                title="p5 Sketch"
+                key={currentSection + (selectedStudy ? "-study" : "")}
+              ></iframe>
+            )}
             <Work onStudyClick={handleStudyClick} />
           </>
         ) : (

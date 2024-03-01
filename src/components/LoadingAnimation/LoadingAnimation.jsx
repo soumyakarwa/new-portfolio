@@ -13,11 +13,11 @@ const LoadingAnimation = () => {
           <Typewriter
             onInit={(typewriter) => {
               typewriter
-                .pauseFor(150)
-                .typeString("Visual Designer")
+                .pauseFor(500)
+                .typeString("Visual Storyteller")
                 .pauseFor(150)
                 .deleteAll()
-                .typeString("Creative Coder")
+                .typeString("Creative Technologist")
                 .pauseFor(150)
                 .deleteAll()
                 .typeString("AI Enthusiast")

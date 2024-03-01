@@ -1,7 +1,7 @@
 let Engine, Composite, World, Vertices, Body, Bodies, Runner, Events;
 let font;
 var fontScale = 3;
-var fontSize = 27;
+var fontSize;
 var letterSpacing = fontSize * 4;
 let grounds = [];
 let bounds;
@@ -60,13 +60,12 @@ function setup() {
 }
 
 function textHelper() {
+  let rootStyle = getComputedStyle(document.documentElement);
+  fontSize = rootStyle.getPropertyValue("--font-size");
   textFont(font);
   textSize(fontSize * fontScale);
-  // splitTxt = txt.split(" ");
-  console.log(splitTxt);
   txt.forEach((word, i) => {
     wordX[i] = width / 2 - textWidth(word) / 2 + textWidth(word[0]) / 3;
-    console.log(word, wordX[i]);
   });
   titleStartingX = wordX[0];
   titleStartingY = 2 * fontSize;

@@ -10,15 +10,32 @@
   flex-direction: column;
   text-align: right;
   width: 10%;
-  /* border: 1px solid black; */
 }
 
 .social-component {
   cursor: pointer;
 }
 
+.social-component a {
+  box-shadow: inset 0 0 0 0 var(--background-color);
+  color: var(--font-color);
+  transition:
+    color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+}
+
+.social-component a:hover {
+  box-shadow: inset 100px 0 0 0 var(--font-color);
+  color: var(--background-color);
+}
+
+.social-component a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
 @media (max-width: 768px) {
-  .navbar-container {
-    font-size: 1rem;
+  .socials-container {
+    width: 15%;
   }
 }
