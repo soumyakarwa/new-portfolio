@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/new-portfolio/static/css/main.b30a9614.css",
+    "main.js": "/new-portfolio/static/js/main.99724a0e.js",
+    "static/js/592.17b918b1.chunk.js": "/new-portfolio/static/js/592.17b918b1.chunk.js",
+    "static/media/dataPortrait.gif": "/new-portfolio/static/media/dataPortrait.aa43a03a36931dcbd3a8.gif",
+    "static/media/lightAndTime.gif": "/new-portfolio/static/media/lightAndTime.c2721b282514116373af.gif",
+    "static/media/fibonacci-copy.gif": "/new-portfolio/static/media/fibonacci-copy.31cb6c3b8bff990e2a3a.gif",
+    "static/media/typographicForm.gif": "/new-portfolio/static/media/typographicForm.9c136870552bd84793de.gif",
+    "static/media/mockup-3.PNG": "/new-portfolio/static/media/mockup-3.f5a2d4437b4ffe8ecea0.PNG",
+    "static/media/mockup-spread5.png": "/new-portfolio/static/media/mockup-spread5.f278d778347c1e7e8760.png",
+    "static/media/mockup-2.PNG": "/new-portfolio/static/media/mockup-2.bfa1a1dbab3560ac6eb3.PNG",
+    "static/media/mockup-1.PNG": "/new-portfolio/static/media/mockup-1.7ecbd14afba1549182c5.PNG",
+    "static/media/mockup-spread4.png": "/new-portfolio/static/media/mockup-spread4.892fb896de56c59558f8.png",
+    "static/media/mockup-spread2.png": "/new-portfolio/static/media/mockup-spread2.87c6381cd274aba4a882.png",
+    "static/media/mockup-spread6.png": "/new-portfolio/static/media/mockup-spread6.364b62b2c1cda59b2b52.png",
+    "static/media/mockup-spread3.png": "/new-portfolio/static/media/mockup-spread3.caecfe5fc8ce64d647bf.png",
+    "static/media/mockup-spread7.png": "/new-portfolio/static/media/mockup-spread7.7ba265970d7aaca332db.png",
+    "static/media/image5.jpeg": "/new-portfolio/static/media/image5.525a460378173b17d166.jpeg",
+    "static/media/image2.jpeg": "/new-portfolio/static/media/image2.816c091f62475b074567.jpeg",
+    "static/media/image3.jpeg": "/new-portfolio/static/media/image3.d4059b1310725b387ecb.jpeg",
+    "static/media/image1.jpeg": "/new-portfolio/static/media/image1.43f56cea81a5a50f9da0.jpeg",
+    "static/media/image4.jpeg": "/new-portfolio/static/media/image4.a4ac94a213b31e625db2.jpeg",
+    "static/media/nuclearDawnSketches.jpg": "/new-portfolio/static/media/nuclearDawnSketches.c5dc2e471dd95432468b.jpg",
+    "static/media/dataPortraitSketch.jpg": "/new-portfolio/static/media/dataPortraitSketch.5d5eb7eca43310a53583.jpg",
+    "static/media/fibonacci-2.jpg": "/new-portfolio/static/media/fibonacci-2.9b8020c7205753d27fad.jpg",
+    "static/media/type-form-sketch.jpg": "/new-portfolio/static/media/type-form-sketch.400110a804acf5b025a4.jpg",
+    "static/media/fibonacci-1.jpg": "/new-portfolio/static/media/fibonacci-1.1709d8658ecadbb34062.jpg",
+    "static/media/lightAndTimeSketch.jpg": "/new-portfolio/static/media/lightAndTimeSketch.7cbb65d16acb858a19e3.jpg",
+    "static/media/GeistVariableVF.ttf": "/new-portfolio/static/media/GeistVariableVF.4b0ac6b5aa24575ee0de.ttf",
+    "static/media/GeistMonoVariableVF.ttf": "/new-portfolio/static/media/GeistMonoVariableVF.7c8e00e98d7a3ef6ca38.ttf",
+    "static/media/golden-spiral.png": "/new-portfolio/static/media/golden-spiral.52727c7fe9e321b7b2cf.png",
+    "index.html": "/new-portfolio/index.html",
+    "main.b30a9614.css.map": "/new-portfolio/static/css/main.b30a9614.css.map",
+    "main.99724a0e.js.map": "/new-portfolio/static/js/main.99724a0e.js.map",
+    "592.17b918b1.chunk.js.map": "/new-portfolio/static/js/592.17b918b1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b30a9614.css",
+    "static/js/main.99724a0e.js"
+  ]
+}
