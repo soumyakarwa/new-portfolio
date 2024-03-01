@@ -19,19 +19,20 @@ function App() {
     const handleScroll = () => {
       if (!messageSent && window.scrollY > (1 / 100) * window.innerHeight) {
         const iframe = document.querySelector(".sketch");
-        // if (iframe) {
-        //   // Determine the target origin based on the hostname
-        //   const targetOrigin =
-        //     window.location.hostname === "localhost"
-        //       ? "http://localhost:3000"
-        //       : "https://soumyakarwa.github.io/new-portfolio/";
-        iframe.contentWindow.postMessage(
-          "startSketch",
-          "http://localhost:3000"
-        );
+        if (iframe) {
+          // Determine the target origin based on the hostname
+          const targetOrigin =
+            window.location.hostname === "localhost"
+              ? "http://localhost:3000"
+              : "https://new-portfolio-brown.vercel.app";
+          // iframe.contentWindow.postMessage(
+          //   "startSketch",
+          //   "http://localhost:3000"
+          // );
 
-        // iframe.contentWindow.postMessage("startSketch", targetOrigin);
-        setMessageSent(true);
+          iframe.contentWindow.postMessage("startSketch", targetOrigin);
+          setMessageSent(true);
+        }
       }
     };
 
