@@ -29,7 +29,9 @@ var showText = true;
 window.addEventListener("message", (event) => {
   if (
     event.origin === "http://localhost:3000" ||
-    event.origin === "https://new-portfolio-brown.vercel.app"
+    event.origin === "https://new-portfolio-brown.vercel.app" ||
+    event.origin ===
+      "https://new-portfolio-osz26jdhb-soumyakarwas-projects.vercel.app"
   ) {
     if (event.data === "startSketch") {
       Runner.run(runner, engine);
