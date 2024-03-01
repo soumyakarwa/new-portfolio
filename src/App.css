@@ -1,4 +1,9 @@
 .App {
-  margin: var(--margin);
   height: 100%;
+}
+
+.intro {
+  display: flex;
+  flex-direction: row;
+  gap: var(--margin);
 }

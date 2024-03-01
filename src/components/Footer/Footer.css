@@ -1,0 +1,8 @@
+.footer-container {
+  padding: var(--margin);
+  text-align: center;
+  background-color: var(--font-color);
+  color: var(--background-color);
+  font-family: var(--body-font-mono);
+  font-size: var(--body-font-size);
+}

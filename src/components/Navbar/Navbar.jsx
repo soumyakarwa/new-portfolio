@@ -4,14 +4,13 @@ import "./Navbar.css";
 
 const Navbar = ({ onSectionChange }) => {
   return (
-    // <div className="nav">
-    <nav className="navbar-container">
+    <div className="navbar-container">
       <div className="navbar-left">
         <div
           className="navbar-component"
-          onClick={() => onSectionChange("work")}
+          onClick={() => onSectionChange("home")}
         >
-          Soumya Karwa
+          SOUMYA KARWA
         </div>
       </div>
       <div className="navbar-right">
@@ -19,23 +18,16 @@ const Navbar = ({ onSectionChange }) => {
           className="navbar-component"
           onClick={() => onSectionChange("work")}
         >
-          Work
+          WORK
         </div>
-        {/* <div
-          className="navbar-component"
-          onClick={() => onSectionChange("play")}
-        >
-          play
-        </div> */}
         <div
           className="navbar-component"
           onClick={() => onSectionChange("about")}
         >
-          About
+          ABOUT
         </div>
       </div>
-    </nav>
-    // </div>
+    </div>
   );
 };
 

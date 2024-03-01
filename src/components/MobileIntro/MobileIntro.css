@@ -1,0 +1,10 @@
+.mobile-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--margin);
+  margin-bottom: var(--margin);
+  font-size: var(--title-font-size);
+}
