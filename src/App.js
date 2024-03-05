@@ -25,7 +25,7 @@ function App() {
             window.location.hostname === "localhost"
               ? "http://localhost:3000"
               : // : "https://new-portfolio-brown.vercel.app";
-                "https://glittering-kulfi-deb7d6.netlify.app";
+                "https://soumyakarwa.xyz";
           // iframe.contentWindow.postMessage(
           //   "startSketch",
           //   "http://localhost:3000"
