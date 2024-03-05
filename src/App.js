@@ -79,7 +79,7 @@ function App() {
               <MobileIntro />
             ) : (
               <iframe
-                src="/p5/sketch.html"
+                src="https://soumyakarwa.github.io/portfolio-animation/"
                 className="sketch"
                 title="p5 Sketch"
               ></iframe>
@@ -99,7 +99,7 @@ function App() {
               <MobileIntro />
             ) : (
               <iframe
-                src="/p5/sketch.html"
+                src="https://soumyakarwa.github.io/portfolio-animation/"
                 className="sketch"
                 title="p5 Sketch"
                 key={currentSection + (selectedStudy ? "-study" : "")}
