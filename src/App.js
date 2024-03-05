@@ -24,7 +24,7 @@ function App() {
           const targetOrigin =
             window.location.hostname === "localhost"
               ? "http://localhost:3000"
-              : "https://soumyakarwa.xyz/";
+              : "https://soumyakarwa.xyz";
           // iframe.contentWindow.postMessage(
           //   "startSketch",
           //   "http://localhost:3000"
