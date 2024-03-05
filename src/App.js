@@ -10,6 +10,7 @@ import MobileIntro from "./components/MobileIntro/MobileIntro.jsx";
 import "./App.css";
 
 function App() {
+  console.log("app loaded");
   const [messageSent, setMessageSent] = useState(false);
   const [selectedStudy, setSelectedStudy] = useState(null);
   const [currentSection, setCurrentSection] = useState("home");
@@ -18,19 +19,24 @@ function App() {
   useEffect(() => {
     const handleScroll = () => {
       if (!messageSent && window.scrollY > (1 / 100) * window.innerHeight) {
+        console.log("scroll");
         const iframe = document.querySelector(".sketch");
         if (iframe) {
+          console.log("iframe exists");
           // Determine the target origin based on the hostname
-          const targetOrigin =
-            window.location.hostname === "localhost"
-              ? "http://localhost:3000"
-              : "https://soumyakarwa.xyz";
-          // iframe.contentWindow.postMessage(
-          //   "startSketch",
-          //   "http://localhost:3000"
-          // );
-
-          iframe.contentWindow.postMessage("startSketch", targetOrigin);
+          // const targetOrigin =
+          //   window.location.hostname === "localhost"
+          //     ? "http://localhost:3000"
+          //     : "https://soumyakarwa.xyz";
+          // // iframe.contentWindow.postMessage(
+          // //   "startSketch",
+          // //   "http://localhost:3000"
+          // // );
+          // console.log(targetOrigin);
+          iframe.contentWindow.postMessage(
+            "startSketch",
+            "https://soumyakarwa.github.io/portfolio-animation/"
+          );
           setMessageSent(true);
         }
       }
