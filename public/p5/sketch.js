@@ -59,7 +59,7 @@ function setup() {
   runner = Runner.create();
   createTitle();
   createBoundary();
-  world.gravity.y = 2;
+  world.gravity.y = 1;
 }
 
 function textHelper() {
