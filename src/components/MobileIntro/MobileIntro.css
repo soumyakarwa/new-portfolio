@@ -5,6 +5,6 @@
   align-items: center;
   justify-content: center;
   margin-top: var(--margin);
-  margin-bottom: var(--margin);
+  margin-bottom: calc(var(--margin) * var(--golden-ratio));
   font-size: var(--title-font-size);
 }

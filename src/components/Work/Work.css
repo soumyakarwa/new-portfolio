@@ -83,6 +83,7 @@
 
   .subtitle {
     max-width: 100%;
+    margin-top: calc(var(--margin) / var(--golden-ratio));
   }
 
   .tags li {
