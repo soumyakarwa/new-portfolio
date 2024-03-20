@@ -12,7 +12,7 @@ const About = () => {
     <div className="about-container">
       <div className="about-content">
         <div className="about-description">
-          <div className="about-subtitle">Hi! I'm Soumya!</div>
+          <div className="about-subtitle">HI THERE! I'M SOUMYA!</div>
           I'm currently a first year MFA student at
           <span className="bold"> Parsons School of Design</span> studying
           Design & Technology with a focus in Creative Coding & Data

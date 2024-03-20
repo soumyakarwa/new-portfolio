@@ -28,7 +28,8 @@
 .about-subtitle {
   margin-bottom: calc(var(--margin) / var(--golden-ratio));
   font-size: var(--navbar-font-size);
-  font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--body-font-mono);
 }
 
 .image-grid {
