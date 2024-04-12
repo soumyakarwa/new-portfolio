@@ -17,7 +17,7 @@ var fps = 30;
 
 var letterTemplates = {};
 var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ&,";
-let txt = ["DESIGNER", "CREATIVE TECHNOLOGIST", "VISUAL STORYTELLER"];
+let txt = ["DATA DESIGNER", "CREATIVE CODER", "VISUAL STORYTELLER"];
 // var letters = "abcdefghijklmnoqprstuvwxyz&";
 // let txt = "designer & creative developer";
 var totalChars = 1;

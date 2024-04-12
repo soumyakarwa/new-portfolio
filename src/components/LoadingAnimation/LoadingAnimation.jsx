@@ -14,14 +14,14 @@ const LoadingAnimation = () => {
             onInit={(typewriter) => {
               typewriter
                 .pauseFor(500)
+                .typeString("Data Driven Designer")
+                .pauseFor(100)
+                .deleteAll()
+                .typeString("Creative Coder")
+                .pauseFor(100)
+                .deleteAll()
                 .typeString("Visual Storyteller")
-                .pauseFor(150)
-                .deleteAll()
-                .typeString("Creative Technologist")
-                .pauseFor(150)
-                .deleteAll()
-                .typeString("AI Enthusiast")
-                .pauseFor(300)
+                .pauseFor(110)
                 .callFunction(() => {
                   setHideAnimation(true);
                 })
