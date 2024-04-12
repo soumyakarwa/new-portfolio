@@ -26,7 +26,7 @@ const Content = ({ study }) => {
       <div className="content">
         <div className="content-details">
           <div className="content-description">
-            <ul className="content-tags">
+            {/* <ul className="content-tags">
               {study.tags.map((tag, idx) => (
                 <li
                   key={idx}
@@ -35,7 +35,7 @@ const Content = ({ study }) => {
                   {tag}
                 </li>
               ))}
-            </ul>
+            </ul> */}
             <div className="content-title">{study.title}</div>
             <div className="section">
               <div className="section-text">

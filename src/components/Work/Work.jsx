@@ -26,7 +26,7 @@ const caseStudies = [
   {
     id: 1,
     title: "FIBONACCI",
-    subtitle: `Created a two posters and a dynamic digital media interaction to illustrate the Fibonacci sequence, showcasing the interdependence of square sizes and their relation to the golden ratio.`,
+    subtitle: `Created two posters and a dynamic digital media interaction to illustrate the Fibonacci sequence, showcasing the interdependence of square sizes and their relation to the golden ratio.`,
     tags: ["Digital Media", "Poster Design"],
     role: `Designer, Developer`,
     overview: `Created a pair of posters and an accompanying dynamic digital media interaction to illustrate the Fibonacci sequence, showcasing the interdependence of square sizes and their relation to the golden ratio.`,
@@ -171,7 +171,7 @@ const Work = ({ onStudyClick }) => {
             <div className="work">
               <div className="description">
                 <div className="title">{study.title}</div>
-                <ul className="tags">
+                {/* <ul className="tags">
                   {study.tags.map((tag, idx) => (
                     <li
                       key={idx}
@@ -180,7 +180,7 @@ const Work = ({ onStudyClick }) => {
                       {tag}
                     </li>
                   ))}
-                </ul>
+                </ul> */}
               </div>
               <div className="subtitle">{study.subtitle}</div>
             </div>
