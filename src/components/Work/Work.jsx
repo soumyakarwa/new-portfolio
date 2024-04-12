@@ -26,10 +26,10 @@ const caseStudies = [
   {
     id: 1,
     title: "FIBONACCI",
-    subtitle: `I created a two posters and a dynamic digital media interaction to illustrate the Fibonacci sequence, showcasing the interdependence of square sizes and their relation to the golden ratio.`,
+    subtitle: `Created a two posters and a dynamic digital media interaction to illustrate the Fibonacci sequence, showcasing the interdependence of square sizes and their relation to the golden ratio.`,
     tags: ["Digital Media", "Poster Design"],
     role: `Designer, Developer`,
-    overview: `I created a pair of posters and an accompanying dynamic digital media interaction to illustrate the Fibonacci sequence, showcasing the interdependence of square sizes and their relation to the golden ratio.`,
+    overview: `Created a pair of posters and an accompanying dynamic digital media interaction to illustrate the Fibonacci sequence, showcasing the interdependence of square sizes and their relation to the golden ratio.`,
     introductionTitle: `SO, WHAT IS FIBONACCI?`,
     introduction: `The Fibonacci sequence is a series of numbers in which each number (Fibonacci number) is the sum of the two preceding ones, usually starting with 0 and 1. The sequence is 0, 1, 1, 2, 3, 5, 8, 13, 21, and so on. Interestingly, this sequence appears in many different areas of mathematics and science. It's also known for its occurrence in biological settings; for example, in branching in trees, the arrangement of leaves on a stem, the flowering of artichokes, and the arrangement of a pine cone's bracts. Apple also used the Golden Spiral to design its logo.`,
     paragraph1Title: `SIGNIFICANCE`,
@@ -50,7 +50,7 @@ const caseStudies = [
   {
     id: 4,
     title: "DATA PORTRAIT",
-    subtitle: `What is fiction really made of? What does an editor do? They work on the structure, the word choice, the sentence length, the chapters and every small detail that turns a good story into a great book. I wanted to examine these nuances and chose words as a starting point.  I used p5.js in a data-driven design project exploring the essence of fiction, using word frequency analysis to dissect the writer's role in shaping narrative structure.`,
+    subtitle: `Used p5.js in a data-driven design project exploring the essence of fiction, using word frequency analysis to dissect the writer's role in shaping narrative structure.`,
     tags: ["Digital Media", "Data Viz"],
     role: "Designer, Developer",
     overview: `What is fiction really made of? What does an editor do? They work on the structure, the word choice, the sentence length, the chapters and every small detail that turns a good story into a great book. I wanted to examine these nuances and chose words as a starting point.  I used p5.js in a data-driven design project exploring the essence of fiction, using word frequency analysis to dissect the writer's role in shaping narrative structure.`,
@@ -72,7 +72,7 @@ const caseStudies = [
   {
     id: 3,
     title: "NUCLEAR DAWN",
-    subtitle: `I designed and curated content for a 120-page, 5x8" trade book on the nuclear age, covering key historical events from the Pacific War to current disarmament efforts.`,
+    subtitle: `Designed and curated content for a 120-page, 5x8" trade book on the nuclear age, covering key historical events from the Pacific War to current disarmament efforts.`,
     tags: ["Editorial Design"],
     role: "Designer, Editor",
     overview: `I designed and curated content for a 120-page, 5x8" trade book on the nuclear age, covering key historical events from the Pacific War to current disarmament efforts.`,
@@ -97,7 +97,7 @@ const caseStudies = [
   {
     id: 2,
     title: "TYPOGRAPHIC FORM",
-    subtitle: `I designed a dynamic typographic animation to explore the anatomy of the word "curiosity," using p5.js to create three interactive experiences: tracking mouse movement, breaking down the word into its constituent letters, and exploring each letter individually.`,
+    subtitle: `Designed a dynamic typographic animation to explore the anatomy of the word "curiosity," using p5.js to create three interactive experiences: tracking mouse movement, breaking down the word into its constituent letters, and exploring each letter individually.`,
     tags: ["Digital Media"],
     role: "Designer, Developer",
     overview: `I designed a dynamic typographic animation to explore the anatomy of the word "curiosity," using p5.js to create three interactive experiences: tracking mouse movement, breaking down the word into its constituent letters, and exploring each letter individually.`,
