@@ -3,24 +3,24 @@ import React from "react";
 import "./Content.css"; // Ensure you import the CSS file
 
 const Content = ({ study }) => {
-  const getBackgroundColor = (tag) => {
-    const rootStyle = getComputedStyle(document.body);
-    const defaultColor = rootStyle.getPropertyValue("--tag-color-1").trim();
+  // const getBackgroundColor = (tag) => {
+  //   const rootStyle = getComputedStyle(document.body);
+  //   const defaultColor = rootStyle.getPropertyValue("--tag-color-1").trim();
 
-    switch (tag) {
-      case "Data Visualization":
-        return (
-          rootStyle.getPropertyValue("--tag-color-2").trim() || defaultColor
-        );
-      case "Digital Media":
-        return (
-          rootStyle.getPropertyValue("--tag-color-3").trim() || defaultColor
-        );
-      // Handle other cases
-      default:
-        return defaultColor;
-    }
-  };
+  //   switch (tag) {
+  //     case "Data Visualization":
+  //       return (
+  //         rootStyle.getPropertyValue("--tag-color-2").trim() || defaultColor
+  //       );
+  //     case "Digital Media":
+  //       return (
+  //         rootStyle.getPropertyValue("--tag-color-3").trim() || defaultColor
+  //       );
+  //     // Handle other cases
+  //     default:
+  //       return defaultColor;
+  //   }
+  // };
   return (
     <div className="content-container">
       <div className="content">

@@ -134,24 +134,24 @@ const caseStudies = [
 ];
 
 const Work = ({ onStudyClick }) => {
-  const getBackgroundColor = (tag) => {
-    const rootStyle = getComputedStyle(document.body);
-    const defaultColor = rootStyle.getPropertyValue("--tag-color-1").trim();
+  // const getBackgroundColor = (tag) => {
+  //   const rootStyle = getComputedStyle(document.body);
+  //   const defaultColor = rootStyle.getPropertyValue("--tag-color-1").trim();
 
-    switch (tag) {
-      case "Data Viz":
-        return (
-          rootStyle.getPropertyValue("--tag-color-2").trim() || defaultColor
-        );
-      case "Digital Media":
-        return (
-          rootStyle.getPropertyValue("--tag-color-3").trim() || defaultColor
-        );
-      // Handle other cases
-      default:
-        return defaultColor;
-    }
-  };
+  //   switch (tag) {
+  //     case "Data Viz":
+  //       return (
+  //         rootStyle.getPropertyValue("--tag-color-2").trim() || defaultColor
+  //       );
+  //     case "Digital Media":
+  //       return (
+  //         rootStyle.getPropertyValue("--tag-color-3").trim() || defaultColor
+  //       );
+  //     // Handle other cases
+  //     default:
+  //       return defaultColor;
+  //   }
+  // };
 
   return (
     <div className="work-container">
