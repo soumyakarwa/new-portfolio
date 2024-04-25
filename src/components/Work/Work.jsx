@@ -30,10 +30,10 @@ const caseStudies = [
   {
     id: 1,
     title: "ECHOES OF CONFLICT",
-    subtitle: `Used d3.js to create an interactive radial bar chart to illustrate the prevalence of war rhetoric in the State of the Union addresses over the last century.`,
+    subtitle: `Used d3.js to create an interactive radial bar chart to illustrate the prevalence of war rhetoric in the State of the Union Addresses over the last century.`,
     tags: ["Data Viz"],
     role: `Designer, Developer, Data Analyst`,
-    overview: `Created an interactive radial bar chart to illustrate the prevalence of war rhetoric in the State of the Union addresses over the last century. This data-driven approach provides a revealing look at how war has ebbed and flowed as a subject in the annual addresses to Congress, reflecting the nation's entanglement with international and domestic conflicts over time.`,
+    overview: `Created an interactive radial bar chart to illustrate the prevalence of war rhetoric in the State of the Union Addresses over the last century. This data-driven approach provides a revealing look at how war has ebbed and flowed as a subject in the annual addresses to Congress, reflecting the nation's entanglement with international and domestic conflicts over time.`,
     introductionTitle: `WHAT IS THE STATE OF THE UNION ADDRESS?`,
     introduction: `The State of the Union address is a yearly speech delivered by the President of the United States to Congress. It outlines the nation's condition in the past year and sets forth the legislative agenda for the following year.`,
     paragraph1Title: `DESCRIPTION`,
