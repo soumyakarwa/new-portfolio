@@ -19,12 +19,33 @@ import nuclearDawnSketch from "../../assets/nuclearDawn/nuclearDawnSketches.jpg"
 import nuclearDawnCover from "../../assets/nuclearDawn/mockup-spread2.png";
 import dataPortraitGif from "../../assets/dataPortrait/dataPortrait.gif";
 import dataPortraitSketch from "../../assets/dataPortrait/dataPortraitSketch.jpg";
-import lightAndTimeGif from "../../assets/lightAndTime/lightAndTime.gif";
-import lightAndTimeSketch from "../../assets/lightAndTime/lightAndTimeSketch.jpg";
+// import lightAndTimeGif from "../../assets/lightAndTime/lightAndTime.gif";
+// import lightAndTimeSketch from "../../assets/lightAndTime/lightAndTimeSketch.jpg";
+import echoesOfConflictGif from "../../assets/echoesOfConflict/echoesOfConflict.gif";
+import echoesOfConflictImg1 from "../../assets/echoesOfConflict/echoesOfConflict-1.jpg";
+import echoesOfConflictImg2 from "../../assets/echoesOfConflict/echoesOfConflict-2.jpg";
 
 const caseStudies = [
   {
     id: 1,
+    title: "ECHOES OF CONFLICT",
+    subtitle: `Created an interactive radial bar chart to illustrate the prevalence of war rhetoric in the State of the Union addresses over the last century.`,
+    tags: ["Data Viz"],
+    role: `Designer, Developer, Data Analyst`,
+    overview: `Created an interactive radial bar chart to illustrate the prevalence of war rhetoric in the State of the Union addresses over the last century. This data-driven approach provides a revealing look at how war has ebbed and flowed as a subject in the annual addresses to Congress, reflecting the nation's entanglement with international and domestic conflicts over time.`,
+    introductionTitle: `WHAT IS THE STATE OF THE UNION ADDRESS?`,
+    introduction: `The State of the Union address is a yearly speech delivered by the President of the United States to Congress. It outlines the nation's condition in the past year and sets forth the legislative agenda for the following year.`,
+    paragraph1Title: `DESCRIPTION`,
+    paragraph1: `"Echoes of Conflict," uses a radial bar chart to depict each year's address, with the bar lengths varying to show the proportion of the speech dedicated to discussing war, military engagements or conflict. This underscores how significantly war has featured in presidential agendas, reflecting the United State's active role in global conflicts over the 20th century. The design enables viewers to quickly discern periods of heightened military focus and less turbulent times, illustrating the ebb and flow of war rhetoric in these pivotal speeches.`,
+    paragraph2Title: `INITIAL SKETCHES`,
+    paragraph2: `To effectively display over 100 data points in a way that emphasizes comparison without overwhelming the viewer, I opted for a radial bar chart. This design allows for an intuitive visual comparison of categories, as longer bars stand out prominently against shorter ones, clearly depicting differences without the need for specific numerical values. This approach simplifies the viewer's experience by focusing on relative magnitudes rather than precise data.`,
+    designHeading: `FINAL DESIGNS`,
+    imageUrl: echoesOfConflictGif,
+    para2Url: [echoesOfConflictImg1, echoesOfConflictImg2],
+    designsUrl: [echoesOfConflictGif],
+  },
+  {
+    id: 2,
     title: "FIBONACCI",
     subtitle: `Created two posters and a dynamic digital media interaction to illustrate the Fibonacci sequence, showcasing the interdependence of square sizes and their relation to the golden ratio.`,
     tags: ["Digital Media", "Poster Design"],
@@ -48,7 +69,7 @@ const caseStudies = [
     ],
   },
   {
-    id: 4,
+    id: 3,
     title: "DATA PORTRAIT",
     subtitle: `Used p5.js in a data-driven design project exploring the essence of fiction, using word frequency analysis to dissect the writer's role in shaping narrative structure.`,
     tags: ["Digital Media", "Data Viz"],
@@ -70,7 +91,7 @@ const caseStudies = [
     designsUrl: [dataPortraitGif],
   },
   {
-    id: 3,
+    id: 4,
     title: "NUCLEAR DAWN",
     subtitle: `Designed and curated content for a 120-page, 5x8" trade book on the nuclear age, covering key historical events from the Pacific War to current disarmament efforts.`,
     tags: ["Editorial Design"],
@@ -95,7 +116,7 @@ const caseStudies = [
     ],
   },
   {
-    id: 2,
+    id: 5,
     title: "TYPOGRAPHIC FORM",
     subtitle: `Designed a dynamic typographic animation to explore the anatomy of the word "curiosity," using p5.js to create three interactive experiences: tracking mouse movement, breaking down the word into its constituent letters, and exploring each letter individually.`,
     tags: ["Digital Media"],
@@ -112,24 +133,24 @@ const caseStudies = [
     para2Url: [typeFormSketch],
     designsUrl: [typographicFormGif],
   },
-  {
-    id: 5,
-    title: "LIGHT, SPACE & TIME",
-    subtitle: `I've always been fascinated with the relationship between light & time. And how sometimes, the stars we see in the night sky might have already died, because they might be so far away that their light has taken years to reach us. I designed a p5.js program to demonstrate this difference.`,
-    tags: ["Digital Media"],
-    role: "Designer, Developer",
-    overview: `I've always been fascinated with the relationship between light & time. And how sometimes, the stars we see in the night sky might have already died, because they might be so far away that their light has taken years to reach us. I designed a p5.js program to demonstrate this difference.`,
-    introductionTitle: `PHYSICS`,
-    introduction: `Nothing can travel faster than at the speed of light, approximately 299,792 kilometers per second. When we look at stars in the night sky, we see them as they were in the past because the stars are so far away that their light can take decades, if not centuries, to reach us. Because the universe is so incredibly vast, astronomers use the term "light year" to describe distances. A light year is the distance light travels in one year, about 9.46 trillion kilometers (or about 5.88 trillion miles). When we say a star is "10 light years away," it means that the light from that star takes ten years to reach us. When we look up at the night sky, we are looking back in time. If a star is 1,000 light years away, the light we are seeing from it tonight left the star 1,000 years ago: a profound metaphor expressing multiple timelines in the same world.`,
-    paragraph1Title: `LOGIC`,
-    paragraph1: ``,
-    paragraph2Title: `INITIAL SKETCHES`,
-    paragraph2: `The screen on the left shows the night sky as we see it. The screen on the right shows the stars in the night sky, accounting for how long the light takes to reach us on Earth.`,
-    designHeading: `FINAL DESIGN`,
-    imageUrl: lightAndTimeGif,
-    para2Url: [lightAndTimeSketch],
-    designsUrl: [lightAndTimeGif],
-  },
+  // {
+  //   id: 5,
+  //   title: "LIGHT, SPACE & TIME",
+  //   subtitle: `I've always been fascinated with the relationship between light & time. And how sometimes, the stars we see in the night sky might have already died, because they might be so far away that their light has taken years to reach us. I designed a p5.js program to demonstrate this difference.`,
+  //   tags: ["Digital Media"],
+  //   role: "Designer, Developer",
+  //   overview: `I've always been fascinated with the relationship between light & time. And how sometimes, the stars we see in the night sky might have already died, because they might be so far away that their light has taken years to reach us. I designed a p5.js program to demonstrate this difference.`,
+  //   introductionTitle: `PHYSICS`,
+  //   introduction: `Nothing can travel faster than at the speed of light, approximately 299,792 kilometers per second. When we look at stars in the night sky, we see them as they were in the past because the stars are so far away that their light can take decades, if not centuries, to reach us. Because the universe is so incredibly vast, astronomers use the term "light year" to describe distances. A light year is the distance light travels in one year, about 9.46 trillion kilometers (or about 5.88 trillion miles). When we say a star is "10 light years away," it means that the light from that star takes ten years to reach us. When we look up at the night sky, we are looking back in time. If a star is 1,000 light years away, the light we are seeing from it tonight left the star 1,000 years ago: a profound metaphor expressing multiple timelines in the same world.`,
+  //   paragraph1Title: `LOGIC`,
+  //   paragraph1: ``,
+  //   paragraph2Title: `INITIAL SKETCHES`,
+  //   paragraph2: `The screen on the left shows the night sky as we see it. The screen on the right shows the stars in the night sky, accounting for how long the light takes to reach us on Earth.`,
+  //   designHeading: `FINAL DESIGN`,
+  //   imageUrl: lightAndTimeGif,
+  //   para2Url: [lightAndTimeSketch],
+  //   designsUrl: [lightAndTimeGif],
+  // },
   // Add more case studies as needed
 ];
 
