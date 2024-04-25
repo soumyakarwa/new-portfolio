@@ -21,7 +21,7 @@ import dataPortraitGif from "../../assets/dataPortrait/dataPortrait.gif";
 import dataPortraitSketch from "../../assets/dataPortrait/dataPortraitSketch.jpg";
 // import lightAndTimeGif from "../../assets/lightAndTime/lightAndTime.gif";
 // import lightAndTimeSketch from "../../assets/lightAndTime/lightAndTimeSketch.jpg";
-import echoesOfConflictGif from "../../assets/echoesOfConflict/echoesOfConflict.gif";
+import echoesOfConflictGif from "../../assets/echoesOfConflict/clippedVid.gif";
 import echoesOfConflictAnimationGif from "../../assets/echoesOfConflict/radialBarGif.gif";
 import echoesOfConflictImg1 from "../../assets/echoesOfConflict/echoesOfConflict-1.jpg";
 import echoesOfConflictImg2 from "../../assets/echoesOfConflict/echoesOfConflict-2.jpg";
