@@ -18,6 +18,10 @@
   justify-content: center;
 }
 
+#dev {
+  margin-top: var(--margin);
+}
+
 .about-description {
   margin-bottom: var(--margin);
   max-width: 50%;
@@ -26,10 +30,10 @@
 }
 
 .about-subtitle {
-  margin-bottom: calc(var(--margin) / var(--golden-ratio));
+  /* margin-bottom: calc(var(--margin) / var(--golden-ratio)); */
   font-size: var(--navbar-font-size);
   font-weight: var(--font-weight-semibold);
-  font-family: var(--body-font-mono);
+  font-family: var(--body-font);
 }
 
 .image-grid {

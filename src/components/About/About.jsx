@@ -13,15 +13,22 @@ const About = () => {
       <div className="about-content">
         <div className="about-description">
           <div className="about-subtitle">HI THERE! I'M SOUMYA!</div>
-          I'm currently a first year MFA student at
-          <span className="bold"> Parsons School of Design</span> studying
-          Design & Technology with a focus in Creative Coding & Data
-          Visualization. Previously, I studied Applied Math-Computer Science at
-          <span className="bold"> Brown Univerity</span>. I want to combine
-          code, design and AI to create beautiful, efficient products and
-          solutions. I love to chat about design, boutique coffee shops, Harry
-          Potter or pretty much anything, so reach out to me at
-          karws352@newschool.edu.
+          <div>
+            I'm currently a first year MFA student at
+            <span className="bold"> Parsons School of Design</span> studying
+            Design & Technology with a focus in Creative Coding & Data
+            Visualization. Previously, I studied Applied Math-Computer Science
+            at
+            <span className="bold"> Brown Univerity</span>. I want to combine
+            code, design and AI to create beautiful, efficient products and
+            solutions. I love to chat about design, boutique coffee shops, Harry
+            Potter or pretty much anything, so reach out to me at
+            karws352@newschool.edu.
+          </div>
+          <div id="dev">
+            Development Languages & Libraries: JavaScript, HTML/CSS, Java,
+            Python, p5.js, d3.js, matter.js, leaflet.js, react.js.
+          </div>
         </div>
         <div className="image-grid">
           <figure className="landscape">
