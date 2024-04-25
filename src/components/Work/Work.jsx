@@ -71,7 +71,6 @@ const caseStudies = [
   },
   {
     id: 3,
-    id: 3,
     title: "DATA PORTRAIT",
     subtitle: `Used p5.js in a data-driven design project exploring the essence of fiction, using word frequency analysis to dissect the writer's role in shaping narrative structure.`,
     tags: ["Digital Media", "Data Viz"],
@@ -93,7 +92,6 @@ const caseStudies = [
     designsUrl: [dataPortraitGif],
   },
   {
-    id: 4,
     id: 4,
     title: "NUCLEAR DAWN",
     subtitle: `Designed and curated content for a 120-page, 5x8" trade book on the nuclear age, covering key historical events from the Pacific War to current disarmament efforts.`,
@@ -119,7 +117,6 @@ const caseStudies = [
     ],
   },
   {
-    id: 5,
     id: 5,
     title: "TYPOGRAPHIC FORM",
     subtitle: `Designed a dynamic typographic animation to explore the anatomy of the word "curiosity," using p5.js to create three interactive experiences: tracking mouse movement, breaking down the word into its constituent letters, and exploring each letter individually.`,
