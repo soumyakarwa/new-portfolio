@@ -36,7 +36,14 @@ const Content = ({ study }) => {
                 </li>
               ))}
             </ul> */}
-            <div className="content-title">{study.title}</div>
+            <div className="content-title">
+              <div>{study.title}</div>
+              <div className="myButton" id="casestudy-button">
+                <a href={study.link} target="_blank" rel="noopener noreferrer">
+                  DEMO
+                </a>
+              </div>
+            </div>
             <div className="section" id="role">
               <div className="section-text">
                 <div className="section-heading">ROLE</div>
