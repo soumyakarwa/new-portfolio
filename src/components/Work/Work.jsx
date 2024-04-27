@@ -32,6 +32,7 @@ const caseStudies = [
     title: "ECHOES OF CONFLICT",
     subtitle: `Used d3.js to create an interactive radial bar chart to illustrate the prevalence of war rhetoric in the State of the Union Addresses over the last century.`,
     tags: ["Data Viz"],
+    link: "https://soumyakarwa.github.io/echoes-of-conflict/",
     role: `Designer, Developer, Data Analyst`,
     overview: `Created an interactive radial bar chart to illustrate the prevalence of war rhetoric in the State of the Union Addresses over the last century. This data-driven approach provides a revealing look at how war has ebbed and flowed as a subject in the annual addresses to Congress, reflecting the nation's entanglement with international and domestic conflicts over time.`,
     introductionTitle: `WHAT IS THE STATE OF THE UNION ADDRESS?`,
@@ -42,14 +43,16 @@ const caseStudies = [
     paragraph2: `To effectively display over 100 data points in a way that emphasizes comparison without overwhelming the viewer, I opted for a radial bar chart. This design allows for an intuitive visual comparison of categories, as longer bars stand out prominently against shorter ones, clearly depicting differences without the need for specific numerical values. I thought this would simplify the viewer's experience by focusing on relative magnitudes rather than precise data.`,
     designHeading: `FINAL DESIGNS`,
     imageUrl: echoesOfConflictGif,
+    para1Url: [echoesOfConflictAnimationGif],
     para2Url: [echoesOfConflictImg1, echoesOfConflictImg2],
-    designsUrl: [echoesOfConflictAnimationGif, echoesOfConflictGif],
+    designsUrl: [echoesOfConflictGif],
   },
   {
     id: 2,
     title: "FIBONACCI",
     subtitle: `Created two posters and a dynamic digital media interaction to illustrate the Fibonacci sequence, showcasing the interdependence of square sizes and their relation to the golden ratio.`,
     tags: ["Digital Media", "Poster Design"],
+    link: "https://soumyakarwa.github.io/typography_poster/",
     role: `Designer, Developer`,
     overview: `Created a pair of posters and an accompanying dynamic digital media interaction to illustrate the Fibonacci sequence, showcasing the interdependence of square sizes and their relation to the golden ratio.`,
     introductionTitle: `SO, WHAT IS FIBONACCI?`,
@@ -74,18 +77,19 @@ const caseStudies = [
     title: "DATA PORTRAIT",
     subtitle: `Used p5.js in a data-driven design project exploring the essence of fiction, using word frequency analysis to dissect the writer's role in shaping narrative structure.`,
     tags: ["Digital Media", "Data Viz"],
+    link: " https://soumyakarwa.github.io/5in5/",
     role: "Designer, Developer",
-    overview: `What is fiction really made of? What does an editor do? They work on the structure, the word choice, the sentence length, the chapters and every small detail that turns a good story into a great book. I wanted to examine these nuances and chose words as a starting point.  I used p5.js in a data-driven design project exploring the essence of fiction, using word frequency analysis to dissect the writer's role in shaping narrative structure.`,
+    overview: `Fiction is crafted through careful manipulation of structure, word choice, sentence length, and chapter organization, transforming a good story into a great book. In a data-driven design project using p5.js, I explored the essence of fiction by analyzing word frequency to understand how writers shape narrative structures`,
     introductionTitle: `CONCEPT`,
     introduction: `I made a data portrait highlighting the frequency of different words in “The Clockwork Angel” by Cassandra Clare. I further segregated the data by parts of speech.`,
-    paragraph1Title: `SIGNIFICANCE`,
-    paragraph1: `I love to read and write fiction. I've always wondered how authors create dynamic, individual characters, creating distinct people with real personalities, flaws, and characteristics using only words. And that's when it hit me: they do precisely that. They associate certain words, tones, and language with certain characters to create distinct fictitious personalities that make their plot real. 
+    paragraph1Title: `INITIAL SKETCHES`,
+    paragraph1: `I designed a minimalistic, book-inspired interface, utilizing a color-coded typography system to categorize words by frequency and part of speech.`,
+    paragraph2Title: `SIGNIFICANCE`,
+    paragraph2: `I love to read and write fiction. I've always wondered how authors create dynamic, individual characters, creating distinct people with real personalities, flaws, and characteristics using only words. And that's when it hit me: they do precisely that. They associate certain words, tones, and language with certain characters to create distinct fictitious personalities that make their plot real. 
     
     How could we believe that [SPOILER ALERT] Dr Sheppard killed Roger Ackroyd if we didn't think him capable of it? How could we believe that Harry Potter's fatal flaw was his "hero thing" if he didn't prove that to us? How could we believe that Sherlock Holmes was not a fraud if every instinct told us it couldn't be true? It's because of words.
 
     Each word tells us something distinct about the character it’s being used for. Using "distraught" instead of "heartbroken" or "dropped" instead of "fell," or even "hey there" instead of "hello:"`,
-    paragraph2Title: `INITIAL SKETCHES`,
-    paragraph2: `I designed a minimalistic, book-inspired interface, utilizing a color-coded typography system to categorize words by frequency and part of speech.`,
     designHeading: `FINAL DESIGN`,
     imageUrl: dataPortraitGif,
     para2Url: [dataPortraitSketch],
@@ -96,6 +100,7 @@ const caseStudies = [
     title: "NUCLEAR DAWN",
     subtitle: `Designed and curated content for a 120-page, 5x8" trade book on the nuclear age, covering key historical events from the Pacific War to current disarmament efforts.`,
     tags: ["Editorial Design"],
+    link: "https://drive.google.com/file/d/1fFxxrMgDQABM_kg-FRuoAqCAiDIQYvDm/view?usp=sharing",
     role: "Designer, Editor",
     overview: `I designed and curated content for a 120-page, 5x8" trade book on the nuclear age, covering key historical events from the Pacific War to current disarmament efforts.`,
     introductionTitle: `WHY ATOMIC WEAPONS?`,
@@ -121,18 +126,19 @@ const caseStudies = [
     title: "TYPOGRAPHIC FORM",
     subtitle: `Designed a dynamic typographic animation to explore the anatomy of the word "curiosity," using p5.js to create three interactive experiences: tracking mouse movement, breaking down the word into its constituent letters, and exploring each letter individually.`,
     tags: ["Digital Media"],
+    link: "https://soumyakarwa.github.io/form_generator/",
     role: "Designer, Developer",
     overview: `I designed a dynamic typographic animation to explore the anatomy of the word "curiosity," using p5.js to create three interactive experiences: tracking mouse movement, breaking down the word into its constituent letters, and exploring each letter individually.`,
     introductionTitle: `CONCEPT`,
     introduction: `I love playing around with mouse interactions and was feeling experimental! I wanted to explore the anatomy of the "curiosity."`,
-    paragraph1Title: `LOGIC`,
-    paragraph1: `The first one is pretty simple, with the word "curiosity" following the mouse position on the canvas. I restricted the number of texts on the screen because I wanted to create dynamic movement instead of the text being permanently drawn at a particular point. The second one was more complicated because I needed to keep track of each letter in the word. I wanted to demonstrate "curiosity" as a sum of its parts. Hence, another word will appear randomly on the screen whenever you hover over a particular letter. This word contains only the letters of "curiosity." I randomized the colors of the additional words while fading out the letters in "curiosity" that weren't used to demonstrate the correlation. The third one was similar to the first, except for one letter at a time. I wanted to break down the word to explore its structure in the barest form.`,
-    paragraph2Title: `INITIAL SKETCHES`,
-    paragraph2: ``,
-    designHeading: `FINAL DESIGNS`,
+    paragraph1Title: `INITIAL SKETCHES`,
+    paragraph1: `I decided on three animations that follow the mouse's x and y position on the screen.`,
+    paragraph2Title: `FINAL DESIGNS`,
+    paragraph2: `The first one is pretty simple, with the word "curiosity" following the mouse position on the canvas. I restricted the number of texts on the screen because I wanted to create dynamic movement instead of the text being permanently drawn at a particular point. The second one was more complicated because I needed to keep track of each letter in the word. I wanted to demonstrate "curiosity" as a sum of its parts. Hence, another word will appear randomly on the screen whenever you hover over a particular letter. This word contains only the letters of "curiosity." I randomized the colors of the additional words while fading out the letters in "curiosity" that weren't used to demonstrate the correlation. The third one was similar to the first, except for one letter at a time. I wanted to break down the word to explore its structure in the barest form.`,
+    designHeading: ``,
     imageUrl: typographicFormGif,
-    para2Url: [typeFormSketch],
-    designsUrl: [typographicFormGif],
+    para1Url: [typeFormSketch],
+    para2Url: [typographicFormGif],
   },
   // {
   //   id: 5,
@@ -173,6 +179,10 @@ const caseStudies = [
   // Add more case studies as needed
 ];
 
+const handleLinkClick = (event) => {
+  event.stopPropagation(); // This stops the click event from bubbling up to parent elements
+};
+
 const Work = ({ onStudyClick }) => {
   // const getBackgroundColor = (tag) => {
   //   const rootStyle = getComputedStyle(document.body);
@@ -211,6 +221,16 @@ const Work = ({ onStudyClick }) => {
             <div className="work">
               <div className="description">
                 <div className="title">{study.title}</div>
+                <div className="myButton">
+                  <a
+                    href={study.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={handleLinkClick}
+                  >
+                    DEMO
+                  </a>
+                </div>
                 {/* <ul className="tags">
                   {study.tags.map((tag, idx) => (
                     <li

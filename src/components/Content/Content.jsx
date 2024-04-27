@@ -37,7 +37,7 @@ const Content = ({ study }) => {
               ))}
             </ul> */}
             <div className="content-title">{study.title}</div>
-            <div className="section">
+            <div className="section" id="role">
               <div className="section-text">
                 <div className="section-heading">ROLE</div>
                 <div>{study.role}</div>

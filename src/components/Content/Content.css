@@ -32,6 +32,7 @@
 }
 
 .content-title {
+  position: fixed;
   font-size: var(--navbar-font-size);
   font-weight: var(--font-weight-semibold);
   font-family: var(--body-font);
@@ -70,13 +71,18 @@
   /* gap: calc(var(--margin) / var(--golden-ratio)); */
 }
 
+#role {
+  margin-top: calc(var(--margin) + var(--navbar-font-size));
+}
+
 .section {
   display: flex;
   align-items: flex-start;
   flex-direction: row; /* Align items at the start of the flex container */
   justify-content: space-between;
   gap: var(--margin);
-  margin-bottom: var(--margin);
+  margin-top: var(--margin);
+  /* margin-bottom: var(--margin); */
 }
 
 .section-text {
