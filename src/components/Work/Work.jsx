@@ -25,6 +25,7 @@ import echoesOfConflictGif from "../../assets/echoesOfConflict/clippedVid.gif";
 import echoesOfConflictAnimationGif from "../../assets/echoesOfConflict/radialBarGif.gif";
 import echoesOfConflictImg1 from "../../assets/echoesOfConflict/echoesOfConflict-1.jpg";
 import echoesOfConflictImg2 from "../../assets/echoesOfConflict/echoesOfConflict-2.jpg";
+import parsonsIntroImg from "../../assets/parsonsBenefit/groupPic.jpg";
 
 const caseStudies = [
   {
@@ -42,13 +43,46 @@ const caseStudies = [
     paragraph2Title: `INITIAL SKETCHES`,
     paragraph2: `To effectively display over 100 data points in a way that emphasizes comparison without overwhelming the viewer, I opted for a radial bar chart. This design allows for an intuitive visual comparison of categories, as longer bars stand out prominently against shorter ones, clearly depicting differences without the need for specific numerical values. I thought this would simplify the viewer's experience by focusing on relative magnitudes rather than precise data.`,
     designHeading: `FINAL DESIGNS`,
+    imageType: "image",
     imageUrl: echoesOfConflictGif,
+    para1Type: ["image"],
     para1Url: [echoesOfConflictAnimationGif],
+    para2Type: ["image", "image"],
     para2Url: [echoesOfConflictImg1, echoesOfConflictImg2],
+    designsType: ["image"],
     designsUrl: [echoesOfConflictGif],
   },
   {
     id: 2,
+    title: "PARSONS BENEFIT 2024",
+    subtitle: `Used p5.js to design and code an animation video in line with the visual identity and branding for the 75th annual Parsons Benefit (2024).`,
+    tags: ["Creative Coding"],
+    link: "https://www.youtube.com/watch?v=B4-ECRn2xAs",
+    role: `Designer, Creative Coder`,
+    overview: `Used p5.js to design and code an animation video in line with the visual identity and branding for the 75th annual Parsons Benefit created by students of Professor Lucille Tenazas’ class, University Design Studio.`,
+    introductionTitle: `TEAM`,
+    introduction: `<span class="section-heading">Henry Wolf Professor of Communication Design,</span> Lucille Tenazas<br>
+    <span class="section-heading">Students:</span> Win Bulbon, Soumya Karwa, Da Won Kim, Aarya Kini, Aparna Krishnan Reshmy, Sachi Mavinkurve, Muhammad Talha.<br><br>
+    <span class="section-heading">Left to Right:</span> Muhammad Talha, Yvonne Watson, Ben Barry, Sachi Mavinkurve, Soumya Karwa, Aparna Krishnan, Win Bulbon`,
+    paragraph1Title: `WHAT IS THE PARSONS BENEFIT`,
+    paragraph1: `The Parsons Benefit is an annual celebration of the transformational role fashion, design, and the arts play in today’s world. The evening highlights the work of Parsons Fashion and Textile students. It gathers an esteemed assembly of industry leaders, Parsons alumni, and other luminaries from the Parsons global network to recognize the Parsons Table Award recipients. On the occasion of the 75th annual Parsons Benefit, we designed the branding, graphics, animation, and overall visual identity for the Parsons Benefit.`,
+    paragraph2Title: `ANIMATION VIDEO`,
+    paragraph2: `tbd`,
+    designHeading: `LIVE AT PARSONS BENEFIT`,
+    imageType: "iframe",
+    imageUrl: "https://www.youtube.com/embed/B4-ECRn2xAs",
+    introType: ["image"],
+    introUrl: [parsonsIntroImg],
+    para2Type: ["iframe"],
+    para2Url: ["https://www.youtube.com/embed/B4-ECRn2xAs"],
+    designsType: ["iframe", "iframe"],
+    designsUrl: [
+      "https://www.youtube.com/embed/jkPGUcxb8-s",
+      "https://www.youtube.com/embed/bPpD8zsi0jY",
+    ],
+  },
+  {
+    id: 3,
     title: "FIBONACCI",
     subtitle: `Created two posters and a dynamic digital media interaction to illustrate the Fibonacci sequence, showcasing the interdependence of square sizes and their relation to the golden ratio.`,
     tags: ["Digital Media", "Poster Design"],
@@ -62,9 +96,13 @@ const caseStudies = [
     paragraph2Title: `INITIAL SKETCHES`,
     paragraph2: `I wanted to focus on the recursive nature of the sequence and decided to focus on the squares.`,
     designHeading: `FINAL DESIGNS`,
+    imageType: "image",
     imageUrl: fibonacciGif,
+    introType: ["image"],
     introUrl: [fibonacciIntro],
+    para2Type: ["image", "image"],
     para2Url: [fibonacciPara2_1, fibonacciPara2_2],
+    designsType: ["image", "image", "image", "image"],
     designsUrl: [
       fibonacciDesignUrl1,
       fibonacciDesignUrl2,
@@ -73,7 +111,7 @@ const caseStudies = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "DATA PORTRAIT",
     subtitle: `Used p5.js in a data-driven design project exploring the essence of fiction, using word frequency analysis to dissect the writer's role in shaping narrative structure.`,
     tags: ["Digital Media", "Data Viz"],
@@ -91,12 +129,15 @@ const caseStudies = [
 
     Each word tells us something distinct about the character it’s being used for. Using "distraught" instead of "heartbroken" or "dropped" instead of "fell," or even "hey there" instead of "hello:"`,
     designHeading: `FINAL DESIGN`,
+    imageType: "image",
     imageUrl: dataPortraitGif,
+    para2Type: ["image"],
     para2Url: [dataPortraitSketch],
+    designsType: ["image"],
     designsUrl: [dataPortraitGif],
   },
   {
-    id: 4,
+    id: 5,
     title: "NUCLEAR DAWN",
     subtitle: `Designed and curated content for a 120-page, 5x8" trade book on the nuclear age, covering key historical events from the Pacific War to current disarmament efforts.`,
     tags: ["Editorial Design"],
@@ -110,8 +151,19 @@ const caseStudies = [
     paragraph2Title: `INITIAL THOUGHTS`,
     paragraph2: ``,
     designHeading: `SELECTED SPREADS`,
+    imageType: "image",
     imageUrl: nuclearDawnCover,
+    para2Type: ["image"],
     para2Url: [nuclearDawnSketch],
+    designsType: [
+      "image",
+      "image",
+      "image",
+      "image",
+      "image",
+      "image",
+      "image",
+    ],
     designsUrl: [
       nuclearDawnFinal1,
       nuclearDawnFinal2,
@@ -122,7 +174,7 @@ const caseStudies = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: "TYPOGRAPHIC FORM",
     subtitle: `Designed a dynamic typographic animation to explore the anatomy of the word "curiosity," using p5.js to create three interactive experiences: tracking mouse movement, breaking down the word into its constituent letters, and exploring each letter individually.`,
     tags: ["Digital Media"],
@@ -136,48 +188,33 @@ const caseStudies = [
     paragraph2Title: `FINAL DESIGNS`,
     paragraph2: `The first one is pretty simple, with the word "curiosity" following the mouse position on the canvas. I restricted the number of texts on the screen because I wanted to create dynamic movement instead of the text being permanently drawn at a particular point. The second one was more complicated because I needed to keep track of each letter in the word. I wanted to demonstrate "curiosity" as a sum of its parts. Hence, another word will appear randomly on the screen whenever you hover over a particular letter. This word contains only the letters of "curiosity." I randomized the colors of the additional words while fading out the letters in "curiosity" that weren't used to demonstrate the correlation. The third one was similar to the first, except for one letter at a time. I wanted to break down the word to explore its structure in the barest form.`,
     designHeading: ``,
+    imageType: "image",
     imageUrl: typographicFormGif,
+    para1Type: ["image"],
     para1Url: [typeFormSketch],
+    para2Type: ["image"],
     para2Url: [typographicFormGif],
   },
-  // {
-  //   id: 5,
-  //   title: "LIGHT, SPACE & TIME",
-  //   subtitle: `I've always been fascinated with the relationship between light & time. And how sometimes, the stars we see in the night sky might have already died, because they might be so far away that their light has taken years to reach us. I designed a p5.js program to demonstrate this difference.`,
-  //   tags: ["Digital Media"],
-  //   role: "Designer, Developer",
-  //   overview: `I've always been fascinated with the relationship between light & time. And how sometimes, the stars we see in the night sky might have already died, because they might be so far away that their light has taken years to reach us. I designed a p5.js program to demonstrate this difference.`,
-  //   introductionTitle: `PHYSICS`,
-  //   introduction: `Nothing can travel faster than at the speed of light, approximately 299,792 kilometers per second. When we look at stars in the night sky, we see them as they were in the past because the stars are so far away that their light can take decades, if not centuries, to reach us. Because the universe is so incredibly vast, astronomers use the term "light year" to describe distances. A light year is the distance light travels in one year, about 9.46 trillion kilometers (or about 5.88 trillion miles). When we say a star is "10 light years away," it means that the light from that star takes ten years to reach us. When we look up at the night sky, we are looking back in time. If a star is 1,000 light years away, the light we are seeing from it tonight left the star 1,000 years ago: a profound metaphor expressing multiple timelines in the same world.`,
-  //   paragraph1Title: `LOGIC`,
-  //   paragraph1: ``,
-  //   paragraph2Title: `INITIAL SKETCHES`,
-  //   paragraph2: `The screen on the left shows the night sky as we see it. The screen on the right shows the stars in the night sky, accounting for how long the light takes to reach us on Earth.`,
-  //   designHeading: `FINAL DESIGN`,
-  //   imageUrl: lightAndTimeGif,
-  //   para2Url: [lightAndTimeSketch],
-  //   designsUrl: [lightAndTimeGif],
-  // },
-  // {
-  //   id: 5,
-  //   title: "LIGHT, SPACE & TIME",
-  //   subtitle: `I've always been fascinated with the relationship between light & time. And how sometimes, the stars we see in the night sky might have already died, because they might be so far away that their light has taken years to reach us. I designed a p5.js program to demonstrate this difference.`,
-  //   tags: ["Digital Media"],
-  //   role: "Designer, Developer",
-  //   overview: `I've always been fascinated with the relationship between light & time. And how sometimes, the stars we see in the night sky might have already died, because they might be so far away that their light has taken years to reach us. I designed a p5.js program to demonstrate this difference.`,
-  //   introductionTitle: `PHYSICS`,
-  //   introduction: `Nothing can travel faster than at the speed of light, approximately 299,792 kilometers per second. When we look at stars in the night sky, we see them as they were in the past because the stars are so far away that their light can take decades, if not centuries, to reach us. Because the universe is so incredibly vast, astronomers use the term "light year" to describe distances. A light year is the distance light travels in one year, about 9.46 trillion kilometers (or about 5.88 trillion miles). When we say a star is "10 light years away," it means that the light from that star takes ten years to reach us. When we look up at the night sky, we are looking back in time. If a star is 1,000 light years away, the light we are seeing from it tonight left the star 1,000 years ago: a profound metaphor expressing multiple timelines in the same world.`,
-  //   paragraph1Title: `LOGIC`,
-  //   paragraph1: ``,
-  //   paragraph2Title: `INITIAL SKETCHES`,
-  //   paragraph2: `The screen on the left shows the night sky as we see it. The screen on the right shows the stars in the night sky, accounting for how long the light takes to reach us on Earth.`,
-  //   designHeading: `FINAL DESIGN`,
-  //   imageUrl: lightAndTimeGif,
-  //   para2Url: [lightAndTimeSketch],
-  //   designsUrl: [lightAndTimeGif],
-  // },
-  // Add more case studies as needed
 ];
+// {
+//   id: 5,
+//   title: "LIGHT, SPACE & TIME",
+//   subtitle: `I've always been fascinated with the relationship between light & time. And how sometimes, the stars we see in the night sky might have already died, because they might be so far away that their light has taken years to reach us. I designed a p5.js program to demonstrate this difference.`,
+//   tags: ["Digital Media"],
+//   role: "Designer, Developer",
+//   overview: `I've always been fascinated with the relationship between light & time. And how sometimes, the stars we see in the night sky might have already died, because they might be so far away that their light has taken years to reach us. I designed a p5.js program to demonstrate this difference.`,
+//   introductionTitle: `PHYSICS`,
+//   introduction: `Nothing can travel faster than at the speed of light, approximately 299,792 kilometers per second. When we look at stars in the night sky, we see them as they were in the past because the stars are so far away that their light can take decades, if not centuries, to reach us. Because the universe is so incredibly vast, astronomers use the term "light year" to describe distances. A light year is the distance light travels in one year, about 9.46 trillion kilometers (or about 5.88 trillion miles). When we say a star is "10 light years away," it means that the light from that star takes ten years to reach us. When we look up at the night sky, we are looking back in time. If a star is 1,000 light years away, the light we are seeing from it tonight left the star 1,000 years ago: a profound metaphor expressing multiple timelines in the same world.`,
+//   paragraph1Title: `LOGIC`,
+//   paragraph1: ``,
+//   paragraph2Title: `INITIAL SKETCHES`,
+//   paragraph2: `The screen on the left shows the night sky as we see it. The screen on the right shows the stars in the night sky, accounting for how long the light takes to reach us on Earth.`,
+//   designHeading: `FINAL DESIGN`,
+//   imageUrl: lightAndTimeGif,
+//   para2Url: [lightAndTimeSketch],
+//   designsUrl: [lightAndTimeGif],
+// },
+// Add more case studies as needed
 
 const handleLinkClick = (event) => {
   event.stopPropagation(); // This stops the click event from bubbling up to parent elements
@@ -213,11 +250,23 @@ const Work = ({ onStudyClick }) => {
             className="case-study"
             onClick={() => onStudyClick(study)}
           >
-            <img
-              src={study.imageUrl}
-              alt={`${study.title} cover`}
-              className="case-study-image"
-            />
+            {study.imageType === "iframe" ? (
+              <div className="iframe-container">
+                <iframe
+                  src={study.imageUrl}
+                  className="responsive-iframe"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  title={`${study.title} cover`}
+                ></iframe>
+              </div>
+            ) : (
+              <img
+                src={study.imageUrl}
+                alt={`${study.title} cover`}
+                className="case-study-image"
+              />
+            )}
             <div className="work">
               <div className="description">
                 <div className="title">{study.title}</div>
