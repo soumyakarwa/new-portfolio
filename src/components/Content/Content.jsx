@@ -53,7 +53,7 @@ const Content = ({ study }) => {
             <div className="section">
               <div className="section-text">
                 <div className="section-heading">OVERVIEW</div>
-                <div>{study.overview}</div>
+                <div dangerouslySetInnerHTML={{ __html: study.overview }} />
               </div>
             </div>
             <div className="section">
@@ -91,7 +91,7 @@ const Content = ({ study }) => {
             <div className="section">
               <div className="section-text">
                 <div className="section-heading">{study.paragraph1Title}</div>
-                <div>{study.paragraph1}</div>
+                <div dangerouslySetInnerHTML={{ __html: study.paragraph1 }} />
               </div>
               <div className="images-container">
                 {study.para1Url &&
@@ -121,7 +121,7 @@ const Content = ({ study }) => {
             <div className="section">
               <div className="section-text">
                 <div className="section-heading">{study.paragraph2Title}</div>
-                <div>{study.paragraph2}</div>
+                <div dangerouslySetInnerHTML={{ __html: study.paragraph2 }} />
               </div>
               <div className="images-container">
                 {study.para2Url &&
