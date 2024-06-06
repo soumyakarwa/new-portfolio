@@ -27,7 +27,7 @@ const About = () => {
           </div>
           <div id="dev">
             Development Languages & Libraries: JavaScript, HTML/CSS, Java,
-            Python, p5.js, d3.js, matter.js, leaflet.js, react.js.
+            Python, p5.js, d3.js, matter.js, leaflet.js, react.js, svelte.js.
           </div>
         </div>
         <div className="image-grid">
