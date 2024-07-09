@@ -33,7 +33,7 @@ const caseStudies = [
     id: 1,
     wip: true,
     title: "THE MOST ICONIC DUO IN BROOKLYN NINE-NINE",
-    subtitle: `Data Journalistic piece identifying the most popular character duo in the sitcom Brooklyn Nine-Nine by analyzing all official and unofficial episode descriptions, along with IMDb ratings and votes`,
+    subtitle: `Data Journalistic piece identifying the most popular character duo in the sitcom Brooklyn Nine-Nine by analyzing all official and unofficial episode descriptions, along with IMDb ratings and votes.`,
     tags: ["Data Viz"],
     link: "",
     role: `Designer, Developer, Data Analyst`,
