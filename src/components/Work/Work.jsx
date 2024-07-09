@@ -1,5 +1,6 @@
 import React from "react";
 import "./Work.css";
+import comingSoonPng from "../../assets/coming-soon3.png";
 import fibonacciGif from "../../assets/fibonacci/fibonacci-copy.gif";
 import fibonacciDesignUrl1 from "../../assets/fibonacci/mockup-1.PNG";
 import fibonacciDesignUrl2 from "../../assets/fibonacci/mockup-2.PNG";
@@ -30,6 +31,32 @@ import parsonsIntroImg from "../../assets/parsonsBenefit/groupPic.jpg";
 const caseStudies = [
   {
     id: 1,
+    wip: true,
+    title: "THE MOST ICONIC DUO IN BROOKLYN NINE-NINE",
+    subtitle: `Data Journalistic piece identifying the most popular character duo in the sitcom Brooklyn Nine-Nine by analyzing all official and unofficial episode descriptions, along with IMDb ratings and votes`,
+    tags: ["Data Viz"],
+    link: "",
+    role: `Designer, Developer, Data Analyst`,
+    overview: ``,
+    introductionTitle: ``,
+    introduction: ``,
+    paragraph1Title: ``,
+    paragraph1: ``,
+    paragraph2Title: ``,
+    paragraph2: ``,
+    designHeading: ``,
+    imageType: "image",
+    imageUrl: comingSoonPng,
+    para1Type: [],
+    para1Url: [],
+    para2Type: [],
+    para2Url: [],
+    designsType: [],
+    designsUrl: [],
+  },
+  {
+    id: 2,
+    wip: false,
     title: "ECHOES OF CONFLICT",
     subtitle: `Used d3.js to create an interactive radial bar chart to illustrate the prevalence of war rhetoric in the State of the Union Addresses over the last century.`,
     tags: ["Data Viz"],
@@ -53,7 +80,8 @@ const caseStudies = [
     designsUrl: [echoesOfConflictGif],
   },
   {
-    id: 2,
+    id: 3,
+    wip: false,
     title: "PARSONS BENEFIT 2024",
     subtitle: `Used p5.js to design and code an animation video in line with the visual identity and branding for the 75th annual Parsons Benefit (2024).`,
     tags: ["Creative Coding"],
@@ -82,7 +110,8 @@ const caseStudies = [
     ],
   },
   {
-    id: 3,
+    id: 4,
+    wip: false,
     title: "FIBONACCI",
     subtitle: `Created two posters and a dynamic digital media interaction to illustrate the Fibonacci sequence, showcasing the interdependence of square sizes and their relation to the golden ratio.`,
     tags: ["Digital Media", "Poster Design"],
@@ -111,7 +140,8 @@ const caseStudies = [
     ],
   },
   // {
-  //   id: 4,
+  //   id: 5,
+  //   wip: false,
   //   title: "DATA PORTRAIT",
   //   subtitle: `Used p5.js in a data-driven design project exploring the essence of fiction, using word frequency analysis to dissect the writer's role in shaping narrative structure.`,
   //   tags: ["Digital Media", "Data Viz"],
@@ -137,7 +167,8 @@ const caseStudies = [
   //   designsUrl: [dataPortraitGif],
   // },
   {
-    id: 4,
+    id: 6,
+    wip: false,
     title: "NUCLEAR DAWN",
     subtitle: `Designed and curated content for a 120-page, 5x8" trade book on the nuclear age, covering key historical events from the Pacific War to current disarmament efforts.`,
     tags: ["Editorial Design"],
@@ -174,7 +205,8 @@ const caseStudies = [
     ],
   },
   // {
-  //   id: 6,
+  //   id: 7,
+  //   wip: false,
   //   title: "TYPOGRAPHIC FORM",
   //   subtitle: `Designed a dynamic typographic animation to explore the anatomy of the word "curiosity," using p5.js to create three interactive experiences: tracking mouse movement, breaking down the word into its constituent letters, and exploring each letter individually.`,
   //   tags: ["Digital Media"],
@@ -221,25 +253,6 @@ const handleLinkClick = (event) => {
 };
 
 const Work = ({ onStudyClick }) => {
-  // const getBackgroundColor = (tag) => {
-  //   const rootStyle = getComputedStyle(document.body);
-  //   const defaultColor = rootStyle.getPropertyValue("--tag-color-1").trim();
-
-  //   switch (tag) {
-  //     case "Data Viz":
-  //       return (
-  //         rootStyle.getPropertyValue("--tag-color-2").trim() || defaultColor
-  //       );
-  //     case "Digital Media":
-  //       return (
-  //         rootStyle.getPropertyValue("--tag-color-3").trim() || defaultColor
-  //       );
-  //     // Handle other cases
-  //     default:
-  //       return defaultColor;
-  //   }
-  // };
-
   return (
     <div className="work-container">
       <div className="subheading">SELECTED PROJECTS</div>
@@ -248,7 +261,8 @@ const Work = ({ onStudyClick }) => {
           <div
             key={study.id}
             className="case-study"
-            onClick={() => onStudyClick(study)}
+            onClick={!study.wip ? () => onStudyClick(study) : undefined}
+            style={{ cursor: study.wip ? "default" : "pointer" }}
           >
             {study.imageType === "iframe" ? (
               <div className="iframe-container">
