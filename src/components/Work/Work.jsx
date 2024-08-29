@@ -1,6 +1,7 @@
 import React from "react";
 import "./Work.css";
 import comingSoonPng from "../../assets/coming-soon3.png";
+import mockup from "../../assets/macbook-mockup.png";
 import fibonacciGif from "../../assets/fibonacci/fibonacci-copy.gif";
 import fibonacciDesignUrl1 from "../../assets/fibonacci/mockup-1.PNG";
 import fibonacciDesignUrl2 from "../../assets/fibonacci/mockup-2.PNG";
@@ -27,32 +28,66 @@ import echoesOfConflictAnimationGif from "../../assets/echoesOfConflict/radialBa
 import echoesOfConflictImg1 from "../../assets/echoesOfConflict/echoesOfConflict-1.jpg";
 import echoesOfConflictImg2 from "../../assets/echoesOfConflict/echoesOfConflict-2.jpg";
 import parsonsIntroImg from "../../assets/parsonsBenefit/groupPic.jpg";
+import comedyDuosImg from "../../assets/comedyDuos/introImg.jpeg";
+import comedyDuosQuestionsImg from "../../assets/comedyDuos/comedyDuosQuestionsImg.jpg";
+import comedyDuosDataCollection from "../../assets/comedyDuos/cdDataCollection.jpg";
+import comedyDuosDataAnalysis from "../../assets/comedyDuos/cdDataAnalysis.jpg";
+import comedyDuosCaseBoard1 from "../../assets/comedyDuos/case-board1.jpeg";
+import comedyDuosLanding from "../../assets/comedyDuos/landing.png";
+import comedyDuosCharacters from "../../assets/comedyDuos/characters.png";
+import comedyDuosEBSketch from "../../assets/comedyDuos/episodeBreakdownSketch.jpg";
+import comedyDuosHeatMapSketch1 from "../../assets/comedyDuos/heatMapSketch1.jpg";
+import comedyDuosHeatMapSketch2 from "../../assets/comedyDuos/heatMapSketch2.jpg";
 
 const caseStudies = [
   {
     id: 1,
-    wip: true,
+    wip: false,
     title: "THE MOST ICONIC DUO IN BROOKLYN NINE-NINE",
-    subtitle: `Data Journalism piece identifying the most popular character duo in the sitcom Brooklyn Nine-Nine by analyzing official and unofficial episode descriptions, along with IMDb ratings and votes.`,
+    subtitle: `Designed and developed a visual essay titled, “The Most Iconic Duo In Brooklyn Nine-Nine” that aimed to identify the most beloved character duo in the sitcom Brooklyn Nine-Nine by analyzing official and unofficial episode descriptions, along with IMDb ratings and votes.`,
     tags: ["Data Viz"],
-    link: "",
+    link: "https://brooklyn-nine-nine-duos.vercel.app/",
     role: `Designer, Developer, Data Analyst`,
-    overview: ``,
-    introductionTitle: ``,
-    introduction: ``,
-    paragraph1Title: ``,
-    paragraph1: ``,
-    paragraph2Title: ``,
-    paragraph2: ``,
-    designHeading: ``,
-    imageType: "image",
-    imageUrl: comingSoonPng,
-    para1Type: [],
-    para1Url: [],
-    para2Type: [],
-    para2Url: [],
-    designsType: [],
-    designsUrl: [],
+    overview: `Designed and developed a visual essay titled, “The Most Iconic Duo In Brooklyn Nine-Nine” that aimed to identify the most beloved character duo in the sitcom Brooklyn Nine-Nine by analyzing official and unofficial episode descriptions, along with IMDb ratings and votes.`,
+    introductionTitle: `DESCRIPTION`,
+    introduction: `As a “die–hard” Brooklyn Nine-Nine fan, I’ve always wondered what made the show so special. What was it that made fans like me rewatch the show, again and again? Was it the wacky cold opens, the quick-whip humor or clunky screenwrite? It turned out to be the characters! It’s hard not to love them, despite their many many flaws. Their interactions and dynamics are what make the precinct feel like a real, albeit dysfunctional, family. Kind of like life itself. So I set out to find (channeling my Jimmy Jab host) the Most Iconic Duo of Brooklyn Nine-Nine. Which character duo is most beloved by the viewers, without whom Brooklyn Nine-Nine would just not be the same?`,
+    paragraph1Title: `All about the Data`,
+    paragraph1: `The key to this project was a language analysis. To identify the most iconic duo, I first had to analyze every episode’s description (both official and unofficial) to identify which characters were grouped together and correspond these findings with the episode’s IMDb rating. This would help me gauge a duo’s “popularity.”<br><br>
+    Data Collection <br>
+    I used an existing Kaggle dataset (containing information about every episode including episode description, IMdB rating, votes, title, season etc) and scraped two additional episode descriptions from Wikipedia and WikiFandom to strengthen the analysis.<br><br>
+    Data Cleaning & Analysis <br>
+    Using the Natural Language Toolkit (python library) and OpenAI API, I broke down every episode description into sentences and clauses: creating different plot points. Then I compared these plot points to a list of main characters to uncover which characters were paired together in the episode. I compared results from all three episode descriptions to ensure accuracy. <br><br>
+
+    Once the analysis was complete for all episodes (all descriptions), I calculated the weighted average rating for the top ten most frequently appearing character duos. This accounted for the number of votes each episode got, not just the episode rating. So, for every character duo, I calculated the weighted average by diving the sum of the product of episode rating and votes by the total number of votes. <br><br>
+
+    In the end, the duo with the highest weighted average rating was the Most Iconic Brooklyn Nine-Nine Duo!<br>
+    `,
+    paragraph2Title: `Initial Sketches`,
+    paragraph2: `No matter the case, each Brooklyn Nine-Nine episode always has a murder board, complete with pictures of perps, newspapers clippings, maps, stickies, and of course, colorful yarn tying everything together. So I decided on a similar theme, except with a digital flair. I designed a dot board with solid lines and ellipses impersonating thumb-pin tying different sections together. <br><br>
+    I started the visual essay with some context about the show, introducing the main characters, and my love for the show. <br><br>
+    To explain my language analysis, I designed a section that would take readers through my thoughts, step-by-step: explaining how each episode was broken down, while simultaneously highlighting the episode descriptions accordingly. Each episode is represented by a square which would subsequently be divided into the number of distinct character groups or pairings the episode had.`,
+    designHeading: `FINAL DESIGNS`,
+    reflection: `I loved this project from conception to ideation to design to development. I chose it as my summer project for my love of Brooklyn Nine-Nine, but also to implement my learnings in data visualization in a large scale, continuous project: a visual essay. I drew inspiration from The Pudding and The New York Times– I wanted to emulate the way they tie stories together, revealing things step by step, piece by piece. I learned and implemented so many things I didn’t end up using for instance Scrollytelling and Intersection Observer, but I’m glad I learned them anyway. I’m excited for more projects like these in the future.`,
+    imageType: "iframe",
+    imageUrl: "https://youtube.com/embed/i068dPXSG1U",
+    introType: ["image", "image", "image"],
+    introUrl: [mockup, comedyDuosImg, comedyDuosQuestionsImg],
+    para1Type: ["image", "image"],
+    para1Url: [comedyDuosDataCollection, comedyDuosDataAnalysis],
+    para2Type: ["image", "image", "image", "image"],
+    para2Url: [
+      comedyDuosCaseBoard1,
+      comedyDuosEBSketch,
+      comedyDuosHeatMapSketch1,
+      comedyDuosHeatMapSketch2,
+    ],
+    designsType: ["iframe", "iframe", "iframe", "iframe"],
+    designsUrl: [
+      "https://youtube.com/embed/bSfM3H85mkY",
+      "https://youtube.com/embed/AwVIR6q7iVs",
+      "https://youtube.com/embed/51FUEfK7cR4",
+      "https://youtube.com/embed/i068dPXSG1U",
+    ],
   },
   {
     id: 2,

@@ -153,6 +153,9 @@ const Content = ({ study }) => {
             <div className="section">
               <div className="section-text">
                 <div className="section-heading">{study.designHeading}</div>
+                {study.reflection && (
+                  <div dangerouslySetInnerHTML={{ __html: study.reflection }} />
+                )}
               </div>
               <div className="images-container">
                 {study.designsUrl &&
