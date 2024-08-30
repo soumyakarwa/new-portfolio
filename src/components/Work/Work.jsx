@@ -77,7 +77,7 @@ const caseStudies = [
       },
       para3: {
         title: `WHAT DO YOU MEAN, ICONICNESS?`,
-        content: `But first, I needed to narrow down what I was trying to find. I knew I wanted to identify the most iconic duo, but this begs the question: What defines iconicness? Mind maps help me visualize my thoughts, so I started there.<br><br>
+        content: `First, I needed to narrow down what I was trying to find. I knew I wanted to identify the most iconic duo, but this begs the question: What defines iconicness? Mind maps help me visualize my thoughts, so I started there.<br><br>
 
         After many questions and thought spirals, I measured iconicness with popularity. On IMDb, every Brooklyn Nine-Nine episode's rating is calculated as the average of ratings received from a certain number of votes. Using this metric, I can assign the episode's rating to each character pair/group in that episode.<br><br>
 
@@ -160,7 +160,7 @@ const caseStudies = [
         title: `REFLECTION`,
         content: `I loved this project, from conception to ideation to design to development. I chose it as my summer project for my love of Brooklyn Nine-Nine, but also to implement learnings in data visualization in a large-scale, continuous project: a visual essay. I drew inspiration from The Pudding and The New York Times– I wanted to emulate the way they tie stories together, revealing things step by step, piece by piece. I learned and implemented so many things I didn’t end up using, for instance, Scrollytelling and Intersection Observer, but I’m glad I learned them anyway. I’m excited for more projects like these in the future.<br><br>
         
-        Shoutout to <span class="underline"><a href="https://www.connorrothschild.com">Connor Rothschild</a></span>, <span class="underline"><a href="https://www.daniellecarrick.com/">Danielle Carrick</a></span> and <span class="underline">Michael Hester</span> for their time and expertise to critique this project! Shoutout to <span class="underline"><a href="https://justinbakse.com/">Prof. Justin Bakse</a></span> for his class, "Javascript+OpenAI" at Parsons which taught me effciently use OpenAI's GPT in projects. 
+        Shoutout to <span class="underline"><a href="https://www.connorrothschild.com">Connor Rothschild</a></span>, <span class="underline"><a href="https://www.daniellecarrick.com/">Danielle Carrick</a></span> and <span class="underline">Michael Hester</span> for their time and expertise to critique this project! Shoutout to <span class="underline"><a href="https://justinbakse.com/">Prof. Justin Bakse</a></span> for his class, "Javascript+OpenAI" at Parsons which taught me how to effciently use OpenAI's GPT in projects. 
 
         Please check my <span class="underline"><a href="https://github.com/soumyakarwa/comedy-duos">Github Repository</a></span> for more detailed sources!`,
         imageType: null,
