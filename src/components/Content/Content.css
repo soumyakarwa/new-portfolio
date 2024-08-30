@@ -33,6 +33,7 @@
 
 .content-title {
   position: fixed;
+  max-width: 35%;
   font-size: var(--navbar-font-size);
   font-weight: var(--font-weight-semibold);
   font-family: var(--body-font);

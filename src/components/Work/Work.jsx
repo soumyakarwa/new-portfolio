@@ -49,45 +49,55 @@ const caseStudies = [
     link: "https://brooklyn-nine-nine-duos.vercel.app/",
     role: `Designer, Developer, Data Analyst`,
     overview: `Designed and developed a visual essay titled, “The Most Iconic Duo In Brooklyn Nine-Nine” that aimed to identify the most beloved character duo in the sitcom Brooklyn Nine-Nine by analyzing official and unofficial episode descriptions, along with IMDb ratings and votes.`,
-    introductionTitle: `DESCRIPTION`,
-    introduction: `As a “die–hard” Brooklyn Nine-Nine fan, I’ve always wondered what made the show so special. What was it that made fans like me rewatch the show, again and again? Was it the wacky cold opens, the quick-whip humor or clunky screenwrite? It turned out to be the characters! It’s hard not to love them, despite their many many flaws. Their interactions and dynamics are what make the precinct feel like a real, albeit dysfunctional, family. Kind of like life itself. So I set out to find (channeling my Jimmy Jab host) the Most Iconic Duo of Brooklyn Nine-Nine. Which character duo is most beloved by the viewers, without whom Brooklyn Nine-Nine would just not be the same?`,
-    paragraph1Title: `All about the Data`,
-    paragraph1: `The key to this project was a language analysis. To identify the most iconic duo, I first had to analyze every episode’s description (both official and unofficial) to identify which characters were grouped together and correspond these findings with the episode’s IMDb rating. This would help me gauge a duo’s “popularity.”<br><br>
-    Data Collection <br>
-    I used an existing Kaggle dataset (containing information about every episode including episode description, IMdB rating, votes, title, season etc) and scraped two additional episode descriptions from Wikipedia and WikiFandom to strengthen the analysis.<br><br>
-    Data Cleaning & Analysis <br>
-    Using the Natural Language Toolkit (python library) and OpenAI API, I broke down every episode description into sentences and clauses: creating different plot points. Then I compared these plot points to a list of main characters to uncover which characters were paired together in the episode. I compared results from all three episode descriptions to ensure accuracy. <br><br>
-
-    Once the analysis was complete for all episodes (all descriptions), I calculated the weighted average rating for the top ten most frequently appearing character duos. This accounted for the number of votes each episode got, not just the episode rating. So, for every character duo, I calculated the weighted average by diving the sum of the product of episode rating and votes by the total number of votes. <br><br>
-
-    In the end, the duo with the highest weighted average rating was the Most Iconic Brooklyn Nine-Nine Duo!<br>
-    `,
-    paragraph2Title: `Initial Sketches`,
-    paragraph2: `No matter the case, each Brooklyn Nine-Nine episode always has a murder board, complete with pictures of perps, newspapers clippings, maps, stickies, and of course, colorful yarn tying everything together. So I decided on a similar theme, except with a digital flair. I designed a dot board with solid lines and ellipses impersonating thumb-pin tying different sections together. <br><br>
-    I started the visual essay with some context about the show, introducing the main characters, and my love for the show. <br><br>
-    To explain my language analysis, I designed a section that would take readers through my thoughts, step-by-step: explaining how each episode was broken down, while simultaneously highlighting the episode descriptions accordingly. Each episode is represented by a square which would subsequently be divided into the number of distinct character groups or pairings the episode had.`,
-    designHeading: `FINAL DESIGNS`,
-    reflection: `I loved this project from conception to ideation to design to development. I chose it as my summer project for my love of Brooklyn Nine-Nine, but also to implement my learnings in data visualization in a large scale, continuous project: a visual essay. I drew inspiration from The Pudding and The New York Times– I wanted to emulate the way they tie stories together, revealing things step by step, piece by piece. I learned and implemented so many things I didn’t end up using for instance Scrollytelling and Intersection Observer, but I’m glad I learned them anyway. I’m excited for more projects like these in the future.`,
     imageType: "iframe",
     imageUrl: "https://youtube.com/embed/i068dPXSG1U",
-    introType: ["image", "image", "image"],
-    introUrl: [mockup, comedyDuosImg, comedyDuosQuestionsImg],
-    para1Type: ["image", "image"],
-    para1Url: [comedyDuosDataCollection, comedyDuosDataAnalysis],
-    para2Type: ["image", "image", "image", "image"],
-    para2Url: [
-      comedyDuosCaseBoard1,
-      comedyDuosEBSketch,
-      comedyDuosHeatMapSketch1,
-      comedyDuosHeatMapSketch2,
-    ],
-    designsType: ["iframe", "iframe", "iframe", "iframe"],
-    designsUrl: [
-      "https://youtube.com/embed/bSfM3H85mkY",
-      "https://youtube.com/embed/AwVIR6q7iVs",
-      "https://youtube.com/embed/51FUEfK7cR4",
-      "https://youtube.com/embed/i068dPXSG1U",
-    ],
+    paragraphs: {
+      para1: {
+        title: `DESCRIPTION`,
+        content: `As a “die–hard” Brooklyn Nine-Nine fan, I’ve always wondered what made the show so special. What was it that made fans like me rewatch the show, again and again? Was it the wacky cold opens, the quick-whip humor or clunky screenwrite? It turned out to be the characters! It’s hard not to love them, despite their many many flaws. Their interactions and dynamics are what make the precinct feel like a real, albeit dysfunctional, family. Kind of like life itself. So I set out to find (channeling my Jimmy Jab host) the Most Iconic Duo of Brooklyn Nine-Nine. Which character duo is most beloved by the viewers, without whom Brooklyn Nine-Nine would just not be the same?`,
+        imageType: ["image", "image", "image"],
+        imageSource: [mockup, comedyDuosImg, comedyDuosQuestionsImg],
+      },
+      para2: {
+        title: `ALL ABOUT THE DATA`,
+        content: `The key to this project was a language analysis. To identify the most iconic duo, I first had to analyze every episode’s description (both official and unofficial) to identify which characters were grouped together and correspond these findings with the episode’s IMDb rating. This would help me gauge a duo’s “popularity.”<br><br>
+        Data Collection <br>
+        I used an existing Kaggle dataset (containing information about every episode including episode description, IMdB rating, votes, title, season etc) and scraped two additional episode descriptions from Wikipedia and WikiFandom to strengthen the analysis.<br><br>
+        Data Cleaning & Analysis <br>
+        Using the Natural Language Toolkit (python library) and OpenAI API, I broke down every episode description into sentences and clauses: creating different plot points. Then I compared these plot points to a list of main characters to uncover which characters were paired together in the episode. I compared results from all three episode descriptions to ensure accuracy. <br><br>
+
+        Once the analysis was complete for all episodes (all descriptions), I calculated the weighted average rating for the top ten most frequently appearing character duos. This accounted for the number of votes each episode got, not just the episode rating. So, for every character duo, I calculated the weighted average by diving the sum of the product of episode rating and votes by the total number of votes. <br><br>
+
+        In the end, the duo with the highest weighted average rating was the Most Iconic Brooklyn Nine-Nine Duo!<br>
+        `,
+        imageType: ["image", "image"],
+        imageSource: [comedyDuosDataCollection, comedyDuosDataAnalysis],
+      },
+      para3: {
+        title: `INITIAL SKETCHES`,
+        content: `No matter the case, each Brooklyn Nine-Nine episode always has a murder board, complete with pictures of perps, newspapers clippings, maps, stickies, and of course, colorful yarn tying everything together. So I decided on a similar theme, except with a digital flair. I designed a dot board with solid lines and ellipses impersonating thumb-pin tying different sections together. <br><br>
+        I started the visual essay with some context about the show, introducing the main characters, and my love for the show. <br><br>
+        To explain my language analysis, I designed a section that would take readers through my thoughts, step-by-step: explaining how each episode was broken down, while simultaneously highlighting the episode descriptions accordingly. Each episode is represented by a square which would subsequently be divided into the number of distinct character groups or pairings the episode had.`,
+        imageType: ["image", "image", "image", "image"],
+        imageSource: [
+          comedyDuosCaseBoard1,
+          comedyDuosEBSketch,
+          comedyDuosHeatMapSketch1,
+          comedyDuosHeatMapSketch2,
+        ],
+      },
+      para4: {
+        title: `FINAL DESIGNS`,
+        reflection: `I loved this project from conception to ideation to design to development. I chose it as my summer project for my love of Brooklyn Nine-Nine, but also to implement my learnings in data visualization in a large scale, continuous project: a visual essay. I drew inspiration from The Pudding and The New York Times– I wanted to emulate the way they tie stories together, revealing things step by step, piece by piece. I learned and implemented so many things I didn’t end up using for instance Scrollytelling and Intersection Observer, but I’m glad I learned them anyway. I’m excited for more projects like these in the future.`,
+        imageType: ["iframe", "iframe", "iframe", "iframe"],
+        imageSource: [
+          "https://youtube.com/embed/bSfM3H85mkY",
+          "https://youtube.com/embed/AwVIR6q7iVs",
+          "https://youtube.com/embed/51FUEfK7cR4",
+          "https://youtube.com/embed/i068dPXSG1U",
+        ],
+      },
+    },
   },
   {
     id: 2,
@@ -98,21 +108,34 @@ const caseStudies = [
     link: "https://soumyakarwa.github.io/echoes-of-conflict/",
     role: `Designer, Developer, Data Analyst`,
     overview: `Created an interactive radial bar chart to illustrate the prevalence of war rhetoric in the State of the Union Addresses over the last century. This data-driven approach provides a revealing look at how war has ebbed and flowed as a subject in the annual addresses to Congress, reflecting the nation's entanglement with international and domestic conflicts over time.`,
-    introductionTitle: `WHAT IS THE STATE OF THE UNION ADDRESS?`,
-    introduction: `The State of the Union address is a yearly speech delivered by the President of the United States to Congress. It outlines the nation's condition in the past year and sets forth the legislative agenda for the following year.`,
-    paragraph1Title: `DESCRIPTION`,
-    paragraph1: `"Echoes of Conflict," uses a radial bar chart to depict each year's address, with the bar lengths showing the percentage of the speech dedicated to discussing war. According to the U.S. Department of Veteran Affairs, the U.S. has been involved in five wars in the 20th century: World War I, World War II, Korean War, Vietnam War and the Global War on Terror. I wanted to depict a comparison between the Addresses in war years and non-war years. It is interesting to note that, despite the U.S.'s long involvement in the Vietnam War, the porportion of Addresses dedicated to talking about it is far lesser compared to years of other wars. Maybe it was because of the number of anti-war protests during that time?`,
-    paragraph2Title: `INITIAL SKETCHES`,
-    paragraph2: `To effectively display over 100 data points in a way that emphasizes comparison without overwhelming the viewer, I opted for a radial bar chart. This design allows for an intuitive visual comparison of categories, as longer bars stand out prominently against shorter ones, clearly depicting differences without the need for specific numerical values. I thought this would simplify the viewer's experience by focusing on relative magnitudes rather than precise data.`,
-    designHeading: `FINAL DESIGNS`,
     imageType: "image",
     imageUrl: echoesOfConflictGif,
-    para1Type: ["image"],
-    para1Url: [echoesOfConflictAnimationGif],
-    para2Type: ["image", "image"],
-    para2Url: [echoesOfConflictImg1, echoesOfConflictImg2],
-    designsType: ["image"],
-    designsUrl: [echoesOfConflictGif],
+    paragraphs: {
+      para1: {
+        title: `WHAT IS THE STATE OF THE UNION ADDRESS?`,
+        content: `The State of the Union address is a yearly speech delivered by the President of the United States to Congress. It outlines the nation's condition in the past year and sets forth the legislative agenda for the following year.`,
+        imageType: null,
+        imageSource: null,
+      },
+      para2: {
+        title: `DESCRIPTION`,
+        content: `"Echoes of Conflict," uses a radial bar chart to depict each year's address, with the bar lengths showing the percentage of the speech dedicated to discussing war. According to the U.S. Department of Veteran Affairs, the U.S. has been involved in five wars in the 20th century: World War I, World War II, Korean War, Vietnam War and the Global War on Terror. I wanted to depict a comparison between the Addresses in war years and non-war years. It is interesting to note that, despite the U.S.'s long involvement in the Vietnam War, the porportion of Addresses dedicated to talking about it is far lesser compared to years of other wars. Maybe it was because of the number of anti-war protests during that time?`,
+        imageType: ["image"],
+        imageSource: [echoesOfConflictAnimationGif],
+      },
+      para3: {
+        title: `INITIAL SKETCHES`,
+        content: `To effectively display over 100 data points in a way that emphasizes comparison without overwhelming the viewer, I opted for a radial bar chart. This design allows for an intuitive visual comparison of categories, as longer bars stand out prominently against shorter ones, clearly depicting differences without the need for specific numerical values. I thought this would simplify the viewer's experience by focusing on relative magnitudes rather than precise data.`,
+        imageType: ["image", "image"],
+        imageSource: [echoesOfConflictImg1, echoesOfConflictImg2],
+      },
+      para4: {
+        title: `FINAL DESIGNS`,
+        content: null,
+        imageType: ["image"],
+        imageSource: [echoesOfConflictGif],
+      },
+    },
   },
   {
     id: 3,
@@ -123,26 +146,39 @@ const caseStudies = [
     link: "https://www.youtube.com/watch?v=B4-ECRn2xAs",
     role: `Designer, Creative Coder`,
     overview: `Used p5.js to design and code an animation video in line with the visual identity and branding created by students of Professor Lucille Tenazas’ class, University Design Studio for the 75<sup>th</sup> Annual Parsons Benefit .`,
-    introductionTitle: `TEAM`,
-    introduction: `<span class="section-heading">Henry Wolf Professor of Communication Design,</span> Lucille Tenazas<br>
-    <span class="section-heading">Students:</span> Win Bulbon, Soumya Karwa, Da Won Kim, Aarya Kini, Aparna Krishnan Reshmy, Sachi Mavinkurve, Muhammad Talha.<br><br>
-    <span class="section-heading">Left to Right:</span> Muhammad Talha, Yvonne Watson (Executive Dean of Parsons School of Design), Ben Barry (Dean, School of Fashion), Sachi Mavinkurve, Soumya Karwa, Aparna Krishnan, Win Bulbon`,
-    paragraph1Title: `WHAT IS THE PARSONS BENEFIT`,
-    paragraph1: `The Parsons Benefit is an annual celebration of the transformational role fashion, design, and the arts play in today’s world. The evening highlights the work of Parsons Fashion and Textile students. It gathers an esteemed assembly of industry leaders, Parsons alumni, and other luminaries from the Parsons global network to recognize the Parsons Table Award recipients. On the occasion of the 75<sup>th</sup> Annual Parsons Benefit, we designed the branding, graphics, animation, and overall visual identity for the Parsons Benefit.`,
-    paragraph2Title: `ANIMATION VIDEO`,
-    paragraph2: `I created an animation using p5.js to align with the logo designed by Aparna. The animation features curvy lines that move in a fluid, oscillating pattern achieved through sine waves, creating a dynamic and engaging background. I wanted the line effect to be organic and similar to the shadowy lines under “BENEFIT.” Additionally, I incorporated increasing stroke widths in each section of the lines, resulting in a gradient effect that enhanced the visual depth and appeal of the animation.`,
-    designHeading: `LIVE AT PARSONS BENEFIT`,
     imageType: "iframe",
     imageUrl: "https://www.youtube.com/embed/B4-ECRn2xAs",
-    introType: ["image"],
-    introUrl: [parsonsIntroImg],
-    para2Type: ["iframe"],
-    para2Url: ["https://www.youtube.com/embed/B4-ECRn2xAs"],
-    designsType: ["iframe", "iframe"],
-    designsUrl: [
-      "https://www.youtube.com/embed/jkPGUcxb8-s",
-      "https://www.youtube.com/embed/bPpD8zsi0jY",
-    ],
+    paragraphs: {
+      para1: {
+        title: `TEAM`,
+        content: `<span class="section-heading">Henry Wolf Professor of Communication Design,</span> Lucille Tenazas<br>
+        <span class="section-heading">Students:</span> Win Bulbon, Soumya Karwa, Da Won Kim, Aarya Kini, Aparna Krishnan Reshmy, Sachi Mavinkurve, Muhammad Talha.<br><br>
+        <span class="section-heading">Left to Right:</span> Muhammad Talha, Yvonne Watson (Executive Dean of Parsons School of Design), Ben Barry (Dean, School of Fashion), Sachi Mavinkurve, Soumya Karwa, Aparna Krishnan, Win Bulbon`,
+        imageType: ["image"],
+        imageSource: [parsonsIntroImg],
+      },
+      para2: {
+        title: `WHAT IS THE PARSONS BENEFIT`,
+        content: `The Parsons Benefit is an annual celebration of the transformational role fashion, design, and the arts play in today’s world. The evening highlights the work of Parsons Fashion and Textile students. It gathers an esteemed assembly of industry leaders, Parsons alumni, and other luminaries from the Parsons global network to recognize the Parsons Table Award recipients. On the occasion of the 75<sup>th</sup> Annual Parsons Benefit, we designed the branding, graphics, animation, and overall visual identity for the Parsons Benefit.`,
+        imageType: null,
+        imageSource: null,
+      },
+      para3: {
+        title: `ANIMATION VIDEO`,
+        content: `I created an animation using p5.js to align with the logo designed by Aparna. The animation features curvy lines that move in a fluid, oscillating pattern achieved through sine waves, creating a dynamic and engaging background. I wanted the line effect to be organic and similar to the shadowy lines under “BENEFIT.” Additionally, I incorporated increasing stroke widths in each section of the lines, resulting in a gradient effect that enhanced the visual depth and appeal of the animation.`,
+        imageType: ["iframe"],
+        imageSource: ["https://www.youtube.com/embed/B4-ECRn2xAs"],
+      },
+      para4: {
+        title: `LIVE AT PARSONS BENEFIT`,
+        content: null,
+        imageType: ["iframe", "iframe"],
+        imageSource: [
+          "https://www.youtube.com/embed/jkPGUcxb8-s",
+          "https://www.youtube.com/embed/bPpD8zsi0jY",
+        ],
+      },
+    },
   },
   {
     id: 4,
@@ -153,26 +189,39 @@ const caseStudies = [
     link: "https://soumyakarwa.github.io/typography_poster/",
     role: `Designer, Developer`,
     overview: `Created a pair of posters and an accompanying dynamic digital media interaction to illustrate the Fibonacci sequence, showcasing the interdependence of square sizes and their relation to the golden ratio.`,
-    introductionTitle: `SO, WHAT IS FIBONACCI?`,
-    introduction: `The Fibonacci sequence is a series of numbers in which each number (Fibonacci number) is the sum of the two preceding ones, usually starting with 0 and 1. The sequence is 0, 1, 1, 2, 3, 5, 8, 13, 21, and so on. Interestingly, this sequence appears in many different areas of mathematics and science. It's also known for its occurrence in biological settings; for example, in branching in trees, the arrangement of leaves on a stem, the flowering of artichokes, and the arrangement of a pine cone's bracts. Apple also used the Golden Spiral to design its logo.`,
-    paragraph1Title: `SIGNIFICANCE`,
-    paragraph1: `As someone who loves math, I find the Fibonacci sequence fascinating. It's amazing how it shows up in so many places, connecting things we wouldn't think are related. It's like finding a secret code in nature that links everything together.`,
-    paragraph2Title: `INITIAL SKETCHES`,
-    paragraph2: `I wanted to focus on the recursive nature of the sequence and decided to focus on the squares.`,
-    designHeading: `FINAL DESIGNS`,
     imageType: "image",
     imageUrl: fibonacciGif,
-    introType: ["image"],
-    introUrl: [fibonacciIntro],
-    para2Type: ["image", "image"],
-    para2Url: [fibonacciPara2_1, fibonacciPara2_2],
-    designsType: ["image", "image", "image", "image"],
-    designsUrl: [
-      fibonacciDesignUrl1,
-      fibonacciDesignUrl2,
-      fibonacciDesignUrl3,
-      fibonacciGif,
-    ],
+    paragraphs: {
+      para1: {
+        title: `SO, WHAT IS FIBONACCI?`,
+        content: `The Fibonacci sequence is a series of numbers in which each number (Fibonacci number) is the sum of the two preceding ones, usually starting with 0 and 1. The sequence is 0, 1, 1, 2, 3, 5, 8, 13, 21, and so on. Interestingly, this sequence appears in many different areas of mathematics and science. It's also known for its occurrence in biological settings; for example, in branching in trees, the arrangement of leaves on a stem, the flowering of artichokes, and the arrangement of a pine cone's bracts. Apple also used the Golden Spiral to design its logo.`,
+        imageType: ["image"],
+        imageSource: [fibonacciIntro],
+      },
+      para2: {
+        title: `SIGNIFICANCE`,
+        content: `As someone who loves math, I find the Fibonacci sequence fascinating. It's amazing how it shows up in so many places, connecting things we wouldn't think are related. It's like finding a secret code in nature that links everything together.`,
+        imageType: null,
+        imageSource: null,
+      },
+      para3: {
+        title: `INITIAL SKETCHES`,
+        content: `I wanted to focus on the recursive nature of the sequence and decided to focus on the squares.`,
+        imageType: ["image", "image"],
+        imageSource: [fibonacciPara2_1, fibonacciPara2_2],
+      },
+      para4: {
+        title: `FINAL DESIGNS`,
+        content: null,
+        imageType: ["image", "image", "image", "image"],
+        imageSource: [
+          fibonacciDesignUrl1,
+          fibonacciDesignUrl2,
+          fibonacciDesignUrl3,
+          fibonacciGif,
+        ],
+      },
+    },
   },
   // {
   //   id: 5,
@@ -210,34 +259,49 @@ const caseStudies = [
     link: "https://drive.google.com/file/d/1fFxxrMgDQABM_kg-FRuoAqCAiDIQYvDm/view?usp=sharing",
     role: "Designer, Editor",
     overview: `I designed and curated content for a 120-page, 5x8" trade book on the nuclear age, covering key historical events from the Pacific War to current disarmament efforts.`,
-    introductionTitle: `WHY ATOMIC WEAPONS?`,
-    introduction: `A short while ago, I learned the gravity of the nuclear age: the ability of global leaders to bring an end to civilization with the push of a button and how often we’ve come close to it since the detonation of the first atomic bomb in 1945. I curated content and designed a book to make this important issue more accessible and understandable. `,
-    paragraph1Title: `DESIGN CHOICES`,
-    paragraph1: `I crafted an intense visual narrative using a striking color palette of black, white, deep red, and orange, with historical imagery and distinctive red and black spreads to enhance the book’s impactful exploration of nuclear history and policy. While I want to preserve the historical context, I also want to ensure the content is accessible and impactful, so I’ve created multiple spreads with poignant quotes from global leaders (for repetition and dramatic effect).`,
-    paragraph2Title: `INITIAL THOUGHTS`,
-    paragraph2: ``,
-    designHeading: `SELECTED SPREADS`,
     imageType: "image",
     imageUrl: nuclearDawnCover,
-    para2Type: ["image"],
-    para2Url: [nuclearDawnSketch],
-    designsType: [
-      "image",
-      "image",
-      "image",
-      "image",
-      "image",
-      "image",
-      "image",
-    ],
-    designsUrl: [
-      nuclearDawnFinal1,
-      nuclearDawnFinal2,
-      nuclearDawnFinal3,
-      nuclearDawnFinal4,
-      nuclearDawnFinal5,
-      nuclearDawnFinal6,
-    ],
+    paragraphs: {
+      para1: {
+        title: `WHY ATOMIC WEAPONS?`,
+        content: `A short while ago, I learned the gravity of the nuclear age: the ability of global leaders to bring an end to civilization with the push of a button and how often we’ve come close to it since the detonation of the first atomic bomb in 1945. I curated content and designed a book to make this important issue more accessible and understandable. `,
+        imageType: null,
+        imageSource: null,
+      },
+      para2: {
+        title: `DESIGN CHOICES`,
+        content: `I crafted an intense visual narrative using a striking color palette of black, white, deep red, and orange, with historical imagery and distinctive red and black spreads to enhance the book’s impactful exploration of nuclear history and policy. While I want to preserve the historical context, I also want to ensure the content is accessible and impactful, so I’ve created multiple spreads with poignant quotes from global leaders (for repetition and dramatic effect).`,
+        imageType: null,
+        imageSource: null,
+      },
+      para3: {
+        title: `INITIAL THOUGHTS`,
+        content: null,
+        imageType: ["image"],
+        imageSource: [nuclearDawnSketch],
+      },
+      para4: {
+        title: `SELECTED SPREADS`,
+        content: null,
+        imageType: [
+          "image",
+          "image",
+          "image",
+          "image",
+          "image",
+          "image",
+          "image",
+        ],
+        imageSource: [
+          nuclearDawnFinal1,
+          nuclearDawnFinal2,
+          nuclearDawnFinal3,
+          nuclearDawnFinal4,
+          nuclearDawnFinal5,
+          nuclearDawnFinal6,
+        ],
+      },
+    },
   },
   // {
   //   id: 7,
