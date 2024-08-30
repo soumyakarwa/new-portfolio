@@ -14,7 +14,7 @@ const About = () => {
         <div className="about-description">
           <div className="about-subtitle">HI THERE! I'M SOUMYA!</div>
           <div>
-            I'm currently a first year MFA student at
+            I'm currently a second year MFA student at
             <span className="bold"> Parsons School of Design</span> studying
             Design & Technology with a focus in Creative Coding & Data
             Visualization. Previously, I studied Applied Math-Computer Science

@@ -31,9 +31,9 @@
 
 .about-subtitle {
   /* margin-bottom: calc(var(--margin) / var(--golden-ratio)); */
-  font-size: var(--navbar-font-size);
+  font-size: var(--body-font-size);
   font-weight: var(--font-weight-semibold);
-  font-family: var(--body-font);
+  /* font-family: var(--body-font); */
 }
 
 .image-grid {
