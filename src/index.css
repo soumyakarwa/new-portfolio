@@ -45,6 +45,14 @@ body {
   margin-top: var(--margin);
 }
 
+.underline {
+  text-decoration: underline;
+}
+
+a {
+  color: var(--font-color);
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

@@ -50,6 +50,12 @@ const Content = ({ study }) => {
                 <div>{study.role}</div>
               </div>
             </div>
+            <div className="section" id="tech">
+              <div className="section-text">
+                <div className="section-heading">TOOLS & TECH</div>
+                <div>{study.tech}</div>
+              </div>
+            </div>
             <div className="section">
               <div className="section-text">
                 <div className="section-heading">OVERVIEW</div>
