@@ -1,38 +1,38 @@
 // Content.jsx
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
 import "./Content.css";
 
 // Navigation Menu Component
-const NavigationMenu = ({ section }) => {
-  if (!section || !section.paragraphs) {
-    console.error("section or paragraphs is undefined");
-    return null;
-  }
+// const NavigationMenu = ({ section }) => {
+//   if (!section || !section.paragraphs) {
+//     console.error("section or paragraphs is undefined");
+//     return null;
+//   }
 
-  return (
-    <nav className="content-nav">
-      <ul>
-        <li key={section.role}>
-          <a href={`#role`}>ROLE</a>
-        </li>
-        <li key={section.tech}>
-          <a href={`#tech`}>TECH</a>
-        </li>
-        <li key={section.overview}>
-          <a href={`#overview`}>OVERVIEW</a>
-        </li>
-        <li key={`section-${2}`}>
-          <a href={`#para2`}>{section.paragraphs.para2.title}</a>
-        </li>
-        {Object.values(section.paragraphs).map((paragraph, index) => (
-          <li key={`nav-para${index + 1}`}>
-            <a href={`#para${index + 1}`}>{paragraph.title}</a>
-          </li>
-        ))}
-      </ul>
-    </nav>
-  );
-};
+//   return (
+//     <nav className="content-nav">
+//       <ul>
+//         <li key={section.role}>
+//           <a href={`#role`}>ROLE</a>
+//         </li>
+//         <li key={section.tech}>
+//           <a href={`#tech`}>TECH</a>
+//         </li>
+//         <li key={section.overview}>
+//           <a href={`#overview`}>OVERVIEW</a>
+//         </li>
+//         <li key={`section-${2}`}>
+//           <a href={`#para2`}>{section.paragraphs.para2.title}</a>
+//         </li>
+//         {Object.values(section.paragraphs).map((paragraph, index) => (
+//           <li key={`nav-para${index + 1}`}>
+//             <a href={`#para${index + 1}`}>{paragraph.title}</a>
+//           </li>
+//         ))}
+//       </ul>
+//     </nav>
+//   );
+// };
 
 const Content = ({ study }) => {
   return (
