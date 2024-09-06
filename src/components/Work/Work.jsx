@@ -33,6 +33,7 @@ import comedyDuosTimeline from "../../assets/comedyDuos/timeline.jpg";
 import comedyDuosIconicness from "../../assets/comedyDuos/iconicness.jpg";
 import comedyDuosTheory from "../../assets/comedyDuos/breakdown.jpg";
 import comedyDuosDataCollection from "../../assets/comedyDuos/cdDataCollection.jpg";
+import comedyDuosGPT from "../../assets/comedyDuos/gpt-use.gif";
 import comedyDuosDataAnalysis from "../../assets/comedyDuos/cdDataAnalysis.jpg";
 import comedyDuosCaseBoard1 from "../../assets/comedyDuos/case-board1.jpeg";
 import comedyDuosLanding from "../../assets/comedyDuos/b99.gif";
@@ -100,8 +101,18 @@ const caseStudies = [
         imageSource: [comedyDuosDataCollection],
       },
       para6: {
-        title: `DATA ANALYSIS`,
-        content: `Using the Natural Language Toolkit (python library) and OpenAI API, I broke down every episode's description into sentences and clauses to identify different storylines. Then, I compared these storylines to a list of main characters to uncover which characters were grouped in the episode. I compared results from all three episode descriptions to ensure accuracy.<br><br> 
+        title: `GENERATIVE AI & LINGUISTICS`,
+        content: `The Natural Language Toolkit (NLTK) was extremely useful for splitting paragraphs into sentences and identifying specific characters amongst sentences. However, I found many sentences with multiple plot points. I needed to further split the sentences into independent clauses to identify distinct plot points (to identify distinct character groups).<br><br>
+
+        I use Generative AI in my daily workflow: to boost productivity, as a template and even as a debugging tool. I read a lot about how Generative AI can identify sentence structures (syntax). While NLTK can assign words to a part of speech, I needed to split up sentences into clauses. For that I needed GenAI to understand text meaning to correctly identify an independent clause.<br><br>
+
+        After testing my idea with ChatGPT, I used Generative AI through the OpenAI API to breakdown complex sentences (from the Wikipedia Episode Descriptions) into independent clauses.<br><br>`,
+        imageType: ["image"],
+        imageSource: [comedyDuosGPT],
+      },
+      para7: {
+        title: `DATA ANALYTICS`,
+        content: `Using the Natural Language Toolkit and OpenAI API, I broke down every episode's description into sentences and clauses to identify different storylines. Then, I compared these storylines to a list of main characters to uncover which characters were grouped in the episode. I compared results from all three episode descriptions to ensure accuracy.<br><br> 
 
         Once the analysis was complete for all episodes (all descriptions), I calculated the weighted average rating for the top ten most frequently appearing character duos. This accounted for the number of votes each episode got, not just the rating. So, for every character duo, I calculated the weighted average by dividing the sum of the product of episode rating and votes by the total number of votes.<br><br>
 
@@ -109,7 +120,7 @@ const caseStudies = [
         imageType: ["image"],
         imageSource: [comedyDuosDataAnalysis],
       },
-      para7: {
+      para8: {
         title: `DESIGN CHOICES`,
         content: `No matter the case, each Brooklyn Nine-Nine episode always has a murder board, complete with pictures of perps, newspaper clippings, maps, stickies, and, of course, colorful yarn tying everything together.<br><br>
 
@@ -119,13 +130,13 @@ const caseStudies = [
         imageType: ["image", "image", "image", "image"],
         imageSource: [comedyDuosCaseBoard1, comedyDuosLanding],
       },
-      para8: {
+      para9: {
         title: `INTRODUCTORY SECTION`,
         content: `The visual essay started with context about the show, introducing the main characters and my love for it.`,
         imageType: ["image"],
         imageSource: [comedyDuosCharacters],
       },
-      para9: {
+      para10: {
         title: `LANGUAGE ANALYSIS SECTION`,
         content: `To explain the language analysis, I designed a section to take readers through my thoughts, step-by-step. I explain how each episode’s description is broken down into different storylines (through sentences and clauses) and subsequently analyzed for distinct character groups.<br><br>
 
@@ -133,7 +144,7 @@ const caseStudies = [
         imageType: ["image"],
         imageSource: [comedyDuosEBSketch],
       },
-      para10: {
+      para11: {
         title: `FINDING THE DUO`,
         content: `Now, the reader has some context for the language analysis and can jump right into the character group comparisons!<br><br>
 
@@ -143,7 +154,7 @@ const caseStudies = [
         imageType: ["image", "image"],
         imageSource: [comedyDuosHeatMapSketch1, comedyDuosHeatMapSketch2],
       },
-      para11: {
+      para12: {
         title: `FINAL DESIGNS`,
         reflection: `I loved this project from conception to ideation to design to development. I chose it as my summer project for my love of Brooklyn Nine-Nine, but also to implement my learnings in data visualization in a large scale, continuous project: a visual essay. I drew inspiration from The Pudding and The New York Times– I wanted to emulate the way they tie stories together, revealing things step by step, piece by piece. I learned and implemented so many things I didn’t end up using for instance Scrollytelling and Intersection Observer, but I’m glad I learned them anyway. I’m excited for more projects like these in the future.`,
         imageType: ["image", "image", "image", "image"],
@@ -156,7 +167,7 @@ const caseStudies = [
           comedyDuosHeatMap2,
         ],
       },
-      para12: {
+      para13: {
         title: `REFLECTION`,
         content: `I loved this project, from conception to ideation to design to development. I chose it as my summer project for my love of Brooklyn Nine-Nine, but also to implement learnings in data visualization in a large-scale, continuous project: a visual essay. I drew inspiration from The Pudding and The New York Times– I wanted to emulate the way they tie stories together, revealing things step by step, piece by piece. I learned and implemented so many things I didn’t end up using, for instance, Scrollytelling and Intersection Observer, but I’m glad I learned them anyway. I’m excited for more projects like these in the future.<br><br>
         
