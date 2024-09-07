@@ -1,15 +1,16 @@
 .content-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  /* align-items: center;
+  justify-content: center; */
   margin: var(--margin);
   margin-bottom: calc(
     var(--margin) * var(--golden-ratio)
   ); /* Consistent spacing */
   font-size: var(--body-font-size);
   font-family: var(--body-font-mono);
-  /* position: relative; */
+  position: relative;
+  z-index: 0;
 }
 
 .content {
@@ -18,16 +19,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* position: absolute;
+  position: relative;
   left: 50%;
-  transform: translateX(-50%); */
+  transform: translateX(-50%);
 }
 
 .content-nav {
   max-width: 10%;
-  /* position: fixed;
+  position: fixed;
   top: 50%;
-  transform: translateY(-50%); */
+  transform: translateY(-50%);
 }
 
 .content-nav ul {
@@ -39,6 +40,27 @@
   text-decoration: none;
   font-weight: var(--font-weight-semibold);
   font-size: var(--body-font-size);
+  background-color: var(--background-color);
+  background-image: linear-gradient(
+    to right,
+    var(--font-color) 0%,
+    var(--font-color) 100%
+  );
+  background-size: 0 100%; /* Initially hidden */
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  transition:
+    background-size 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+}
+
+.content-nav a:hover {
+  background-size: 100% 100%; /* Expands background */
+  color: var(--background-color); /* Change text color */
+}
+
+.content-nav li {
+  padding-bottom: calc(var(--body-font-size) / 3);
 }
 
 .content-details {
@@ -55,11 +77,14 @@
 
 .content-title {
   position: fixed;
+  top: var(--margin);
+  left: 15%;
   max-width: 35%;
   font-size: var(--navbar-font-size);
   font-weight: var(--font-weight-semibold);
   font-family: var(--body-font);
   margin-bottom: calc(var(--margin) / var(--golden-ratio));
+  z-index: 1;
 }
 
 .content-subtitle {
@@ -96,7 +121,7 @@
 
 #role {
   margin-top: calc(
-    var(--margin) + var(--navbar-font-size) + var(--body-font-size) + 0.5rem
+    var(--margin) + var(--navbar-font-size) + var(--body-font-size) + 1.5rem
   );
 }
 
