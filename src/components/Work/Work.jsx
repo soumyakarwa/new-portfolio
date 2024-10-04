@@ -162,7 +162,7 @@ const caseStudies = [
           comedyDuosLanding,
           comedyDuosCharacters,
           comedyDuosEpisode1,
-          comedyDuosEpisode2,
+          // comedyDuosEpisode2,
           comedyDuosHeatMap1,
           comedyDuosHeatMap2,
         ],
