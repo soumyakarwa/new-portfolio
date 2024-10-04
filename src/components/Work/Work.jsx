@@ -39,7 +39,7 @@ import comedyDuosCaseBoard1 from "../../assets/comedyDuos/case-board1.jpeg";
 import comedyDuosLanding from "../../assets/comedyDuos/b99.gif";
 import comedyDuosCharacters from "../../assets/comedyDuos/characters.gif";
 import comedyDuosEpisode1 from "../../assets/comedyDuos/episode1.gif";
-import comedyDuosEpisode2 from "../../assets/comedyDuos/episode2.gif";
+// import comedyDuosEpisode2 from "../../assets/comedyDuos/episode2.gif";
 import comedyDuosHeatMap1 from "../../assets/comedyDuos/heatmap1.gif";
 import comedyDuosHeatMap2 from "../../assets/comedyDuos/heatmap2.gif";
 import comedyDuosEBSketch from "../../assets/comedyDuos/episodeBreakdownSketch.jpg";
