@@ -1,7 +1,14 @@
 :root {
   --body-font: "Geist";
+  --body-font-semibold: "Geist-Semibold";
+  --body-font-medium: "Geist-Medium";
+
   --body-font-mono: "Geist-Mono";
+  --body-font-mono-medium: "Geist-Mono-Medium";
+  --body-font-mono-semibold: "Geist-Mono-Semibold";
+  --body-font-mono-bold: "Geist-Mono-Bold";
   --golden-ratio: 1.618;
+
   --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
@@ -79,12 +86,42 @@ code {
 
 @font-face {
   font-family: "Geist";
-  src: url("../public/Geist/GeistVariableVF.ttf") format("truetype");
+  src: url("../public/Geist/GeistVariableVF.woff2"),
+    url("../public/Geist/GeistVariableVF.ttf");
+}
+
+@font-face {
+  font-family: "Geist-SemiBold";
+  src: url("../public/Geist/Geist-SemiBold.woff2");
+  /* url("../public/Geist/GeistVariableVF.ttf"); */
+}
+
+@font-face {
+  font-family: "Geist-Medium";
+  src: url("../public/Geist/Geist-Medium.woff2");
+  /* url("../public/Geist/GeistVariableVF.ttf"); */
 }
 
 @font-face {
   font-family: "Geist-Mono";
-  src: url("../public/Geist.Mono/GeistMonoVariableVF.ttf") format("truetype");
+  src: url("../public/Geist.Mono/GeistMonoVariableVF.woff2"),
+    url("../public/Geist.Mono/GeistMonoVariableVF.ttf");
+}
+
+@font-face {
+  font-family: "Geist-Mono-Medium";
+  src: url("../public/Geist.Mono/GeistMono-Medium.otf");
+}
+
+@font-face {
+  font-family: "Geist-Mono-SemiBold";
+  src: url("../public/Geist.Mono/GeistMono-SemiBold.otf");
+}
+
+@font-face {
+  font-family: "Geist-Mono-Bold";
+  src: url("../public/Geist.Mono/GeistMono-Bold.woff2");
+  /* url("../public/Geist/GeistVariableVF.ttf"); */
 }
 
 @media (max-width: 768px) {

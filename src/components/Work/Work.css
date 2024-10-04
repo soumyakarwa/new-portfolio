@@ -20,7 +20,8 @@
 
 .title {
   font-size: var(--navbar-font-size);
-  font-weight: var(--font-weight-semibold);
+  font-family: var(--body-font-semibold);
+  /* font-family:  */
 }
 
 .subtitle {
@@ -30,7 +31,7 @@
 }
 
 .subheading {
-  font-weight: var(--font-weight-semibold);
+  font-family: var(--body-font-semibold);
   font-size: var(--navbar-font-size);
 }
 
@@ -79,7 +80,6 @@
 
 .myButton {
   font-size: var(--body-font-size);
-  font-weight: var(--font-weight-regular);
   display: inline-block;
   background-color: white;
   color: black;
@@ -122,10 +122,10 @@
   }
 
   .title {
-    font-weight: var(--font-weight-medium);
+    font-family: var(--body-font-medium);
   }
 
   .subheading {
-    font-weight: var(--font-weight-medium);
+    font-family: var(--body-font-medium);
   }
 }

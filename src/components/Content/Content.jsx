@@ -73,24 +73,6 @@ const Content = ({ study }) => {
       <div className="content">
         <div className="content-details">
           <div className="content-description">
-            {/* <ul className="content-tags">
-              {study.tags.map((tag, idx) => (
-                <li
-                  key={idx}
-                  style={{ backgroundColor: getBackgroundColor(tag) }}
-                >
-                  {tag}
-                </li>
-              ))}
-            </ul> */}
-            {/* <div className="content-title">
-              <div>{study.title}</div>
-              <div className="myButton" id="casestudy-button">
-                <a href={study.link} target="_blank" rel="noopener noreferrer">
-                  DEMO
-                </a>
-              </div>
-            </div> */}
             <div className="section" id="role">
               <div className="section-text">
                 <div className="section-heading">ROLE</div>

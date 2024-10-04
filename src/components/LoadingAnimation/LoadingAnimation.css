@@ -35,7 +35,7 @@
 .fixed-phrase {
   /* margin-right: 0.5rem; */
   white-space: nowrap;
-  font-weight: var(--font-weight-medium);
+  font-family: var(--body-font-mono-medium);
 }
 
 .loading-overlay.hide {

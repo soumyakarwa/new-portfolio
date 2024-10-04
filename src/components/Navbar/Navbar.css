@@ -4,7 +4,7 @@
   left: 0;
   margin: var(--margin);
   font-size: var(--navbar-font-size);
-  font-weight: var(--font-weight-regular);
+  font-family: var(--body-font);
   color: var(--font-color);
   display: flex;
   flex-direction: column;
@@ -15,7 +15,7 @@
 }
 
 .navbar-left {
-  font-weight: var(--font-weight-semibold);
+  font-family: var(--body-font-semibold);
 }
 
 .navbar-right {
@@ -59,6 +59,6 @@
   }
 
   .navbar-left {
-    font-weight: var(--font-weight-medium);
+    font-family: var(--body-font-medium);
   }
 }

@@ -4,7 +4,7 @@
   right: 0;
   margin: var(--margin);
   font-size: var(--body-font-size);
-  font-weight: var(--font-weight-regular);
+  font-family: var(--body-font);
   color: var(--font-color);
   display: flex;
   flex-direction: column;
