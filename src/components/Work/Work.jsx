@@ -56,7 +56,7 @@ const caseStudies = [
     link: "https://brooklyn-nine-nine-duos.vercel.app/",
     role: `Designer, Developer, Data Analyst`,
     tech: `Photoshop, Figma, Svelte.js, d3.js, NLTK, OpenAI API`,
-    overview: `Designed and developed a visual essay titled “The Most Iconic Duo in Brooklyn Nine-Nine” to identify the most beloved character duo in the sitcom Brooklyn Nine-Nine by analyzing official and unofficial episode descriptions, IMDb ratings, and votes.`,
+    overview: `Designed and developed a visual essay titled “The Most Iconic Duo in Brooklyn Nine-Nine” to identify the most beloved character duo in the sitcom Brooklyn Nine-Nine by analyzing official and unofficial episode descriptions, IMDb ratings, and votes. Honorable mention in the 2024 Pudding Cup, Longlisted in the 2024 Information is Beautiful Awards.`,
     imageType: "image",
     imageUrl: comedyDuosLanding,
     paragraphs: {
